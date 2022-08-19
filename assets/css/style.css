@@ -2,3 +2,10 @@
 
 @import "reset.css";
 @import "header.css";
+
+@import "mainTitle.css";
+
+@import "menu.css";
+@import "menu/menu-list.css";
+@import "menu/menu-item.css";
+@import "menu/menu-link.css";
