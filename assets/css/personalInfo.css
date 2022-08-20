@@ -56,6 +56,10 @@
         width: calc(100% - 200px);
     }
 
+    .personal-info__description {
+        font-size: 1.1rem;
+    }
+
     .personal-info__list {
         gap: 1.5rem;
     }
@@ -78,5 +82,9 @@
 
     .personal-info__title {
         font-size: 2rem;
+    }
+
+    .personal-info__description {
+        font-size: 1.2rem;
     }
 }
