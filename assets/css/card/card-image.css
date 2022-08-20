@@ -1,6 +1,36 @@
 .card__image {
-    background-color: red;
-    height: 50px;
+    /* background-color: red; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30px;
     margin-bottom: 1rem;
-    width: 50px;
+    width: 30px;
 }
+
+/* Skills */
+.card__image--skill-1 {
+    background-image: url("../../img/skills/html.svg");
+}
+
+.card__image--skill-2 {
+    background-image: url("../../img/skills/css.svg");
+}
+
+.card__image--skill-3 {
+    background-image: url("../../img/skills/js.svg");
+}
+
+.card__image--skill-4 {
+    background-image: url("../../img/skills/java.svg");
+}
+
+.card__image--skill-5 {
+    background-image: url("../../img/skills/git.svg");
+}
+
+.card__image--skill-6 {
+    background-image: url("../../img/skills/vscode.svg");
+}
+
+/* Hobbies */
