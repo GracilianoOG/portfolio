@@ -1,0 +1,18 @@
+.personal-info__description {
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+@media screen and (min-width: 768px) {
+
+    .personal-info__description {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .personal-info__description {
+        font-size: 1.2rem;
+    }
+}

@@ -1,0 +1,13 @@
+.personal-info__title {
+    color: #464646;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .personal-info__title {
+        font-size: 2rem;
+    }
+}

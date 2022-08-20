@@ -1,0 +1,11 @@
+.personal-info__list {
+    display: flex;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .personal-info__list {
+        gap: 1.5rem;
+    }
+}

@@ -12,3 +12,9 @@
 @import "menu/menu-link.css";
 
 @import "personalInfo.css";
+@import "personalInfo/personalInfo-image.css";
+@import "personalInfo/personalInfo-content.css";
+@import "personalInfo/personalInfo-title.css";
+@import "personalInfo/personalInfo-description.css";
+@import "personalInfo/personalInfo-list.css";
+@import "personalInfo/personalInfo-link.css";
