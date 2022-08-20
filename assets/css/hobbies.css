@@ -1,0 +1,18 @@
+.hobbies {
+    background-color: #E5E5E5;
+    padding: 2rem 5% 3rem 5%;
+}
+
+.hobbies__title {
+    color: #464646;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .hobbies {
+        padding: 2rem 8% 3rem 8%;
+    }
+}
