@@ -34,3 +34,26 @@
 }
 
 /* Hobbies */
+.card__image--hobby-1 {
+    background-image: url("../../img/hobbies/chat.svg");
+}
+
+.card__image--hobby-2 {
+    background-image: url("../../img/hobbies/games.svg");
+}
+
+.card__image--hobby-3 {
+    background-image: url("../../img/hobbies/music.svg");
+}
+
+.card__image--hobby-4 {
+    background-image: url("../../img/hobbies/programming.svg");
+}
+
+.card__image--hobby-5 {
+    background-image: url("../../img/hobbies/reading.svg");
+}
+
+.card__image--hobby-6 {
+    background-image: url("../../img/hobbies/videos.svg");
+}
