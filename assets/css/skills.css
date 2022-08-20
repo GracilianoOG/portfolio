@@ -1,0 +1,61 @@
+.skills {
+    background-color: #E5E5E5;
+    padding: 2rem 5% 3rem 5%;
+}
+
+.skills__title {
+    color: #464646;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #FFF;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 3rem 0 1rem 1rem;
+}
+
+.card__image {
+    background-color: red;
+    height: 50px;
+    margin-bottom: 1rem;
+    width: 50px;
+}
+
+.card__title {
+    color: #464646;
+    font-weight: 700;
+}
+
+@media screen and (min-width: 325px) {
+    .card {
+        width: calc(50% - 0.5rem);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .card {
+        width: calc(33% - 0.6rem);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .skills {
+        padding: 2rem 8% 3rem 8%;
+    }
+
+    .card {
+        padding: 5rem 0 1rem 1rem;
+        width: calc(16% - 0.5rem);
+    }
+}
