@@ -23,5 +23,12 @@
 @import "aboutMe/aboutMe-title.css";
 @import "aboutMe/aboutMe-description.css";
 
+@import "cards.css";
+@import "card/card.css";
+@import "card/card-image.css";
+@import "card/card-title.css";
+
 @import "skills.css";
+@import "skills/skills-title.css";
+
 @import "hobbies.css";
