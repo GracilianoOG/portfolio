@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
 
 @import "reset.css";
 @import "base.css";
@@ -18,3 +18,5 @@
 @import "personalInfo/personalInfo-description.css";
 @import "personalInfo/personalInfo-list.css";
 @import "personalInfo/personalInfo-link.css";
+
+@import "aboutMe.css";
