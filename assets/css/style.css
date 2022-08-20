@@ -20,3 +20,5 @@
 @import "personalInfo/personalInfo-link.css";
 
 @import "aboutMe.css";
+@import "aboutMe/aboutMe-title.css";
+@import "aboutMe/aboutMe-description.css";
