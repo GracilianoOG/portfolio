@@ -1,5 +1,8 @@
 .personal-info__image {
-    background-color: red;
+    background-image: url("../../img/photo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 50%;
     height: 150px;
     width: 150px;
