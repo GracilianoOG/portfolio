@@ -1,6 +1,7 @@
 .hobbies {
     background-color: #E5E5E5;
-    padding: 2rem 5% 3rem 5%;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 
 .hobbies__title {
@@ -9,10 +10,4 @@
     font-weight: 700;
     text-align: center;
     padding-bottom: 2rem;
-}
-
-@media screen and (min-width: 1024px) {
-    .hobbies {
-        padding: 2rem 8% 3rem 8%;
-    }
 }

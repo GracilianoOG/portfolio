@@ -1,6 +1,7 @@
 .education {
     background-color: #EAF2FD;
-    padding: 2rem 5% 3rem 5%;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 
 .education__title {
@@ -52,11 +53,5 @@
     /* Because of specificity I needed to put the complete code here */
     .institution:not(:last-child) {
         margin-bottom: 0;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .education {
-        padding: 2rem 8% 3rem 8%;
     }
 }

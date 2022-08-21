@@ -1,13 +1,12 @@
 .header {
     display: flex;
     justify-content: center;
-    padding: 50px 5% 0 5%;
+    padding-top: 50px;
 }
 
 @media screen and (min-width: 1024px) {
 
     .header {
         justify-content: space-between;
-        padding: 50px 8% 0 8%;
     }
 }
