@@ -6,7 +6,7 @@
 
 .education__title {
     color: #464646;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 700;
     text-align: center;
     padding-bottom: 2rem;
@@ -53,5 +53,11 @@
     /* Because of specificity I needed to put the complete code here */
     .institution:not(:last-child) {
         margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .education__title {
+        font-size: 2rem;
     }
 }
