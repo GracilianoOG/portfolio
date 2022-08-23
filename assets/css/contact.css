@@ -1,0 +1,111 @@
+.contact {
+    background-color: #EAF2FD;
+    display: flex;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+}
+
+.contact__image {
+    background-image: url("../img/contact.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+    height: auto;
+    margin-right: 1rem;
+    width: 40%;
+}
+
+.contact__information {
+    width: 100%;
+}
+
+.contact__title {
+    color: #464646;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.contact__description {
+    font-weight: 300;
+    line-height: 1.25;
+    margin-bottom: 2rem;
+}
+
+.contact__form__group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+}
+
+.contact__label {
+    font-size: 0.9rem;
+    opacity: 0.35;
+    padding-left: 1rem;
+    position: absolute;
+    transition: all 0.15s ease-in-out;
+    top: 0.50rem;
+}
+
+.contact__field {
+    border: none;
+    border-bottom: 2px solid gray;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    outline: none;
+    padding: 1.25rem 1rem;
+    resize: none;
+    transition: border 0.15s ease-in-out;
+    width: 100%;
+}
+
+.contact__field--labeled {
+    padding-top: 2rem;
+    padding-bottom: 0.5rem;
+}
+
+.contact__field:focus {
+    border-color: #2A7AE4;
+}
+
+.contact__field:focus + .contact__label {
+    color: #2A7AE4;
+    opacity: 1;
+}
+
+.contact__field::placeholder {
+    opacity: 0.35;
+    font-size: 1rem;
+}
+
+.contact__button {
+    background-color: #2A7AE4;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    margin-right: 0.75rem;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .contact__image {
+        display: block;
+    }
+
+    .contact__information {
+        width: 60%;
+    }
+
+    .contact__title {
+        font-size: 2rem;
+    }
+}
