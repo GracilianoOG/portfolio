@@ -94,6 +94,12 @@
     margin-right: 0.75rem;
     padding: 0.8rem 1rem;
     text-decoration: none;
+    transition: all 500ms;
+}
+
+.contact__button:hover {
+    background-color: #5595E9;
+    transform: scale(1.1);
 }
 
 @media screen and (min-width: 1024px) {
