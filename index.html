@@ -165,18 +165,18 @@
                 <h3 class="contact__description">Contact with me</h3>
                 <form action="" class="contact__form">
                     <div class="contact__form__group">
-                        <input class="contact__field contact__field--labeled" type="text" id="name" placeholder="Type your name...">
+                        <input class="contact__field contact__field--labeled" type="text" id="name" placeholder="Type your name..." maxlength="50" required>
                         <label class="contact__label" for="name">Name</label>
                     </div>
 
                     <div class="contact__form__group">
-                        <input class="contact__field contact__field--labeled" type="email" id="email" placeholder="Type your e-mail...">
+                        <input class="contact__field contact__field--labeled" type="email" id="email" placeholder="Type your e-mail..." required>
                         <label class="contact__label" for="email">E-mail</label>
                     </div>
 
-                    <input class="contact__field" type="text" id="subject" placeholder="Inform the subject...">
+                    <input class="contact__field" type="text" id="subject" placeholder="Inform the subject..." maxlength="50" required>
 
-                    <textarea class="contact__field" name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                    <textarea class="contact__field" name="" id="" cols="30" rows="10" placeholder="Message" maxlength="300" required></textarea>
 
                     <input class="contact__button" type="submit" value="Send message">
                 </form>
