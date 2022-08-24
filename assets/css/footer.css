@@ -3,3 +3,12 @@
     padding: 2rem 0;
     text-align: center;
 }
+
+.footer__highlight {
+    color: tomato;
+}
+
+.footer__date {
+    color: #464646;
+    padding-top: 0.25rem;
+}
