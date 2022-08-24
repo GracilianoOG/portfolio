@@ -43,17 +43,27 @@
     font-weight: 600;
     text-decoration: none;
     padding: 0.8rem 1rem;
+    transition: all 500ms;
 }
 
 .project__link--source {
+    background-color: #FFFFFF;
     color: #2A7AE4;
     border: 2px solid #2A7AE4;
     margin-right: 0.75rem;
 }
 
+.project__link--source:hover {
+    background-color: #D4E4FA;
+}
+
 .project__link--demo {
     background-color: #2A7AE4;
     color: #FFFFFF;
+}
+
+.project__link--demo:hover {
+    background-color: #5595E9;
 }
 
 @media screen and (min-width: 1024px) {
