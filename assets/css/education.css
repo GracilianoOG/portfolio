@@ -32,7 +32,12 @@
 
 .institution__image {
     height: auto;
+    transition: transform 500ms;
     width: 100%;
+}
+
+.institution__image:hover {
+    transform: scale(1.05);
 }
 
 .institution__course {
