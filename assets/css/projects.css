@@ -21,7 +21,9 @@
 }
 
 .project__image {
-    height: 200px;
+    box-shadow: -3px -3px 5px rgba(0, 0, 0, .25);
+    height: 250px;
+    object-fit: cover;
     width: 100%;
 }
 
@@ -91,6 +93,7 @@
     }
 
     .project__image {
+        height: auto;
         width: 60%;
     }
 }
