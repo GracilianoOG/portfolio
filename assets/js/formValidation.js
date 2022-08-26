@@ -6,7 +6,7 @@ const MAX_MESSAGE_CHARACTERS = 300;
 
 const validateField = (event) => {
     const field = event.target;
-    if(checkIfFieldIsEmpty(field) || checkFieldLength(field)) {
+    if(checkIfFieldIsEmpty(field) || checkFieldLength(field) || checkFieldFormat(field)) {
         invalidField(field);
     } else {
         validField(field);
@@ -43,9 +43,21 @@ function checkFieldLength(field) {
     }
 }
 
-function validateCharacters(event) {
-    const fieldText = event.target.value;
-    const regExp = /[A-z\s]/;
+function checkFieldFormat(field) {
+    if(field.id == "email") {
+        return validateEmail(field);
+    }
+    return false;
+}
+
+function validateEmail(field) {
+    const fieldText = field.value;
+    const regExp = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/;
+    if(fieldText.match(regExp)) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
 contactFields.forEach((field) => {
