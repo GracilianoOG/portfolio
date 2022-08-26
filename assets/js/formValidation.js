@@ -6,7 +6,7 @@ const MAX_MESSAGE_CHARACTERS = 300;
 
 const validateField = (event) => {
     const field = event.target;
-    if(checkIfFieldIsEmpty(event) || checkFieldLength(event)) {
+    if(checkIfFieldIsEmpty(field) || checkFieldLength(field)) {
         invalidField(field);
     } else {
         validField(field);
@@ -23,8 +23,7 @@ function invalidField(field) {
     field.classList.remove(okClass);
 }
 
-function checkIfFieldIsEmpty(event) {
-    const field = event.target;
+function checkIfFieldIsEmpty(field) {
     const textLength = field.value.length;
     if(textLength < 1) {
         console.log("This field cannot be empty.");
@@ -32,8 +31,7 @@ function checkIfFieldIsEmpty(event) {
     }
 }
 
-function checkFieldLength(event) {
-    const field = event.target;
+function checkFieldLength(field) {
     const textLength = field.value.length;
     if(field.id != "message" && textLength > MAX_FIELD_CHARACTERS) {
         console.log("Limit of 50 characters exceeded.");
