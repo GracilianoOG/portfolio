@@ -50,14 +50,19 @@ function checkFieldFormat(field) {
     return false;
 }
 
-function validateEmail(field) {
+function validation(field, pattern) {
     const fieldText = field.value;
-    const regExp = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/;
+    const regExp = pattern;
     if(fieldText.match(regExp)) {
         return false;
     } else {
         return true;
     }
+}
+
+function validateEmail(field) {
+    const pattern = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/;
+    return validation(field, pattern);
 }
 
 contactFields.forEach((field) => {
