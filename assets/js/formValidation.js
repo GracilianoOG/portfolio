@@ -13,6 +13,10 @@ const validateField = (event) => {
     }
 }
 
+contactFields.forEach((field) => {
+    field.addEventListener("blur", validateField);
+});
+
 function validField(field) {
     field.classList.add(okClass);
     field.classList.remove(errorClass);
@@ -64,7 +68,3 @@ function validateEmail(field) {
     const pattern = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/;
     return validation(field, pattern);
 }
-
-contactFields.forEach((field) => {
-    field.addEventListener("blur", validateField);
-});
