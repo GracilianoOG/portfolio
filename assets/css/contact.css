@@ -70,6 +70,14 @@
     padding-bottom: 0.5rem;
 }
 
+.contact__field--error {
+    border-color: red;
+}
+
+.contact__field--ok {
+    border-color: green;
+}
+
 .contact__field:focus {
     border-color: #2A7AE4;
 }
