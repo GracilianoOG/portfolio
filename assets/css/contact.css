@@ -105,6 +105,11 @@
     transition: all 500ms;
 }
 
+.contact__button--disabled {
+    background-color: gray;
+    pointer-events: none;
+}
+
 .contact__button:hover {
     background-color: #5595E9;
     transform: scale(1.1);
