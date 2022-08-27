@@ -9,11 +9,22 @@ const MAX_MESSAGE_CHARACTERS = 300;
 
 const validateField = (event) => {
     const field = event.target;
-    if(checkIfFieldIsEmpty(field) || checkFieldLength(field) || checkFieldFormat(field)) {
+    if(checkIfFieldIsValid(field)) {
         invalidField(field);
     } else {
         validField(field);
     }
+}
+
+function checkIfFieldIsValid(field) {
+    return (checkIfFieldIsEmpty(field) || checkFieldLength(field) || checkFieldFormat(field));
+}
+
+function checkIfEveryFieldIsValid() {
+    for(let i = 0; i < contactFields.length; i++)
+        if(checkIfFieldIsValid(contactFields[i]))
+            return true;
+    return false;
 }
 
 contactFields.forEach((field) => {
@@ -31,6 +42,15 @@ function checkIfEveryFieldIsEmpty() {
 }
 
 form.addEventListener("keyup", checkIfEveryFieldIsEmpty);
+
+contactButton.addEventListener("click", (event) => {
+    if(checkIfEveryFieldIsValid()) {
+        event.preventDefault();
+        alert("Error!");
+    } else {
+        alert("Submitted!");
+    }
+});
 
 function enableButton() {
     contactButton.classList.remove(disableButtonClass);
