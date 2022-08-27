@@ -23,14 +23,24 @@ contactFields.forEach((field) => {
 function checkIfEveryFieldIsEmpty() {
     for(let i = 0; i < contactFields.length; i++) {
         if(checkIfFieldIsEmpty(contactFields[i])) {
-            contactButton.classList.add(disableButtonClass);
+            disableButton();
             return;
         }
     }
-    contactButton.classList.remove(disableButtonClass);
+    enableButton();
 }
 
 form.addEventListener("keyup", checkIfEveryFieldIsEmpty);
+
+function enableButton() {
+    contactButton.classList.remove(disableButtonClass);
+    contactButton.disabled = false;
+}
+
+function disableButton() {
+    contactButton.classList.add(disableButtonClass);
+    contactButton.disabled = true;
+}
 
 function validField(field) {
     field.classList.add(okClass);
