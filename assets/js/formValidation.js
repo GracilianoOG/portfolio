@@ -1,4 +1,7 @@
+const contactButton = document.querySelector(".contact__button");
 const contactFields = document.querySelectorAll(".contact__field");
+const form = document.querySelector(".contact__form");
+const disableButtonClass = "contact__button--disabled";
 const errorClass = "contact__field--error";
 const okClass = "contact__field--ok";
 const MAX_FIELD_CHARACTERS = 50;
@@ -16,6 +19,18 @@ const validateField = (event) => {
 contactFields.forEach((field) => {
     field.addEventListener("blur", validateField);
 });
+
+function checkIfEveryFieldIsEmpty() {
+    for(let i = 0; i < contactFields.length; i++) {
+        if(checkIfFieldIsEmpty(contactFields[i])) {
+            contactButton.classList.add(disableButtonClass);
+            return;
+        }
+    }
+    contactButton.classList.remove(disableButtonClass);
+}
+
+form.addEventListener("keyup", checkIfEveryFieldIsEmpty);
 
 function validField(field) {
     field.classList.add(okClass);
