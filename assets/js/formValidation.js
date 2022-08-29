@@ -1,4 +1,5 @@
 const contactButton = document.querySelector(".contact__button");
+const contactError = document.querySelector(".contact__error");
 const contactFields = document.querySelectorAll(".contact__field");
 const form = document.querySelector(".contact__form");
 const disabledButtonClass = "contact__button--disabled";
@@ -6,6 +7,7 @@ const errorClass = "contact__field--error";
 const okClass = "contact__field--ok";
 const MAX_FIELD_CHARACTERS = 50;
 const MAX_MESSAGE_CHARACTERS = 300;
+let error = "";
 
 const checkIfTheFieldIsValid = (event) => {
     const field = event.target;
@@ -34,7 +36,7 @@ contactFields.forEach((field) => {
 function isTheFieldEmpty(field) {
     const textLength = field.value.length;
     if(textLength < 1) {
-        console.log("This field cannot be empty.");
+        error = "There are one or more empty fields.";
         return true;
     }
     return false;
@@ -54,10 +56,10 @@ form.addEventListener("keyup", isEveryFieldEmpty);
 
 contactButton.addEventListener("click", (event) => {
     if(isEveryFieldValid()) {
-        alert("Submitted!");
+        contactError.innerHTML = "";
     } else {
         event.preventDefault();
-        alert("Error!");
+        contactError.innerHTML = error;
     }
 });
 
@@ -84,11 +86,11 @@ function applyInvalidClass(field) {
 function isTheLengthValid(field) {
     const textLength = field.value.length;
     if(field.id != "message" && textLength > MAX_FIELD_CHARACTERS) {
-        console.log("Limit of 50 characters exceeded.");
+        error = "Limit of 50 characters exceeded.";
         return false;
     }
     if(textLength > MAX_MESSAGE_CHARACTERS) {
-        console.log("Limit of 300 characters exceeded.");
+        error = "Limit of 300 characters exceeded.";
         return false;
     }
     return true;
@@ -113,5 +115,8 @@ function validateField(field, pattern) {
 
 function validateEmail(field) {
     const pattern = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/;
-    return validateField(field, pattern);
+    const validity = validateField(field, pattern);
+    if(!validity)
+        error = "E-mail format is invalid."
+    return validity;
 }
