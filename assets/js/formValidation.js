@@ -31,6 +31,14 @@ contactFields.forEach((field) => {
     field.addEventListener("blur", validateField);
 });
 
+function checkIfFieldIsEmpty(field) {
+    const textLength = field.value.length;
+    if(textLength < 1) {
+        console.log("This field cannot be empty.");
+        return true;
+    }
+}
+
 function checkIfEveryFieldIsEmpty() {
     for(let i = 0; i < contactFields.length; i++) {
         if(checkIfFieldIsEmpty(contactFields[i])) {
@@ -70,14 +78,6 @@ function validField(field) {
 function invalidField(field) {
     field.classList.add(errorClass);
     field.classList.remove(okClass);
-}
-
-function checkIfFieldIsEmpty(field) {
-    const textLength = field.value.length;
-    if(textLength < 1) {
-        console.log("This field cannot be empty.");
-        return true;
-    }
 }
 
 function checkFieldLength(field) {
