@@ -30,7 +30,13 @@
 .contact__description {
     font-weight: 300;
     line-height: 1.25;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact__error {
+    color: red;
+    height: 1rem;
+    margin-bottom: 1rem;
 }
 
 .contact__form__group {
