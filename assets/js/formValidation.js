@@ -1,37 +1,37 @@
 const contactButton = document.querySelector(".contact__button");
 const contactFields = document.querySelectorAll(".contact__field");
 const form = document.querySelector(".contact__form");
-const disableButtonClass = "contact__button--disabled";
+const disabledButtonClass = "contact__button--disabled";
 const errorClass = "contact__field--error";
 const okClass = "contact__field--ok";
 const MAX_FIELD_CHARACTERS = 50;
 const MAX_MESSAGE_CHARACTERS = 300;
 
-const validateField = (event) => {
+const checkIfTheFieldIsValid = (event) => {
     const field = event.target;
-    if(checkIfFieldIsValid(field)) {
-        invalidField(field);
+    if(isTheFieldValid(field)) {
+        applyInvalidClass(field);
     } else {
-        validField(field);
+        applyValidClass(field);
     }
 }
 
-function checkIfFieldIsValid(field) {
-    return (checkIfFieldIsEmpty(field) || checkFieldLength(field) || checkFieldFormat(field));
+function isTheFieldValid(field) {
+    return (isTheFieldEmpty(field) || checkTheFieldLength(field) || isTheFieldTypeValid(field));
 }
 
-function checkIfEveryFieldIsValid() {
+function isEveryFieldValid() {
     for(let i = 0; i < contactFields.length; i++)
-        if(checkIfFieldIsValid(contactFields[i]))
+        if(isTheFieldValid(contactFields[i]))
             return true;
     return false;
 }
 
 contactFields.forEach((field) => {
-    field.addEventListener("blur", validateField);
+    field.addEventListener("blur", checkIfTheFieldIsValid);
 });
 
-function checkIfFieldIsEmpty(field) {
+function isTheFieldEmpty(field) {
     const textLength = field.value.length;
     if(textLength < 1) {
         console.log("This field cannot be empty.");
@@ -39,9 +39,9 @@ function checkIfFieldIsEmpty(field) {
     }
 }
 
-function checkIfEveryFieldIsEmpty() {
+function isEveryFieldEmpty() {
     for(let i = 0; i < contactFields.length; i++) {
-        if(checkIfFieldIsEmpty(contactFields[i])) {
+        if(isTheFieldEmpty(contactFields[i])) {
             disableButton();
             return;
         }
@@ -49,10 +49,10 @@ function checkIfEveryFieldIsEmpty() {
     enableButton();
 }
 
-form.addEventListener("keyup", checkIfEveryFieldIsEmpty);
+form.addEventListener("keyup", isEveryFieldEmpty);
 
 contactButton.addEventListener("click", (event) => {
-    if(checkIfEveryFieldIsValid()) {
+    if(isEveryFieldValid()) {
         event.preventDefault();
         alert("Error!");
     } else {
@@ -61,26 +61,26 @@ contactButton.addEventListener("click", (event) => {
 });
 
 function enableButton() {
-    contactButton.classList.remove(disableButtonClass);
+    contactButton.classList.remove(disabledButtonClass);
     contactButton.disabled = false;
 }
 
 function disableButton() {
-    contactButton.classList.add(disableButtonClass);
+    contactButton.classList.add(disabledButtonClass);
     contactButton.disabled = true;
 }
 
-function validField(field) {
+function applyValidClass(field) {
     field.classList.add(okClass);
     field.classList.remove(errorClass);
 }
 
-function invalidField(field) {
+function applyInvalidClass(field) {
     field.classList.add(errorClass);
     field.classList.remove(okClass);
 }
 
-function checkFieldLength(field) {
+function checkTheFieldLength(field) {
     const textLength = field.value.length;
     if(field.id != "message" && textLength > MAX_FIELD_CHARACTERS) {
         console.log("Limit of 50 characters exceeded.");
@@ -92,14 +92,14 @@ function checkFieldLength(field) {
     }
 }
 
-function checkFieldFormat(field) {
+function isTheFieldTypeValid(field) {
     if(field.id == "email") {
         return validateEmail(field);
     }
     return false;
 }
 
-function validation(field, pattern) {
+function validateField(field, pattern) {
     const fieldText = field.value;
     const regExp = pattern;
     if(fieldText.match(regExp)) {
@@ -111,5 +111,5 @@ function validation(field, pattern) {
 
 function validateEmail(field) {
     const pattern = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/;
-    return validation(field, pattern);
+    return validateField(field, pattern);
 }
