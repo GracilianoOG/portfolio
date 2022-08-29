@@ -17,7 +17,7 @@ const checkIfTheFieldIsValid = (event) => {
 }
 
 function isTheFieldValid(field) {
-    return (isTheFieldEmpty(field) || checkTheFieldLength(field) || isTheFieldTypeValid(field));
+    return (isTheFieldEmpty(field) || isTheLengthValid(field) || isTheFieldTypeValid(field));
 }
 
 function isEveryFieldValid() {
@@ -80,7 +80,7 @@ function applyInvalidClass(field) {
     field.classList.remove(okClass);
 }
 
-function checkTheFieldLength(field) {
+function isTheLengthValid(field) {
     const textLength = field.value.length;
     if(field.id != "message" && textLength > MAX_FIELD_CHARACTERS) {
         console.log("Limit of 50 characters exceeded.");
