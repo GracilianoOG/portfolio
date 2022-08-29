@@ -10,21 +10,21 @@ const MAX_MESSAGE_CHARACTERS = 300;
 const checkIfTheFieldIsValid = (event) => {
     const field = event.target;
     if(isTheFieldValid(field)) {
-        applyInvalidClass(field);
-    } else {
         applyValidClass(field);
+    } else {
+        applyInvalidClass(field);
     }
 }
 
 function isTheFieldValid(field) {
-    return (isTheFieldEmpty(field) || isTheLengthValid(field) || isTheFieldTypeValid(field));
+    return (!isTheFieldEmpty(field) && isTheLengthValid(field) && isTheFieldTypeValid(field));
 }
 
 function isEveryFieldValid() {
     for(let i = 0; i < contactFields.length; i++)
-        if(isTheFieldValid(contactFields[i]))
-            return true;
-    return false;
+        if(!isTheFieldValid(contactFields[i]))
+            return false;
+    return true;
 }
 
 contactFields.forEach((field) => {
@@ -37,6 +37,7 @@ function isTheFieldEmpty(field) {
         console.log("This field cannot be empty.");
         return true;
     }
+    return false;
 }
 
 function isEveryFieldEmpty() {
@@ -53,10 +54,10 @@ form.addEventListener("keyup", isEveryFieldEmpty);
 
 contactButton.addEventListener("click", (event) => {
     if(isEveryFieldValid()) {
+        alert("Submitted!");
+    } else {
         event.preventDefault();
         alert("Error!");
-    } else {
-        alert("Submitted!");
     }
 });
 
@@ -84,28 +85,29 @@ function isTheLengthValid(field) {
     const textLength = field.value.length;
     if(field.id != "message" && textLength > MAX_FIELD_CHARACTERS) {
         console.log("Limit of 50 characters exceeded.");
-        return true;
+        return false;
     }
     if(textLength > MAX_MESSAGE_CHARACTERS) {
         console.log("Limit of 300 characters exceeded.");
-        return true;
+        return false;
     }
+    return true;
 }
 
 function isTheFieldTypeValid(field) {
     if(field.id == "email") {
         return validateEmail(field);
     }
-    return false;
+    return true;
 }
 
 function validateField(field, pattern) {
     const fieldText = field.value;
     const regExp = pattern;
     if(fieldText.match(regExp)) {
-        return false;
-    } else {
         return true;
+    } else {
+        return false;
     }
 }
 
