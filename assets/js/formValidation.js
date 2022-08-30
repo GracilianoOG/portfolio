@@ -7,6 +7,16 @@ const errorClass = "contact__field--error";
 const okClass = "contact__field--ok";
 const MAX_FIELD_CHARACTERS = 50;
 const MAX_MESSAGE_CHARACTERS = 300;
+const errors = {
+    emptyFieldError: "There are one or more empty fields.",
+    charLimitExcedeedError: {
+        smallField: "Limit of 50 characters exceeded.",
+        bigField: "Limit of 300 characters exceeded."
+    },
+    fieldFormatError: {
+        emailField: "E-mail format is invalid."
+    }
+}
 let error = "";
 
 const checkIfTheFieldIsValid = (event) => {
@@ -36,7 +46,7 @@ contactFields.forEach((field) => {
 function isTheFieldEmpty(field) {
     const textLength = field.value.length;
     if(textLength < 1) {
-        error = "There are one or more empty fields.";
+        error = errors.emptyFieldError;
         return true;
     }
     return false;
@@ -86,11 +96,11 @@ function applyInvalidClass(field) {
 function isTheLengthValid(field) {
     const textLength = field.value.length;
     if(field.id != "message" && textLength > MAX_FIELD_CHARACTERS) {
-        error = "Limit of 50 characters exceeded.";
+        error = errors.charLimitExcedeedError.smallField;
         return false;
     }
     if(textLength > MAX_MESSAGE_CHARACTERS) {
-        error = "Limit of 300 characters exceeded.";
+        error = errors.charLimitExcedeedError.bigField;
         return false;
     }
     return true;
@@ -112,6 +122,6 @@ function validateEmail(field) {
     const pattern = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/;
     const validity = validateField(field, pattern);
     if(!validity)
-        error = "E-mail format is invalid."
+        error = errors.fieldFormatError.emailField;
     return validity;
 }
