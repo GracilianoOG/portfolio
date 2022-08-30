@@ -21,11 +21,7 @@ let error = "";
 
 const checkIfTheFieldIsValid = (event) => {
     const field = event.target;
-    if(isTheFieldValid(field)) {
-        applyValidClass(field);
-    } else {
-        applyInvalidClass(field);
-    }
+    isTheFieldValid(field) ? applyValidClass(field) : applyInvalidClass(field);
 }
 
 function isTheFieldValid(field) {
@@ -107,9 +103,7 @@ function isTheLengthValid(field) {
 }
 
 function isTheFieldTypeValid(field) {
-    if(field.id == "email") {
-        return validateEmail(field);
-    }
+    if(field.id == "email") return validateEmail(field);
     return true;
 }
 
@@ -121,7 +115,6 @@ function validateField(field, pattern) {
 function validateEmail(field) {
     const pattern = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/;
     const validity = validateField(field, pattern);
-    if(!validity)
-        error = errors.fieldFormatError.emailField;
+    if(!validity) error = errors.fieldFormatError.emailField;
     return validity;
 }
