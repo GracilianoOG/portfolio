@@ -105,12 +105,7 @@ function isTheFieldTypeValid(field) {
 
 function validateField(field, pattern) {
     const fieldText = field.value;
-    const regExp = pattern;
-    if(fieldText.match(regExp)) {
-        return true;
-    } else {
-        return false;
-    }
+    return pattern.test(fieldText);
 }
 
 function validateEmail(field) {
