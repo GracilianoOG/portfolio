@@ -4,6 +4,11 @@
     text-align: center;
 }
 
+.footer__text {
+    color: #464646;
+    font-weight: 500;
+}
+
 .footer__highlight {
     color: tomato;
 }

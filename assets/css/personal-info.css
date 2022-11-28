@@ -1,0 +1,109 @@
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 50px;
+}
+
+.personal-info__image {
+    background-image: url("../img/photo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.personal-info__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.personal-info__title {
+    color: #464646;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.personal-info__description {
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+.personal-info__list {
+    display: flex;
+    gap: 1rem;
+}
+
+.personal-info__link {
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    color: #464646;
+    font-weight: 600;
+    padding: .5rem 0 .5rem 1.8rem;
+    text-decoration: none;
+    transition: opacity 500ms;
+}
+
+.personal-info__link:hover {
+    opacity: 0.6;
+}
+
+.personal-info__link--info-1 {
+    background-image: url("../img/social/github.svg");
+}
+
+.personal-info__link--info-2 {
+    background-image: url("../img/social/linkedin.svg");
+}
+
+.personal-info__link--info-3 {
+    background-image: url("../img/social/resume.svg");
+}
+
+@media screen and (min-width: 768px) {
+    .personal-info {
+        flex-direction: row-reverse;
+    }
+
+    .personal-info__image {
+        height: 200px;
+        width: 200px;
+    }
+
+    .personal-info__content {
+        width: calc(100% - 200px);
+    }
+
+    .personal-info__description {
+        font-size: 1.1rem;
+    }
+
+    .personal-info__list {
+        gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .personal-info__image {
+        height: 300px;
+        width: 300px;
+    }
+    
+    .personal-info__content {
+        width: calc(100% - 300px);
+    }
+
+    .personal-info__title {
+        font-size: 2rem;
+    }
+
+    .personal-info__description {
+    font-size: 1.2rem;
+    }
+}
