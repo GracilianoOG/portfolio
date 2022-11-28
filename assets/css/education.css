@@ -41,12 +41,12 @@
 }
 
 .institution__course {
-    color: #464646;
+    color: var(--color-text);
     font-weight: 700;
 }
 
 .institution_description {
-    color: #464646;
+    color: var(--color-text);
     font-weight: 500;
 }
 

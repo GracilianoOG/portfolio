@@ -1,7 +1,7 @@
 .main-title {
-    color: #464646;
+    color: var(--color-text);
     display: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-main);
     font-weight: 700;
 }
 

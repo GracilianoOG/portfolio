@@ -15,8 +15,8 @@
 }
 
 .menu__link {
-    color: #464646;
-    font-family: 'Raleway', sans-serif;
+    color: var(--color-text);
+    font-family: var(--font-main);
     font-size: 1rem;
     font-weight: 500;
     text-decoration: none;

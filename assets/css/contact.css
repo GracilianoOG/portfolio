@@ -1,5 +1,5 @@
 .contact {
-    background-color: #EAF2FD;
+    background-color: var(--color-background-1);
     display: flex;
     padding-top: 6rem;
     padding-bottom: 3rem;
@@ -21,7 +21,7 @@
 }
 
 .contact__title {
-    color: #464646;
+    color: var(--color-text);
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -34,7 +34,7 @@
 }
 
 .contact__error {
-    color: red;
+    color: var(--color-danger);
     height: 1rem;
     margin-bottom: 1rem;
 }
@@ -57,11 +57,11 @@
 
 .contact__field {
     border: none;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid var(--color-disabled);
     border-radius: 5px;
     box-sizing: border-box;
     display: block;
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-main);
     font-size: 1rem;
     margin-bottom: 2rem;
     outline: none;
@@ -77,19 +77,19 @@
 }
 
 .contact__field--error {
-    border-color: red;
+    border-color: var(--color-danger);
 }
 
 .contact__field--ok {
-    border-color: green;
+    border-color: var(--color-ok);
 }
 
 .contact__field:focus {
-    border-color: #2A7AE4;
+    border-color: var(--color-primary);
 }
 
 .contact__field:focus + .contact__label {
-    color: #2A7AE4;
+    color: var(--color-primary);
     opacity: 1;
 }
 
@@ -99,11 +99,11 @@
 }
 
 .contact__button {
-    background-color: #2A7AE4;
+    background-color: var(--color-primary);
     border: none;
-    color: #FFFFFF;
+    color: var(--color-neutral);
     cursor: pointer;
-    font-family: 'Raleway', sans-serif;
+    font-family: var(--font-main);
     font-size: 1rem;
     margin-right: 0.75rem;
     padding: 0.8rem 1rem;
@@ -112,12 +112,12 @@
 }
 
 .contact__button--disabled {
-    background-color: gray;
+    background-color: var(--color-disabled);
     pointer-events: none;
 }
 
 .contact__button:hover {
-    background-color: #5595E9;
+    background-color: var(--color-secondary);
     transform: scale(1.1);
 }
 

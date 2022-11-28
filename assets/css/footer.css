@@ -1,19 +1,19 @@
 .footer {
-    background-color: #FFFFFF;
+    background-color: var(--color-neutral);
     padding: 2rem 0;
     text-align: center;
 }
 
 .footer__text {
-    color: #464646;
+    color: var(--color-text);
     font-weight: 500;
 }
 
 .footer__highlight {
-    color: tomato;
+    color: var(--color-highlight);
 }
 
 .footer__date {
-    color: #464646;
+    color: var(--color-text);
     padding-top: 0.25rem;
 }
