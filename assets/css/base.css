@@ -27,12 +27,6 @@
     --color-text: var(--color-dark-gray);
     --color-neutral: var(--color-white);
 
-    /* Screen Sizes */
-    --screen-s-mobile: 325px;
-    --screen-m-mobile: 600px;
-    --screen-tablet: 768px;
-    --screen-desktop: 1024px;
-
     /* Fonts */
     --font-main: 'Raleway', sans-serif;
 }
