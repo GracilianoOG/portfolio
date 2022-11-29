@@ -1,15 +1,12 @@
 .contact {
     background-color: var(--color-background-1);
     display: flex;
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 
 .contact__image {
-    background-image: url("../img/contact.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url("../img/contact.jpg") no-repeat center / cover;
     display: none;
     height: auto;
     margin-right: 1rem;
@@ -30,13 +27,12 @@
 .contact__description {
     font-weight: 300;
     line-height: 1.25;
-    margin-bottom: 1rem;
 }
 
 .contact__error {
     color: var(--color-danger);
     height: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
 }
 
 .contact__form__group {
@@ -57,8 +53,8 @@
 
 .contact__field {
     border: none;
-    border-bottom: 2px solid var(--color-disabled);
-    border-radius: 5px;
+    border-bottom: 0.125rem solid var(--color-disabled);
+    border-radius: 0.3125rem;
     box-sizing: border-box;
     display: block;
     font-family: var(--font-main);
@@ -122,6 +118,11 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .contact {
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+    }
+
     .contact__image {
         display: block;
     }
