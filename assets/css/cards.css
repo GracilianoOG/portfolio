@@ -5,16 +5,48 @@
 }
 
 .card {
+    height: 8rem;
+    perspective: 25rem;
+    position: relative;
+}
+
+.card__container {
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 500ms ease-out;
+}
+
+.card:hover > .card__container {
+    transform: rotateY(180deg) translateY(-0.5rem) scale(1.05);
+}
+
+.card__face {
     background-color: var(--color-neutral);
     border-radius: 0.3125rem;
     box-sizing: border-box;
+    backface-visibility: hidden;
+    display: flex;
+    height: 100%;
+    padding: 1rem;
+    position: absolute;
     width: 100%;
-    padding: 3rem 1rem 1rem;
-    transition: transform 500ms;
 }
 
-.card:hover {
-    transform: translateY(-0.5rem) scale(1.05);
+.card__face--front {
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card__face--back {
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+.card__text {
+    font-size: 1rem;
+    line-height: 1.4rem;
 }
 
 .card__image {
@@ -97,6 +129,6 @@
     }
 
     .card {
-        padding-top: 5rem;
+        height: 10rem;
     }
 }
