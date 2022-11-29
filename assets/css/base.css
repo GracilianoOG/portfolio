@@ -35,3 +35,24 @@ body {
     background-color: var(--color-background-3);
     font-family: var(--font-main);
 }
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.container {
+    padding: 0 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 0 6rem;
+    }
+}
