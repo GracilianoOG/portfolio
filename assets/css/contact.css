@@ -1,6 +1,7 @@
 .contact {
     background-color: var(--color-background-1);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
@@ -8,13 +9,6 @@
 .contact__image {
     background: url("../img/contact.jpg") no-repeat center / cover;
     display: none;
-    height: auto;
-    margin-right: 1rem;
-    width: 40%;
-}
-
-.contact__information {
-    width: 100%;
 }
 
 .contact__title {
@@ -119,16 +113,14 @@
 
 @media screen and (min-width: 1024px) {
     .contact {
+        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
         padding-top: 6rem;
         padding-bottom: 3rem;
     }
 
     .contact__image {
         display: block;
-    }
-
-    .contact__information {
-        width: 60%;
     }
 
     .contact__title {
