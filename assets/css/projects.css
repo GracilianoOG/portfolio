@@ -9,8 +9,8 @@
 }
 
 .project {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template: "thumbnail" "information" / 1fr;
 }
 
 .project:not(:last-child) {
@@ -19,9 +19,15 @@
 
 .project__image {
     box-shadow: -0.1875rem -0.1875rem 0.3125rem rgba(0, 0, 0, .25);
-    height: 15.625rem;
+    grid-area: thumbnail;
+    height: auto;
     object-fit: cover;
     width: 100%;
+}
+
+.project__information {
+    grid-area: information;
+    text-align: justify;
 }
 
 .project__title {
@@ -70,31 +76,23 @@
 @media screen and (min-width: 1024px) {
     .project {
         align-items: center;
+        gap: 2rem;
+        grid-template: "thumbnail information" / 3fr 2fr;
         perspective: 90rem;
         transform-style: preserve-3d;
     }
 
     .project:nth-of-type(even) {
-        flex-direction: row-reverse;
+        grid-template: "information thumbnail" / 2fr 3fr;
     }
 
     .project__title {
         margin-top: 0;
     }
 
-    .project__information {
-        box-sizing: border-box;
-        padding: 0 2rem;
-        max-width: 40%;
-    }
-
     .project__image {
         height: auto;
         transition: transform 250ms ease-in-out;
-        width: 60%;
-    }
-
-    .project:nth-of-type(odd) > .project__image {
         transform: rotateY(35deg);
     }
     
