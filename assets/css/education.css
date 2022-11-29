@@ -29,7 +29,7 @@
 }
 
 .institution__image:hover {
-    transform: scale(1.05);
+    transform: scale(1.025);
 }
 
 .institution__course {
