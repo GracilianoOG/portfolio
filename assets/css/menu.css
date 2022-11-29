@@ -10,8 +10,8 @@
 }
 
 .menu__item {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-    padding-bottom: 5px;
+    border-bottom: 0.125rem solid rgba(0, 0, 0, 0.5);
+    padding-bottom: 0.3125rem;
 }
 
 .menu__link {
