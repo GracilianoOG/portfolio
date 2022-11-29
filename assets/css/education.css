@@ -5,9 +5,6 @@
 }
 
 .education__title {
-    color: var(--color-text);
-    font-size: 1.75rem;
-    font-weight: 700;
     text-align: center;
     padding-bottom: 2rem;
 }
@@ -55,9 +52,5 @@
     .education {
         padding-top: 5rem;
         padding-bottom: 5rem;
-    }
-
-    .education__title {
-        font-size: 2rem;
     }
 }

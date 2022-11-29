@@ -5,15 +5,6 @@
 }
 
 .skills__title {
-    color: var(--color-text);
-    font-size: 1.75rem;
-    font-weight: 700;
     text-align: center;
     padding-bottom: 2rem;
-}
-
-@media screen and (min-width: 1024px) {
-    .skills__title {
-        font-size: 2rem;
-    }
 }

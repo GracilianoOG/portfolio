@@ -20,9 +20,6 @@
 }
 
 .personal-info__title {
-    color: var(--color-text);
-    font-size: 1.75rem;
-    font-weight: 700;
     line-height: 1.25;
 }
 
@@ -92,10 +89,6 @@
     
     .personal-info__content {
         width: calc(100% - 18.75rem);
-    }
-
-    .personal-info__title {
-        font-size: 2rem;
     }
 
     .personal-info__description {
