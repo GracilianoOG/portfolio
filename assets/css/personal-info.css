@@ -2,17 +2,14 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-top: 50px;
+    padding-top: 3.125rem;
 }
 
 .personal-info__image {
-    background-image: url("https://github.com/GracilianoOG.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url("https://github.com/GracilianoOG.png") no-repeat center / cover;
     border-radius: 50%;
-    height: 150px;
-    width: 150px;
+    height: 9.375rem;
+    width: 9.375rem;
 }
 
 .personal-info__content {
@@ -40,9 +37,7 @@
 }
 
 .personal-info__link {
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: 1.5rem;
+    background: no-repeat left / 1.5rem;
     color: var(--color-text);
     font-weight: 600;
     padding: .5rem 0 .5rem 1.8rem;
@@ -51,7 +46,7 @@
 }
 
 .personal-info__link:hover {
-    opacity: 0.6;
+    opacity: 0.75;
 }
 
 .personal-info__link--info-1 {
@@ -72,12 +67,12 @@
     }
 
     .personal-info__image {
-        height: 200px;
-        width: 200px;
+        height: 12.5rem;
+        width: 12.5rem;
     }
 
     .personal-info__content {
-        width: calc(100% - 200px);
+        width: calc(100% - 12.5rem);
     }
 
     .personal-info__description {
@@ -91,12 +86,12 @@
 
 @media screen and (min-width: 1024px) {
     .personal-info__image {
-        height: 300px;
-        width: 300px;
+        height: 18.75rem;
+        width: 18.75rem;
     }
     
     .personal-info__content {
-        width: calc(100% - 300px);
+        width: calc(100% - 18.75rem);
     }
 
     .personal-info__title {
