@@ -2,13 +2,14 @@ const contactButton = document.querySelector(".contact__button");
 const contactError = document.querySelector(".contact__error");
 const contactFields = document.querySelectorAll(".contact__field");
 const form = document.querySelector(".contact__form");
-const disabledButtonClass = "contact__button--disabled";
-const errorClass = "contact__field--error";
-const okClass = "contact__field--ok";
-const fieldHasContent = "has-content";
+const DISABLED_BTN_CLASS = "contact__button--disabled";
+const ERROR_CLASS = "contact__field--error";
+const VALID_CLASS = "contact__field--ok";
+const HAS_CONTENT_CLASS = "has-content";
 const MAX_FIELD_CHARACTERS = 50;
 const MAX_MESSAGE_CHARACTERS = 300;
 const errors = {
+    currentError: "",
     emptyFieldError: "There are one or more empty fields.",
     charLimitExcedeedError: {
         smallField: "Limit of 50 characters exceeded.",
@@ -18,52 +19,46 @@ const errors = {
         emailField: "E-mail format is invalid."
     }
 }
-let error = "";
 
-const checkIfTheFieldIsValid = (event) => {
+window.onload = contactFields.forEach(field => field.value = "");
+
+const checkIfTheFieldIsValid = event => {
     const field = event.target;
-    isTheFieldValid(field) ? applyValidClass(field) : applyInvalidClass(field);
+    isFieldValid(field) ? applyValidClass(field) : applyInvalidClass(field);
 }
 
-function isTheFieldValid(field) {
-    return (!isTheFieldEmpty(field) && isTheLengthValid(field) && isTheFieldTypeValid(field));
-}
+const isFieldValid = field => !isFieldEmpty(field) && isLengthValid(field) && isFieldTypeValid(field);
 
-function isEveryFieldValid() {
-    for(let i = 0; i < contactFields.length; i++)
-        if(!isTheFieldValid(contactFields[i]))
+const isEveryFieldValid = fields => {
+    for(let i = 0; i < fields.length; i++)
+        if(!isFieldValid(fields[i]))
             return false;
     return true;
 }
 
-contactFields.forEach((field) => {
+const coolEffect = event => {
+    const field = event.target;
+    const fieldLength = field.value.length;
+    fieldLength > 0 ? field.classList.add(HAS_CONTENT_CLASS) : field.classList.remove(HAS_CONTENT_CLASS);
+}
+
+contactFields.forEach(field => {
     field.addEventListener("blur", checkIfTheFieldIsValid);
     field.addEventListener("blur", coolEffect);
 });
 
-function coolEffect(event) {
-    const field = event.target;
-    if(field.value.length > 0) {
-        field.classList.add(fieldHasContent);
-    } else {
-        field.classList.remove(fieldHasContent);
-    }
-}
-
-window.onload = contactFields.forEach(field => field.value = "");
-
-function isTheFieldEmpty(field) {
+const isFieldEmpty = field => {
     const textLength = field.value.length;
     if(textLength < 1) {
-        error = errors.emptyFieldError;
+        errors.currentError = errors.emptyFieldError;
         return true;
     }
     return false;
 }
 
-function isEveryFieldEmpty() {
-    for(let i = 0; i < contactFields.length; i++) {
-        if(isTheFieldEmpty(contactFields[i])) {
+const isEveryFieldEmpty = fields => {
+    for(let i = 0; i < fields.length; i++) {
+        if(isFieldEmpty(fields[i])) {
             disableButton();
             return;
         }
@@ -71,63 +66,61 @@ function isEveryFieldEmpty() {
     enableButton();
 }
 
-form.addEventListener("keyup", isEveryFieldEmpty);
+form.addEventListener("keyup", () => isEveryFieldEmpty(contactFields));
 
-contactButton.addEventListener("click", (event) => {
-    if(isEveryFieldValid()) {
-        contactError.innerHTML = "";
+contactButton.addEventListener("click", event => {
+    if(isEveryFieldValid(contactFields)) {
+        event.preventDefault();
+        contactError.innerHTML = "Enviando formulário...";
     } else {
         event.preventDefault();
-        contactError.innerHTML = error;
+        contactError.innerHTML = errors.currentError;
     }
 });
 
-function enableButton() {
-    contactButton.classList.remove(disabledButtonClass);
+const enableButton = () => {
+    contactButton.classList.remove(DISABLED_BTN_CLASS);
     contactButton.disabled = false;
 }
 
-function disableButton() {
-    contactButton.classList.add(disabledButtonClass);
+const disableButton = () => {
+    contactButton.classList.add(DISABLED_BTN_CLASS);
     contactButton.disabled = true;
 }
 
-function applyValidClass(field) {
-    field.classList.add(okClass);
-    field.classList.remove(errorClass);
+const applyValidClass = field => {
+    field.classList.add(VALID_CLASS);
+    field.classList.remove(ERROR_CLASS);
 }
 
-function applyInvalidClass(field) {
-    field.classList.add(errorClass);
-    field.classList.remove(okClass);
+const applyInvalidClass = field => {
+    field.classList.add(ERROR_CLASS);
+    field.classList.remove(VALID_CLASS);
 }
 
-function isTheLengthValid(field) {
+const isLengthValid = field => {
     const textLength = field.value.length;
-    if(field.id != "message" && textLength > MAX_FIELD_CHARACTERS) {
-        error = errors.charLimitExcedeedError.smallField;
+    if(field.id !== "message" && textLength > MAX_FIELD_CHARACTERS) {
+        errors.currentError = errors.charLimitExcedeedError.smallField;
         return false;
     }
     if(textLength > MAX_MESSAGE_CHARACTERS) {
-        error = errors.charLimitExcedeedError.bigField;
+        errors.currentError = errors.charLimitExcedeedError.bigField;
         return false;
     }
     return true;
 }
 
-function isTheFieldTypeValid(field) {
-    if(field.id == "email") return validateEmail(field);
+const isFieldTypeValid = field => {
+    if(field.id === "email") return validateEmail(field);
     return true;
 }
 
-function validateField(field, pattern) {
-    const fieldText = field.value;
-    return pattern.test(fieldText);
-}
+const validateField = (field, pattern) => pattern.test(field.value);
 
-function validateEmail(field) {
+const validateEmail = field => {
     const pattern = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/;
     const validity = validateField(field, pattern);
-    if(!validity) error = errors.fieldFormatError.emailField;
+    if(!validity) errors.currentError = errors.fieldFormatError.emailField;
     return validity;
 }
