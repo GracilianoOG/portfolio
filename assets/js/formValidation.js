@@ -1,27 +1,20 @@
-const contactButton = document.querySelector(".contact__button");
-const contactError = document.querySelector(".contact__error");
-const contactFields = document.querySelectorAll(".contact__field");
-const form = document.querySelector(".contact__form");
-
 const DISABLED_BTN_CLASS = "contact__button--disabled";
 const ERROR_CLASS = "contact__field--error";
 const VALID_CLASS = "contact__field--ok";
 const HAS_CONTENT_CLASS = "has-content";
 const MAX_FIELD_CHARACTERS = 50;
-const MAX_MESSAGE_CHARACTERS = 300;
+const MAX_MESSAGE_CHARACTERS = 255;
 const errors = {
     currentError: "",
-    emptyFieldError: "There are one or more empty fields.",
-    charLimitExcedeedError: {
-        smallField: "Limit of 50 characters exceeded.",
-        bigField: "Limit of 300 characters exceeded."
+    valueMissing: "There are one or more empty fields.",
+    tooLong: {
+        smallField: `Limit of ${MAX_FIELD_CHARACTERS} characters exceeded.`,
+        bigField: `Limit of ${MAX_MESSAGE_CHARACTERS} characters exceeded.`
     },
-    fieldFormatError: {
+    typeMismatch: {
         emailField: "E-mail format is invalid."
     }
 }
-
-window.onload = contactFields.forEach(field => field.value = "");
 
 const applyValidityClass = event => {
     const field = event.target;
@@ -31,62 +24,40 @@ const applyValidityClass = event => {
 const isFieldValid = field => !isFieldEmpty(field) && isLengthValid(field) && isFieldTypeValid(field);
 
 const isEveryFieldValid = fields => {
-    for(let i = 0; i < fields.length; i++)
-        if(!isFieldValid(fields[i]))
-            return false;
+    for(let field of fields)
+        if(!isFieldValid(field)) return false;
     return true;
 }
 
-const coolEffect = event => {
+const applyLabelOnTopEffect = event => {
     const field = event.target;
     const fieldLength = field.value.length;
     fieldLength > 0 ? field.classList.add(HAS_CONTENT_CLASS) : field.classList.remove(HAS_CONTENT_CLASS);
 }
 
-contactFields.forEach(field => field.addEventListener("blur", event => {
-    coolEffect(event);
-    applyValidityClass(event);
-}));
-
 const isFieldEmpty = field => {
     const textLength = field.value.length;
     if(textLength <= 0) {
-        errors.currentError = errors.emptyFieldError;
+        errors.currentError = errors.valueMissing;
         return true;
     }
     return false;
 }
 
-const isEveryFieldEmpty = fields => {
-    for(let i = 0; i < fields.length; i++) {
-        if(isFieldEmpty(fields[i])) {
-            disableButton();
+const isEveryFieldEmpty = (fields, button) => {
+    for(let field of fields) {
+        if(isFieldEmpty(field)) {
+            keepButtonEnabled(button, false);
             return;
         }
     }
-    enableButton();
+    keepButtonEnabled(button, true);
 }
 
-form.addEventListener("keyup", () => isEveryFieldEmpty(contactFields));
-
-contactButton.addEventListener("click", event => {
-    if(isEveryFieldValid(contactFields)) {
-        event.preventDefault();
-        contactError.innerHTML = "Enviando formulário...";
-    } else {
-        event.preventDefault();
-        contactError.innerHTML = errors.currentError;
-    }
-});
-
-const enableButton = () => {
-    contactButton.classList.remove(DISABLED_BTN_CLASS);
-    contactButton.disabled = false;
-}
-
-const disableButton = () => {
-    contactButton.classList.add(DISABLED_BTN_CLASS);
-    contactButton.disabled = true;
+const keepButtonEnabled = (button, isEnabled) => {
+    const classes = button.classList;
+    isEnabled ? classes.remove(DISABLED_BTN_CLASS) : classes.add(DISABLED_BTN_CLASS);
+    button.disabled = !isEnabled;
 }
 
 const applyValidClass = field => {
@@ -102,11 +73,11 @@ const applyInvalidClass = field => {
 const isLengthValid = field => {
     const textLength = field.value.length;
     if(field.id !== "message" && textLength > MAX_FIELD_CHARACTERS) {
-        errors.currentError = errors.charLimitExcedeedError.smallField;
+        errors.currentError = errors.tooLong.smallField;
         return false;
     }
     if(textLength > MAX_MESSAGE_CHARACTERS) {
-        errors.currentError = errors.charLimitExcedeedError.bigField;
+        errors.currentError = errors.tooLong.bigField;
         return false;
     }
     return true;
@@ -117,11 +88,16 @@ const isFieldTypeValid = field => {
     return true;
 }
 
-const validateField = (field, pattern) => pattern.test(field.value);
-
 const validateEmail = field => {
-    const pattern = /^[A-Za-z0-9._-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/;
-    const validity = validateField(field, pattern);
-    if(!validity) errors.currentError = errors.fieldFormatError.emailField;
-    return validity;
+    const validity = field.validity.typeMismatch;
+    if(validity) errors.currentError = errors.typeMismatch.emailField;
+    return !validity;
+}
+
+export const customValidation = {
+    errors,
+    applyValidityClass,
+    isEveryFieldValid,
+    applyLabelOnTopEffect,
+    isEveryFieldEmpty
 }
