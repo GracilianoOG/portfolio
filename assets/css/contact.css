@@ -33,8 +33,9 @@
 }
 
 .contact__label {
+    cursor: text;
     font-size: 1rem;
-    opacity: .35;
+    opacity: .5;
     padding-left: 1rem;
     position: absolute;
     transition: all .15s ease-in-out;
@@ -55,6 +56,12 @@
     resize: none;
     transition: border 150ms ease-in-out, padding 100ms ease;
     width: 100%;
+}
+
+.contact__field[required] + .contact__label::after {
+    content: "*";
+    color: var(--color-danger);
+    padding-left: .2rem;
 }
 
 .contact__field--error {
@@ -87,7 +94,7 @@
 
 .contact__field::placeholder {
     font-size: 1rem;
-    opacity: .35;
+    opacity: .5;
 }
 
 .contact__button {
@@ -110,7 +117,7 @@
 
 .contact__button:hover {
     background-color: var(--color-secondary);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 @media screen and (min-width: 768px) {
