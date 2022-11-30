@@ -5,6 +5,7 @@ const form = document.querySelector(".contact__form");
 const disabledButtonClass = "contact__button--disabled";
 const errorClass = "contact__field--error";
 const okClass = "contact__field--ok";
+const fieldHasContent = "has-content";
 const MAX_FIELD_CHARACTERS = 50;
 const MAX_MESSAGE_CHARACTERS = 300;
 const errors = {
@@ -37,7 +38,19 @@ function isEveryFieldValid() {
 
 contactFields.forEach((field) => {
     field.addEventListener("blur", checkIfTheFieldIsValid);
+    field.addEventListener("blur", coolEffect);
 });
+
+function coolEffect(event) {
+    const field = event.target;
+    if(field.value.length > 0) {
+        field.classList.add(fieldHasContent);
+    } else {
+        field.classList.remove(fieldHasContent);
+    }
+}
+
+window.onload = contactFields.forEach(field => field.value = "");
 
 function isTheFieldEmpty(field) {
     const textLength = field.value.length;
