@@ -2,6 +2,7 @@ const contactButton = document.querySelector(".contact__button");
 const contactError = document.querySelector(".contact__error");
 const contactFields = document.querySelectorAll(".contact__field");
 const form = document.querySelector(".contact__form");
+
 const DISABLED_BTN_CLASS = "contact__button--disabled";
 const ERROR_CLASS = "contact__field--error";
 const VALID_CLASS = "contact__field--ok";
@@ -22,7 +23,7 @@ const errors = {
 
 window.onload = contactFields.forEach(field => field.value = "");
 
-const checkIfTheFieldIsValid = event => {
+const applyValidityClass = event => {
     const field = event.target;
     isFieldValid(field) ? applyValidClass(field) : applyInvalidClass(field);
 }
@@ -42,14 +43,14 @@ const coolEffect = event => {
     fieldLength > 0 ? field.classList.add(HAS_CONTENT_CLASS) : field.classList.remove(HAS_CONTENT_CLASS);
 }
 
-contactFields.forEach(field => {
-    field.addEventListener("blur", checkIfTheFieldIsValid);
-    field.addEventListener("blur", coolEffect);
-});
+contactFields.forEach(field => field.addEventListener("blur", event => {
+    coolEffect(event);
+    applyValidityClass(event);
+}));
 
 const isFieldEmpty = field => {
     const textLength = field.value.length;
-    if(textLength < 1) {
+    if(textLength <= 0) {
         errors.currentError = errors.emptyFieldError;
         return true;
     }
