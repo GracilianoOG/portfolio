@@ -33,12 +33,12 @@
 }
 
 .contact__label {
-    font-size: .9rem;
+    font-size: 1rem;
     opacity: .35;
     padding-left: 1rem;
     position: absolute;
     transition: all .15s ease-in-out;
-    top: .50rem;
+    top: 1.5rem;
 }
 
 .contact__field {
@@ -53,13 +53,8 @@
     outline: none;
     padding: 1.25rem 1rem;
     resize: none;
-    transition: border .15s ease-in-out;
+    transition: border 150ms ease-in-out, padding 100ms ease;
     width: 100%;
-}
-
-.contact__field--labeled {
-    padding-top: 2rem;
-    padding-bottom: .5rem;
 }
 
 .contact__field--error {
@@ -70,8 +65,19 @@
     border-color: var(--color-ok);
 }
 
+.has-content,
+.contact__field:focus {
+    padding: 2rem 1rem .5rem;
+}
+
 .contact__field:focus {
     border-color: var(--color-primary);
+}
+
+.has-content + .contact__label,
+.contact__field:focus + .contact__label {
+    font-size: 85%;
+    top: .5rem;
 }
 
 .contact__field:focus + .contact__label {
@@ -80,8 +86,8 @@
 }
 
 .contact__field::placeholder {
-    opacity: .35;
     font-size: 1rem;
+    opacity: .35;
 }
 
 .contact__button {
