@@ -245,18 +245,24 @@
                 <input type="hidden" name="accessKey" value="969bdc75-76ce-4a56-9ad2-90b7cf02fe63">
                 <input type="hidden" name="redirectTo" value="https://gracilianoog.github.io/portfolio/">
                 <div class="contact__form__group">
-                    <input class="contact__field contact__field--labeled" type="text" name="name" id="name" placeholder="Type your name..." maxlength="50" required>
+                    <input class="contact__field" type="text" name="name" id="name" placeholder="" maxlength="50" required>
                     <label class="contact__label" for="name">Name</label>
                 </div>
 
                 <div class="contact__form__group">
-                    <input class="contact__field contact__field--labeled" type="email" name="email" id="email" placeholder="Type your e-mail..." required>
+                    <input class="contact__field" type="email" name="email" id="email" placeholder="" required>
                     <label class="contact__label" for="email">E-mail</label>
                 </div>
 
-                <input class="contact__field" type="text" name="subject" id="subject" placeholder="Inform the subject..." maxlength="50" required>
+                <div class="contact__form__group">
+                    <input class="contact__field" type="text" name="subject" id="subject" placeholder="" maxlength="50" required>
+                    <label class="contact__label" for="subject">Subject</label>
+                </div>
 
-                <textarea class="contact__field" name="message" id="message" rows="5" placeholder="Message" maxlength="300" required></textarea>
+                <div class="contact__form__group">
+                    <textarea class="contact__field" name="message" id="message" rows="5" placeholder="" maxlength="255" required></textarea>
+                    <label class="contact__label" for="message">Message</label>
+                </div>
 
                 <input class="contact__button contact__button--disabled" type="submit" value="Send message" disabled>
             </form>
