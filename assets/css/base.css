@@ -4,6 +4,7 @@
     --color-bright-blue: #D4E4FA;
     --color-dark-gray: #464646;
     --color-gray: #808080;
+    --color-light-gray: #A2A2A2;
     --color-green: #008000;
     --color-light-white: #F5F5F5;
     --color-light-blue: #5595E9;
@@ -21,6 +22,7 @@
     --color-disabled: var(--color-gray);
     --color-highlight: var(--color-tomato);
     --color-ok: var(--color-green);
+    --color-placeholder: var(--color-light-gray);
     --color-primary: var(--color-blue);
     --color-secondary: var(--color-light-blue);
     --color-source: var(--color-bright-blue);
