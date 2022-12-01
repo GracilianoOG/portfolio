@@ -6,7 +6,7 @@
 }
 
 .main-title::before {
-    content: "\1F913";
+    content: "🤩";
 }
 
 @media screen and (min-width: 1024px) {
