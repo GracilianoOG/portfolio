@@ -18,7 +18,7 @@ const errors = {
 
 const applyValidityClass = event => {
     const field = event.target;
-    isFieldValid(field) ? applyValidClass(field) : applyInvalidClass(field);
+    chooseValidityClass(field, isFieldValid(field));
 }
 
 const isFieldValid = field => !isFieldEmpty(field) && isLengthValid(field) && isFieldTypeValid(field);
@@ -31,8 +31,8 @@ const isEveryFieldValid = fields => {
 
 const applyLabelOnTopEffect = event => {
     const field = event.target;
-    const fieldLength = field.value.length;
-    fieldLength > 0 ? field.classList.add(HAS_CONTENT_CLASS) : field.classList.remove(HAS_CONTENT_CLASS);
+    const length = field.value.length;
+    length > 0 ? field.classList.add(HAS_CONTENT_CLASS) : field.classList.remove(HAS_CONTENT_CLASS);
 }
 
 const isFieldEmpty = field => {
@@ -60,24 +60,22 @@ const keepButtonEnabled = (button, isEnabled) => {
     button.disabled = !isEnabled;
 }
 
-const applyValidClass = field => {
-    field.classList.add(VALID_CLASS);
-    field.classList.remove(ERROR_CLASS);
-}
-
-const applyInvalidClass = field => {
-    field.classList.add(ERROR_CLASS);
-    field.classList.remove(VALID_CLASS);
+const chooseValidityClass = (field, isValid) => {
+    field.classList.add(isValid ? VALID_CLASS : ERROR_CLASS);
+    field.classList.remove(isValid ? ERROR_CLASS : VALID_CLASS);
 }
 
 const isLengthValid = field => {
     const textLength = field.value.length;
-    if(field.id !== "message" && textLength > MAX_FIELD_CHARACTERS) {
-        errors.currentError = errors.tooLong.smallField;
+    if(field.id === "email") {
+        return true;
+    }
+    if(field.id === "message" && textLength > MAX_MESSAGE_CHARACTERS) {
+        errors.currentError = errors.tooLong.bigField;
         return false;
     }
-    if(textLength > MAX_MESSAGE_CHARACTERS) {
-        errors.currentError = errors.tooLong.bigField;
+    if(textLength > MAX_FIELD_CHARACTERS) {
+        errors.currentError = errors.tooLong.smallField;
         return false;
     }
     return true;
@@ -94,22 +92,10 @@ const validateEmail = field => {
     return !validity;
 }
 
-const submitForm = async (name, email, subject, message) => {
-    fetch("https://formsubmit.co/ajax/0608572af44fdc8ec0fba1f58f12adfc", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify({ name, email, subject, message })
-    });
-}
-
-export const customValidation = {
+export const formValidation = {
     errors,
     applyValidityClass,
     isEveryFieldValid,
     applyLabelOnTopEffect,
-    isEveryFieldEmpty,
-    submitForm
+    isEveryFieldEmpty
 }

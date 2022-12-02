@@ -1,4 +1,5 @@
-import { customValidation as cv } from "./formValidation.js";
+import { formValidation as fv } from "./formValidation.js";
+import { formHandling as fh } from "./formHandling.js";
 
 const contactButton = document.querySelector(".contact__button");
 const contactError = document.querySelector(".contact__error");
@@ -18,21 +19,21 @@ const resetFields = () => {
 }
 
 contactFields.forEach(field => field.addEventListener("blur", event => {
-  cv.applyLabelOnTopEffect(event);
-  cv.applyValidityClass(event);
+    fv.applyLabelOnTopEffect(event);
+    fv.applyValidityClass(event);
 }));
 
-form.addEventListener("keyup", () => cv.isEveryFieldEmpty(contactFields, contactButton));
+form.addEventListener("keyup", () => fv.isEveryFieldEmpty(contactFields, contactButton));
 
 contactButton.addEventListener("click", event => {
     event.preventDefault();
-    if(cv.isEveryFieldValid(contactFields)) {
+    if(fv.isEveryFieldValid(contactFields)) {
         const values = [];
         contactFields.forEach(field => values.push(field.value));
-        cv.submitForm(...values);
+        fh.submitForm(...values);
         resetFields();
         contactError.innerHTML = "";
         return;
     }
-    contactError.innerHTML = cv.errors.currentError;
+    contactError.innerHTML = fv.errors.currentError;
 });
