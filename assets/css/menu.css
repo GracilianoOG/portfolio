@@ -5,22 +5,21 @@
 .menu__list {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem 2rem;
+    gap: 1.25rem 1.75rem;
     text-align: center;
 }
 
-.menu__item {
-    border-bottom: 0.125rem solid rgba(0, 0, 0, 0.5);
-    padding-bottom: 0.3125rem;
-}
-
 .menu__link {
+    border-bottom: 0.125rem solid rgba(0, 0, 0, 0.5);
     color: var(--color-text);
+    display: inline-block;
     font-family: var(--font-main);
     font-size: 1rem;
     font-weight: 500;
+    padding: .35rem .25rem .35rem;
     text-decoration: none;
     transition: opacity 500ms;
+    width: 100%;
 }
 
 .menu__link:hover {
@@ -35,9 +34,11 @@
     .menu__list {
         flex-direction: row;
     }
-
-    .menu__item {
+    
+    .menu__link {
         border: none;
-        padding: 0;
+        display: inline;
+        padding: .25rem;
+        width: auto;
     }
 }
