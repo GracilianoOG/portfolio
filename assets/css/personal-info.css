@@ -10,7 +10,7 @@
 }
 
 .personal-info__image {
-    background: url("https://github.com/GracilianoOG.png") no-repeat center / cover;
+    background: url("../img/photo.jpg") no-repeat center / cover;
     border-radius: 50%;
     height: var(--image-mobile);
     width: var(--image-mobile);
