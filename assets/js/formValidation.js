@@ -92,7 +92,7 @@ const validateEmail = field => {
     return !validity;
 }
 
-export const formValidation = {
+export const validation = {
     errors,
     applyValidityClass,
     isEveryFieldValid,

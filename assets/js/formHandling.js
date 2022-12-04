@@ -9,6 +9,6 @@ const submitForm = async (name, email, subject, message) => {
   });
 }
 
-export const formHandling = {
+export const handling = {
   submitForm
 }

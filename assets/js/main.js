@@ -1,5 +1,5 @@
-import { formValidation as fv } from "./formValidation.js";
-import { formHandling as fh } from "./formHandling.js";
+import { validation as fv } from "./formValidation.js";
+import { handling as fh } from "./formHandling.js";
 
 const contactButton = document.querySelector(".contact__button");
 const contactError = document.querySelector(".contact__error");
