@@ -1,10 +1,10 @@
-.hobbies {
+.attribute {
     background-color: var(--color-background-2);
     padding-top: 2rem;
     padding-bottom: 3rem;
 }
 
-.hobbies__title {
+.attribute__title {
     text-align: center;
     padding-bottom: 2rem;
 }
