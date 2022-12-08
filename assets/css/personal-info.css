@@ -46,6 +46,7 @@
     transition: opacity 500ms;
 }
 
+.personal-info__link:focus,
 .personal-info__link:hover {
     opacity: 0.75;
 }

@@ -22,6 +22,7 @@
     width: 100%;
 }
 
+.menu__link:focus,
 .menu__link:hover {
     opacity: 0.75;
 }
