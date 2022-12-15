@@ -1,6 +1,5 @@
 .main-title {
     color: var(--color-text);
-    display: none;
     font-family: var(--font-main);
     font-weight: 700;
 }
@@ -8,10 +7,4 @@
 .main-title::before {
     content: "🤩";
     padding-right: .25rem;
-}
-
-@media screen and (min-width: 1024px) {
-    .main-title {
-        display: block;
-    }
 }

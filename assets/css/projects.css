@@ -67,7 +67,7 @@
 
 .project__link--demo {
     background-color: var(--color-primary);
-    color: var(--color-neutral);
+    color: var(--color-button-text);
 }
 
 .project__link--demo:focus,

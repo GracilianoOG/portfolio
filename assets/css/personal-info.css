@@ -28,6 +28,7 @@
 }
 
 .personal-info__description {
+    color: var(--color-description);
     font-weight: 300;
     line-height: 1.25;
 }

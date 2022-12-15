@@ -1,0 +1,27 @@
+.theme-toggler {
+  --size: 2.5rem;
+  --mask-image: url("../img/theme-switch.svg");
+  --mask-size: 1.5rem;
+  --mask-repeat: no-repeat;
+  --mask-position: center;
+  
+  background-color: var(--color-text);
+  cursor: pointer;
+  height: var(--size);
+  mask-image: var(--mask-image);
+  -webkit-mask-image: var(--mask-image);
+  mask-size: var(--mask-size);
+  -webkit-mask-size: var(--mask-size);
+  mask-repeat: var(--mask-repeat);
+  -webkit-mask-repeat: var(--mask-repeat);
+  mask-position: var(--mask-position);
+  -webkit-mask-position: var(--mask-position);
+  padding: 0;
+  transition: filter 300ms;
+  width: var(--size);
+}
+
+.theme-toggler:focus,
+.theme-toggler:hover {
+  filter: brightness(1.75);
+}

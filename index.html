@@ -10,17 +10,23 @@
 </head>
 <body class="wrapper">
     <header class="header container">
-        <h1 class="main-title">Gabriel's Portfolio</h1>
-        <nav class="menu">
-            <ul class="menu__list">
-                <li class="menu__item"><a href="#about" class="menu__link" title="Go to the About section">About</a></li>
-                <li class="menu__item"><a href="#skills" class="menu__link" title="Go to the Skills section">Skills</a></li>
-                <li class="menu__item"><a href="#hobbies" class="menu__link" title="Go to the Hobbies section">Hobbies</a></li>
-                <li class="menu__item"><a href="#education" class="menu__link" title="Go to the Education section">Education</a></li>
-                <li class="menu__item"><a href="#projects" class="menu__link" title="Go to the Projects section">Projects</a></li>
-                <li class="menu__item"><a href="#contact" class="menu__link" title="Go to the Contact section">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header__main">
+            <h1 class="main-title">Gabriel's Portfolio</h1>
+            <button class="header__hamburguer" type="button" title="Open or close navigation link menu">|||</button>
+        </div>
+        <div class="header__menu header__menu--off">
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#about" class="menu__link" title="Go to the About section">About</a></li>
+                    <li class="menu__item"><a href="#skills" class="menu__link" title="Go to the Skills section">Skills</a></li>
+                    <li class="menu__item"><a href="#hobbies" class="menu__link" title="Go to the Hobbies section">Hobbies</a></li>
+                    <li class="menu__item"><a href="#education" class="menu__link" title="Go to the Education section">Education</a></li>
+                    <li class="menu__item"><a href="#projects" class="menu__link" title="Go to the Projects section">Projects</a></li>
+                    <li class="menu__item"><a href="#contact" class="menu__link" title="Go to the Contact section">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="theme-toggler" type="button" title="Toggle dark mode"></button>
+        </div>
     </header>
     <main>
         <section class="personal-info container">

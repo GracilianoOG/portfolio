@@ -1,12 +1,61 @@
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding-top: 3.125rem;
+    row-gap: 2.5rem;
+}
+
+.header__main {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header__hamburguer {
+    --size: 2.5rem;
+    background-color: transparent;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    height: var(--size);
+    text-align: center;
+    transition: transform 200ms;
+    width: var(--size);
+    writing-mode: vertical-lr;
+}
+
+.header__hamburguer:focus,
+.header__hamburguer:hover {
+    transform: skew(-20deg);
+}
+
+.header__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.header__menu--off {
+    display: none;
 }
 
 @media screen and (min-width: 1024px) {
 
     .header {
+        align-items: center;
+        flex-direction: row;
         justify-content: space-between;
+    }
+
+    .header__hamburguer {
+        display: none;
+    }
+
+    .header__menu {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
     }
 }

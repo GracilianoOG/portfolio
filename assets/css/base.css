@@ -1,11 +1,12 @@
-:root {
+:root, :root.light {
     /* Colors */
-    --color-blue: #2A7AE4;
+    --color-black: #000000;
     --color-bright-blue: #D4E4FA;
+    --color-blue: #2A7AE4;
     --color-dark-gray: #464646;
     --color-gray: #808080;
-    --color-light-gray: #A2A2A2;
     --color-green: #008000;
+    --color-light-gray: #A2A2A2;
     --color-light-white: #F5F5F5;
     --color-light-blue: #5595E9;
     --color-red: #FF0000;
@@ -18,18 +19,32 @@
     --color-background-1: var(--color-white-blue);
     --color-background-2: var(--color-white-gray);
     --color-background-3: var(--color-light-white);
+    --color-button-text: var(--color-white);
     --color-danger: var(--color-red);
+    --color-description: var(--color-black);
     --color-disabled: var(--color-gray);
     --color-highlight: var(--color-tomato);
     --color-ok: var(--color-green);
     --color-placeholder: var(--color-light-gray);
     --color-primary: var(--color-blue);
+    --color-neutral: var(--color-white);
     --color-secondary: var(--color-light-blue);
     --color-source: var(--color-bright-blue);
     --color-text: var(--color-dark-gray);
-    --color-neutral: var(--color-white);
+}
 
-    /* Fonts */
+:root.dark {
+    --color-background-1: #1B1D1E;
+    --color-background-2: #272A2C;
+    --color-background-3: #1E2021;
+    --color-description: #EEEEEE;
+    --color-disabled: #60686C;
+    --color-neutral: #181A1B;
+    --color-source: #26292A;
+    --color-text: #BCB6AD;
+}
+
+:root {
     --font-main: 'Raleway', sans-serif;
 }
 
@@ -39,13 +54,17 @@ html, body {
     scroll-behavior: smooth;
 }
 
+body, header, section, footer {
+    transition: background-color 300ms;
+}
+
 .wrapper {
-    animation: fade-out .8s ease;
+    animation: fade-in .8s ease;
     margin: 0 auto;
     max-width: 1440px;
 }
 
-@keyframes fade-out {
+@keyframes fade-in {
     from {
         transform: translateX(-2rem);
         opacity: 0;
@@ -67,6 +86,19 @@ html, body {
     font-size: 1.75rem;
     font-weight: 700;
     text-transform: capitalize;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background-1: #1B1D1E;
+        --color-background-2: #272A2C;
+        --color-background-3: #1E2021;
+        --color-description: #EEEEEE;
+        --color-disabled: #60686C;
+        --color-neutral: #181A1B;
+        --color-source: #26292A;
+        --color-text: #BCB6AD;
+    }
 }
 
 @media screen and (min-width: 768px) {

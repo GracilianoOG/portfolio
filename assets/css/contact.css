@@ -71,6 +71,7 @@
 }
 
 .contact__description {
+    color: var(--color-description);
     font-weight: 300;
     line-height: 1.25;
 }
@@ -153,7 +154,7 @@
 .contact__button {
     background-color: var(--color-primary);
     border: none;
-    color: var(--color-neutral);
+    color: var(--color-button-text);
     cursor: pointer;
     font-family: var(--font-main);
     font-size: 1rem;
