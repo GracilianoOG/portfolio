@@ -77,10 +77,13 @@
 
 @media screen and (min-width: 1024px) {
     .project {
+        --length-perspective: 90rem;
         align-items: center;
         gap: 2rem;
         grid-template: "thumbnail information" / 3fr 2fr;
-        perspective: 90rem;
+        perspective: var(--length-perspective);
+        -moz-perspective: var(--length-perspective);
+        -webkit-perspective: var(--length-perspective);
         transform-style: preserve-3d;
     }
 
