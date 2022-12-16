@@ -39,29 +39,53 @@
 }
 
 .personal-info__link {
-    background: no-repeat left / 1.5rem;
     color: var(--color-text);
     font-weight: 600;
-    padding: .5rem 0 .5rem 1.8rem;
+    padding: .5rem 0;
     text-decoration: none;
-    transition: opacity 500ms;
+    transition: opacity 500ms, color 500ms;
+}
+
+.personal-info__link::before {
+    --size: 1.5rem;
+    --mask-size: var(--size);
+    --mask-repeat: no-repeat;
+
+    background-color: var(--color-text);
+    content: "";
+    display: inline-block;
+    height: var(--size);
+    mask-repeat: var(--mask-repeat);
+    -webkit-mask-repeat: var(--mask-repeat);
+    mask-size: var(--mask-size);
+    -webkit-mask-size: var(--mask-size);
+    margin-right: .5rem;
+    vertical-align: -35%;
+    width: var(--size);
 }
 
 .personal-info__link:focus,
 .personal-info__link:hover {
-    opacity: 0.75;
+    color: var(--color-primary);
+    opacity: 0.8;
 }
 
-.personal-info__link--info-1 {
-    background-image: url("../img/social/github.svg");
+.personal-info__link--info-1::before {
+    --mask-image: url("../img/social/github.svg");
+    mask-image: var(--mask-image);
+    -webkit-mask-image: var(--mask-image);
 }
 
-.personal-info__link--info-2 {
-    background-image: url("../img/social/linkedin.svg");
+.personal-info__link--info-2::before {
+    --mask-image: url("../img/social/linkedin.svg");
+    mask-image: var(--mask-image);
+    -webkit-mask-image: var(--mask-image);
 }
 
-.personal-info__link--info-3 {
-    background-image: url("../img/social/resume.svg");
+.personal-info__link--info-3::before {
+    --mask-image: url("../img/social/resume.svg");
+    mask-image: var(--mask-image);
+    -webkit-mask-image: var(--mask-image);
 }
 
 @media screen and (min-width: 768px) {
