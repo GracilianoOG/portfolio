@@ -2,7 +2,7 @@
     /* Colors */
     --color-black: #000000;
     --color-bright-blue: #D4E4FA;
-    --color-blue: #2A7AE4;
+    --color-blue: #0C65DD;
     --color-dark-gray: #464646;
     --color-gray: #808080;
     --color-green: #008000;
@@ -30,18 +30,31 @@
     --color-neutral: var(--color-white);
     --color-secondary: var(--color-light-blue);
     --color-source: var(--color-bright-blue);
+    --color-source-button: var(--color-blue);
     --color-text: var(--color-dark-gray);
+
+    /* Dark Colors */
+    --color-dark-background-1: #1B1D1E;
+    --color-dark-background-2: #272A2C;
+    --color-dark-background-3: #1E2021;
+    --color-dark-description: #EEEEEE;
+    --color-dark-disabled: #60686C;
+    --color-dark-neutral: #181A1B;
+    --color-dark-source: #26292A;
+    --color-dark-source-button: var(--color-light-blue);
+    --color-dark-text: #BCB6AD;
 }
 
 :root.dark {
-    --color-background-1: #1B1D1E;
-    --color-background-2: #272A2C;
-    --color-background-3: #1E2021;
-    --color-description: #EEEEEE;
-    --color-disabled: #60686C;
-    --color-neutral: #181A1B;
-    --color-source: #26292A;
-    --color-text: #BCB6AD;
+    --color-background-1: var(--color-dark-background-1);
+    --color-background-2: var(--color-dark-background-2);
+    --color-background-3: var(--color-dark-background-3);
+    --color-description: var(--color-dark-description);
+    --color-disabled: var(--color-dark-disabled);
+    --color-neutral: var(--color-dark-neutral);
+    --color-source: var(--color-dark-source);
+    --color-source-button: var(--color-light-blue);
+    --color-text: var(--color-dark-text);
 }
 
 :root {
@@ -90,14 +103,15 @@ body, header, section, footer {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-background-1: #1B1D1E;
-        --color-background-2: #272A2C;
-        --color-background-3: #1E2021;
-        --color-description: #EEEEEE;
-        --color-disabled: #60686C;
-        --color-neutral: #181A1B;
-        --color-source: #26292A;
-        --color-text: #BCB6AD;
+        --color-background-1: var(--color-dark-background-1);
+        --color-background-2: var(--color-dark-background-2);
+        --color-background-3: var(--color-dark-background-3);
+        --color-description: var(--color-dark-description);
+        --color-disabled: var(--color-dark-disabled);
+        --color-neutral: var(--color-dark-neutral);
+        --color-source: var(--color-dark-source);
+        --color-source-button: var(--color-light-blue);
+        --color-text: var(--color-dark-text);
     }
 }
 

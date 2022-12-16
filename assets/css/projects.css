@@ -55,7 +55,7 @@
 
 .project__link--source {
     background-color: var(--color-neutral);
-    color: var(--color-primary);
+    color: var(--color-source-button);
     border: 0.125rem solid var(--color-primary);
     margin-right: 0.75rem;
 }
