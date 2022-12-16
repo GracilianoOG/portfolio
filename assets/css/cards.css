@@ -5,14 +5,20 @@
 }
 
 .card {
+    --perspective: 25rem;
     height: 8rem;
-    perspective: 25rem;
+    perspective: var(--perspective);
+    -moz-perspective: var(--perspective);
+    -webkit-perspective: var(--perspective);
     position: relative;
 }
 
 .card__container {
+    --preserve-3d: preserve-3d;
     height: 100%;
-    transform-style: preserve-3d;
+    transform-style: var(--preserve-3d);
+    -moz-transform-style: var(--preserve-3d);
+    -webkit-transform-style: var(--preserve-3d);
     transition: transform 500ms ease-out;
 }
 
@@ -22,10 +28,13 @@
 
 .card__face {
     --face-size: 100%;
+    --backface: hidden;
     background-color: var(--color-neutral);
     border-radius: 0.3125rem;
     box-sizing: border-box;
-    backface-visibility: hidden;
+    backface-visibility: var(--backface);
+    -moz-backface-visibility: var(--backface);
+    -webkit-backface-visibility: var(--backface);
     display: flex;
     height: var(--face-size);
     padding: 1rem;
