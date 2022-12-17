@@ -3,12 +3,15 @@
     --color-black: #000000;
     --color-bright-blue: #D4E4FA;
     --color-blue: #0C65DD;
+    --color-blue-linkedin: #1575CA;
     --color-dark-gray: #464646;
     --color-gray: #808080;
     --color-green: #008000;
+    --color-green-resume: #19B64D;
     --color-light-gray: #A2A2A2;
     --color-light-white: #F5F5F5;
     --color-light-blue: #5595E9;
+    --color-pink-github: #B514B5;
     --color-red: #FF0000;
     --color-tomato: #FF6347;
     --color-white: #FFFFFF;
@@ -20,6 +23,9 @@
     --color-background-2: var(--color-white-gray);
     --color-background-3: var(--color-light-white);
     --color-button-text: var(--color-white);
+    --color-link-1: var(--color-pink-github);
+    --color-link-2: var(--color-blue-linkedin);
+    --color-link-3: var(--color-green-resume);
     --color-danger: var(--color-red);
     --color-description: var(--color-black);
     --color-disabled: var(--color-gray);

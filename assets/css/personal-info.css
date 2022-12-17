@@ -61,13 +61,13 @@
     mask-size: var(--mask-size);
     -webkit-mask-size: var(--mask-size);
     margin-right: .5rem;
+    transition: background-color 300ms;
     vertical-align: -35%;
     width: var(--size);
 }
 
 .personal-info__link:focus,
 .personal-info__link:hover {
-    color: var(--color-primary);
     opacity: 0.8;
 }
 
@@ -77,16 +77,31 @@
     -webkit-mask-image: var(--mask-image);
 }
 
+.personal-info__link--info-1:focus::before,
+.personal-info__link--info-1:hover::before {
+    background-color: var(--color-link-1);
+}
+
 .personal-info__link--info-2::before {
     --mask-image: url("../img/social/linkedin.svg");
     mask-image: var(--mask-image);
     -webkit-mask-image: var(--mask-image);
 }
 
+.personal-info__link--info-2:focus::before,
+.personal-info__link--info-2:hover::before {
+    background-color: var(--color-link-2);
+}
+
 .personal-info__link--info-3::before {
     --mask-image: url("../img/social/resume.svg");
     mask-image: var(--mask-image);
     -webkit-mask-image: var(--mask-image);
+}
+
+.personal-info__link--info-3:focus::before,
+.personal-info__link--info-3:hover::before {
+    background-color: var(--color-link-3);
 }
 
 @media screen and (min-width: 768px) {
