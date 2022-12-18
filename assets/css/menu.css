@@ -10,7 +10,7 @@
 }
 
 .menu__link {
-    border-bottom: 0.125rem solid rgba(0, 0, 0, 0.5);
+    border-bottom: 0.125rem solid var(--color-text);
     color: var(--color-text);
     display: inline-block;
     font-family: var(--font-main);
