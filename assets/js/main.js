@@ -73,4 +73,7 @@ contactButton.addEventListener("click", event => {
 themeToggler.addEventListener("click", toggleTheme);
 
 // Hamburguer Menu
-hamburguer.addEventListener("click", () => headerMenu.classList.toggle("header__menu--off"));
+hamburguer.addEventListener("click", () => {
+    headerMenu.classList.toggle("header__menu--off");
+    hamburguer.classList.toggle("header__hamburguer--close");
+});
