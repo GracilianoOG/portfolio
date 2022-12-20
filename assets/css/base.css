@@ -64,7 +64,11 @@
 }
 
 :root {
+    /* Fonts */
     --font-main: 'Raleway', sans-serif;
+
+    /* Spacing */
+    --container-sides: 1rem;
 }
 
 html, body {
@@ -83,6 +87,32 @@ body, header, section, footer {
     max-width: 1440px;
 }
 
+.to-top {
+    --size: 3.125rem;
+    --vertical-shadow: 2px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+    bottom: var(--container-sides);
+    box-shadow: 0 var(--vertical-shadow) var(--color-black);
+    color: var(--color-button-text);
+    font-size: .75rem;
+    font-weight: 600;
+    height: var(--size);
+    line-height: var(--size);
+    position: fixed;
+    right: var(--container-sides);
+    transition: transform 50ms;
+    text-decoration: none;
+    text-align: center;
+    width: var(--size);
+    z-index: 5;
+}
+
+.to-top:active {
+    --vertical-shadow: 0;
+    transform: translateY(0.15rem);
+}
+
 @keyframes fade-in {
     from {
         transform: translateX(-2rem);
@@ -96,7 +126,6 @@ body, header, section, footer {
 }
 
 .container {
-    --container-sides: 1rem;
     padding: 0 var(--container-sides);
 }
 
@@ -122,13 +151,13 @@ body, header, section, footer {
 }
 
 @media screen and (min-width: 768px) {
-    .container {
+    :root {
         --container-sides: 2rem;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    .container {
+    :root {
         --container-sides: 6rem;
     }
 
