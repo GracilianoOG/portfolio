@@ -19,6 +19,9 @@ const themeToggler = document.querySelector(".theme-toggler");
 const hamburguer = document.querySelector(".header__hamburguer");
 const headerMenu = document.querySelector(".header__menu");
 
+// Back To Top Button
+const backToTopButton = document.querySelector(".to-top");
+
 // Clear all input fields
 const clearFields = () => contactFields.forEach(field => field.value = "");
 window.onload = clearFields;
@@ -77,3 +80,13 @@ hamburguer.addEventListener("click", () => {
     headerMenu.classList.toggle("header__menu--off");
     hamburguer.classList.toggle("header__hamburguer--close");
 });
+
+// Back To Top Code
+window.onscroll = () => {
+    const amount = 150;
+    if(document.body.scrollTop >= amount || document.documentElement.scrollTop >= amount) {
+        backToTopButton.classList.remove("to-top--hidden");
+    } else {
+        backToTopButton.classList.add("to-top--hidden");
+    }
+}

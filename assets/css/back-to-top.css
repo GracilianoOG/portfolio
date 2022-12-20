@@ -1,0 +1,45 @@
+.to-top {
+  --size: 3.125rem;
+  animation: fade-in-vertical 500ms;
+  bottom: var(--container-sides);
+  color: var(--color-button-text);
+  font-size: .75rem;
+  font-weight: 600;
+  height: var(--size);
+  line-height: var(--size);
+  position: fixed;
+  right: var(--container-sides);
+  text-decoration: none;
+  text-align: center;
+  width: var(--size);
+  z-index: 5;
+}
+
+.to-top__content {
+  --vertical-shadow: 2px;
+  box-shadow: 0 var(--vertical-shadow) var(--color-black);
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  transition: transform 50ms;
+}
+
+.to-top:active > .to-top__content {
+  --vertical-shadow: 0;
+  transform: translateY(0.15rem);
+}
+
+.to-top--hidden {
+  display: none;
+}
+
+@keyframes fade-in-vertical {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
