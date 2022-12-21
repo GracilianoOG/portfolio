@@ -29,6 +29,7 @@
 }
 
 .contact__feedback__title {
+    color: var(--color-contact-feedback);
     text-align: center;
 }
 
