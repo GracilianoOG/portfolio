@@ -1,6 +1,8 @@
 .to-top {
   --size: 3.125rem;
-  animation: fade-in-vertical 500ms;
+  --move-x-initial: 0;
+  --move-y-initial: 50%;
+  animation: fade-and-move 500ms;
   bottom: var(--container-sides);
   color: var(--color-button-text);
   font-size: .75rem;
@@ -30,16 +32,4 @@
 
 .to-top--hidden {
   display: none;
-}
-
-@keyframes fade-in-vertical {
-  0% {
-    opacity: 0;
-    transform: translateY(50%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
