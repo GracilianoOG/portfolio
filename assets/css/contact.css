@@ -9,6 +9,8 @@
 
 .contact__feedback {
     --feedback-size: 100%;
+    --move-x-initial: 0;
+    animation: fade-and-move .5s ease;
     background-color: rgba(0, 255, 0, .25);
     display: none;
     height: var(--feedback-size);
@@ -29,6 +31,8 @@
 }
 
 .contact__feedback__title {
+    animation: fade-and-move .4s ease;
+    --move-x-initial: -2rem;
     color: var(--color-contact-feedback);
     text-align: center;
 }
