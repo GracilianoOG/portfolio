@@ -677,7 +677,7 @@ body, header, section, footer {
 }
 .projects {
   padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 
 .projects__title {
@@ -759,6 +759,9 @@ body, header, section, footer {
 }
 
 @media screen and (min-width: 1024px) {
+  .projects {
+    padding-bottom: 5rem;
+  }
   .project {
     --length-perspective: 90rem;
     align-items: center;
