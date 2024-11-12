@@ -15,18 +15,19 @@
 
 /* Hamburguer */
 .header__hamburguer {
-  --size: 1.25rem;
-  --line-height: 0.125rem;
-  --translation: calc(var(--size)/2 - var(--line-height)/2);
+  --line-gap: 0.4rem; 
+  --line-width: 1.5rem;
+  --line-height: 0.15rem;
+  --translation: calc(var(--line-height) + var(--line-gap));
   --translation-neg: calc(var(--translation) * -1);
   background-color: transparent;
+  border: none;
   display: flex;
   flex-direction: column;
+  gap: var(--line-gap);
   justify-content: space-between;
-  height: var(--size);
-  width: var(--size);
   padding: 0;
-  border: none;
+  width: var(--line-width);
 }
 
 .header__hamburguer:hover {
@@ -66,20 +67,19 @@
 }
 
 @media screen and (min-width: 1024px) {
-
   .header {
-      align-items: center;
-      flex-direction: row;
-      justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .header__hamburguer {
-      display: none;
+    display: none;
   }
 
   .header__menu {
-      align-items: center;
-      display: flex;
-      flex-direction: row;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
   }
 }
