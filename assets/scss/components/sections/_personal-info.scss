@@ -1,8 +1,5 @@
 .personal-info {
-  --image-mobile: 9.375rem;
-  --image-tablet: 12.5rem;
-  --image-desktop: 25rem;
-
+  --photo-size: clamp(10rem, 25vw, 25rem);
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -12,8 +9,8 @@
 .personal-info__image {
   background: url("../img/photo.jpg") no-repeat center / cover;
   border-radius: 50%;
-  height: var(--image-mobile);
-  width: var(--image-mobile);
+  height: var(--photo-size);
+  width: var(--photo-size);
 }
 
 .personal-info__content {
@@ -109,13 +106,8 @@
       flex-direction: row-reverse;
   }
 
-  .personal-info__image {
-      height: var(--image-tablet);
-      width: var(--image-tablet);
-  }
-
   .personal-info__content {
-      width: calc(100% - var(--image-tablet));
+      width: calc(100% - var(--photo-size) - 2rem);
   }
 
   .personal-info__description {
@@ -128,15 +120,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .personal-info__image {
-      height: var(--image-desktop);
-      width: var(--image-desktop);
-  }
-  
-  .personal-info__content {
-      width: calc(100% - var(--image-desktop));
-  }
-
   .personal-info__description {
       font-size: 1.2rem;
   }
