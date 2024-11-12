@@ -3,7 +3,7 @@ import { validation as fv } from "./formValidation.js";
 import { handling as fh } from "./formHandling.js";
 
 // Theme toggler import
-import toggleTheme from "./customThemes.js";
+import toggleTheme, { loadCachedTheme } from "./customThemes.js";
 
 // Variables to work with forms
 const contactButton = document.querySelector(".contact__button");
@@ -90,3 +90,6 @@ window.onscroll = () => {
         backToTopButton.classList.add("to-top--hidden");
     }
 }
+
+// Load cached theme if possible
+loadCachedTheme();
