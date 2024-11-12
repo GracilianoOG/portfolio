@@ -1,0 +1,146 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem 1rem;
+}
+
+.card {
+  --perspective: 25rem;
+  height: 8rem;
+  perspective: var(--perspective);
+  -moz-perspective: var(--perspective);
+  -webkit-perspective: var(--perspective);
+  position: relative;
+}
+
+.card__container {
+  --preserve-3d: preserve-3d;
+  height: 100%;
+  transform-style: var(--preserve-3d);
+  -moz-transform-style: var(--preserve-3d);
+  -webkit-transform-style: var(--preserve-3d);
+  transition: transform 500ms ease-out;
+}
+
+.card:hover > .card__container {
+  transform: rotateY(180deg) translateY(-0.5rem) scale(1.05);
+}
+
+.card__face {
+  --face-size: 100%;
+  --backface: hidden;
+  background-color: var(--color-neutral);
+  border-radius: 0.3125rem;
+  box-sizing: border-box;
+  backface-visibility: var(--backface);
+  -moz-backface-visibility: var(--backface);
+  -webkit-backface-visibility: var(--backface);
+  display: flex;
+  height: var(--face-size);
+  padding: 1rem;
+  position: absolute;
+  width: var(--face-size);
+}
+
+.card__face--front {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card__face--back {
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  text-align: center;
+}
+
+.card__text {
+  color: var(--color-description);
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+.card__image {
+  --card-size: 1.875rem;
+  background: no-repeat center / cover;
+  height: var(--card-size);
+  margin-bottom: 1rem;
+  width: var(--card-size);
+}
+
+/* Skills */
+.card__image--skill-1 {
+  background-image: url("../img/skills/html.svg");
+}
+
+.card__image--skill-2 {
+  background-image: url("../img/skills/css.svg");
+}
+
+.card__image--skill-3 {
+  background-image: url("../img/skills/js.svg");
+}
+
+.card__image--skill-4 {
+  background-image: url("../img/skills/java.svg");
+}
+
+.card__image--skill-5 {
+  background-image: url("../img/skills/git.svg");
+}
+
+.card__image--skill-6 {
+  background-image: url("../img/skills/vscode.svg");
+}
+
+/* Hobbies */
+.card__image--hobby-1 {
+  background-image: url("../img/hobbies/chat.svg");
+}
+
+.card__image--hobby-2 {
+  background-image: url("../img/hobbies/games.svg");
+}
+
+.card__image--hobby-3 {
+  background-image: url("../img/hobbies/music.svg");
+}
+
+.card__image--hobby-4 {
+  background-image: url("../img/hobbies/programming.svg");
+}
+
+.card__image--hobby-5 {
+  background-image: url("../img/hobbies/reading.svg");
+}
+
+.card__image--hobby-6 {
+  background-image: url("../img/hobbies/videos.svg");
+}
+
+.card__title {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+@media screen and (min-width: 325px) {
+  .cards {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .cards {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cards {
+      grid-template-columns: repeat(6, 1fr);
+  }
+
+  .card {
+      height: 10rem;
+  }
+}

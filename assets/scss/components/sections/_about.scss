@@ -1,0 +1,16 @@
+.about-me {
+  background-color: var(--color-background-1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 3rem; 
+  padding-bottom: 3rem; 
+}
+
+.about-me__description {
+  color: var(--color-description);
+  font-weight: 300;
+  line-height: 1.25;
+  text-align: justify;
+}

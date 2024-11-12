@@ -1,0 +1,24 @@
+/* Essential */
+@use "./base/reset";
+@use "./base/base";
+
+/* Structure */
+@use "./components/header";
+@use "./components/main-title";
+@use "./components/menu";
+@use "./components/sections/personal-info";
+@use "./components/sections/about";
+@use "./components/cards";
+@use "./components/sections/attribute";
+@use "./components/sections/education";
+@use "./components/sections/projects";
+@use "./components/sections/contact";
+@use "./components/footer";
+
+/* Extra Styling */
+@use "./utils/themes";
+@use "./utils/line-under";
+@use "./components/back-to-top";
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
