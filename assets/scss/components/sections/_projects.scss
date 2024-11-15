@@ -15,6 +15,7 @@
   --box-shadow-hover: 0 0 0.8rem 0px rgba(0, 0, 0, 0.15);
   --box-shadow-left: -30px var(--box-shadow-common);
   --box-shadow-right: 30px var(--box-shadow-common);
+  --rotation-val: 20deg;
 
   display: grid;
   grid-template: "thumbnail" "information" / 1fr;
@@ -110,14 +111,14 @@
   .project__image {
     height: auto;
     transition: transform 250ms ease-in-out, box-shadow 300ms;
-    transform: rotateY(35deg);
+    transform: rotateY(var(--rotation-val));
   }
 
   .project:nth-of-type(even) > .project__image {
     box-shadow: var(--box-shadow-right);
     -moz-box-shadow: var(--box-shadow-right);
     -webkit-box-shadow: var(--box-shadow-right);
-    transform: rotateY(-35deg);
+    transform: rotateY(calc(var(--rotation-val) * -1));
   }
 
   .project:hover > .project__image {
