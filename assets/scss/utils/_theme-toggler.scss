@@ -21,7 +21,7 @@
   width: var(--size);
 }
 
-.theme-toggler:focus,
+.theme-toggler:focus-visible,
 .theme-toggler:hover {
   filter: brightness(1.75);
 }

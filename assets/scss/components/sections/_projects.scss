@@ -69,7 +69,7 @@
   margin-right: 0.75rem;
 }
 
-.project__link--source:focus,
+.project__link--source:focus-visible,
 .project__link--source:hover {
   background-color: var(--color-source);
 }
@@ -79,7 +79,7 @@
   color: var(--color-button-text);
 }
 
-.project__link--demo:focus,
+.project__link--demo:focus-visible,
 .project__link--demo:hover {
   background-color: var(--color-secondary);
 }

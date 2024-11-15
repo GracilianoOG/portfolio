@@ -24,9 +24,9 @@
     background-color: var(--color-link-3);
   }
 
-  .line-under-container:focus > .line-under::after,
+  .line-under-container:focus-visible > .line-under::after,
   .line-under-container:hover > .line-under::after,
-  .line-under:focus::after,
+  .line-under:focus-visible::after,
   .line-under:hover::after {
     width: 100%;
   }

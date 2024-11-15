@@ -399,7 +399,7 @@ footer {
   width: var(--size);
 }
 
-.personal-info__link:focus,
+.personal-info__link:focus-visible,
 .personal-info__link:hover {
   opacity: 0.8;
 }
@@ -410,7 +410,7 @@ footer {
   -webkit-mask-image: var(--mask-image);
 }
 
-.personal-info__link--info-1:focus::before,
+.personal-info__link--info-1:focus-visible::before,
 .personal-info__link--info-1:hover::before {
   background-color: var(--color-link-1);
 }
@@ -421,7 +421,7 @@ footer {
   -webkit-mask-image: var(--mask-image);
 }
 
-.personal-info__link--info-2:focus::before,
+.personal-info__link--info-2:focus-visible::before,
 .personal-info__link--info-2:hover::before {
   background-color: var(--color-link-2);
 }
@@ -432,7 +432,7 @@ footer {
   -webkit-mask-image: var(--mask-image);
 }
 
-.personal-info__link--info-3:focus::before,
+.personal-info__link--info-3:focus-visible::before,
 .personal-info__link--info-3:hover::before {
   background-color: var(--color-link-3);
 }
@@ -750,7 +750,7 @@ footer {
   margin-right: 0.75rem;
 }
 
-.project__link--source:focus,
+.project__link--source:focus-visible,
 .project__link--source:hover {
   background-color: var(--color-source);
 }
@@ -760,7 +760,7 @@ footer {
   color: var(--color-button-text);
 }
 
-.project__link--demo:focus,
+.project__link--demo:focus-visible,
 .project__link--demo:hover {
   background-color: var(--color-secondary);
 }
@@ -977,7 +977,7 @@ footer {
   pointer-events: none;
 }
 
-.contact__button:focus,
+.contact__button:focus-visible,
 .contact__button:hover {
   background-color: var(--color-secondary);
   transform: scale(1.05);
@@ -1043,7 +1043,7 @@ footer {
   width: var(--size);
 }
 
-.theme-toggler:focus,
+.theme-toggler:focus-visible,
 .theme-toggler:hover {
   filter: brightness(1.75);
 }
@@ -1069,9 +1069,9 @@ footer {
   .line-under--green::after {
     background-color: var(--color-link-3);
   }
-  .line-under-container:focus > .line-under::after,
+  .line-under-container:focus-visible > .line-under::after,
   .line-under-container:hover > .line-under::after,
-  .line-under:focus::after,
+  .line-under:focus-visible::after,
   .line-under:hover::after {
     width: 100%;
   }

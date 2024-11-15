@@ -176,7 +176,7 @@
   pointer-events: none;
 }
 
-.contact__button:focus,
+.contact__button:focus-visible,
 .contact__button:hover {
   background-color: var(--color-secondary);
   transform: scale(1.05);
