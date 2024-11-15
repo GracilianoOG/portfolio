@@ -1,3 +1,5 @@
+@use "../../utils/breakpoints" as *;
+
 .personal-info {
   --photo-size: clamp(10rem, 25vw, 25rem);
   display: flex;
@@ -101,7 +103,7 @@
   background-color: var(--color-link-3);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: map-get($breakpoints, md)) {
   .personal-info {
       flex-direction: row-reverse;
   }
@@ -119,7 +121,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: map-get($breakpoints, lg)) {
   .personal-info__description {
       font-size: 1.2rem;
   }

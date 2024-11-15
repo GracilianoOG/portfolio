@@ -1,3 +1,5 @@
+@use "../utils/breakpoints" as *;
+
 .cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -123,19 +125,19 @@
   font-weight: 700;
 }
 
-@media screen and (min-width: 325px) {
+@media screen and (min-width: map-get($breakpoints, xs)) {
   .cards {
       grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: map-get($breakpoints, sm)) {
   .cards {
       grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: map-get($breakpoints, lg)) {
   .cards {
       grid-template-columns: repeat(6, 1fr);
   }

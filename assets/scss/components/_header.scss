@@ -1,3 +1,5 @@
+@use "../utils/breakpoints" as *;
+
 .header {
   display: flex;
   flex-direction: column;
@@ -66,7 +68,7 @@
   display: none;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: map-get($breakpoints, lg)) {
   .header {
     align-items: center;
     flex-direction: row;

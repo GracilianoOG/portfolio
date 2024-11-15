@@ -1,3 +1,5 @@
+@use "../utils/breakpoints" as *;
+
 :root {
   /* Base Colors */
   --color-black: #000000;
@@ -125,13 +127,13 @@ body, header, section, footer {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: map-get($breakpoints, md)) {
   :root {
       --container-sides: 2rem;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: map-get($breakpoints, lg)) {
   :root {
       --container-sides: 6rem;
   }

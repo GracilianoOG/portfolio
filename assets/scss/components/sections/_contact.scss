@@ -1,3 +1,5 @@
+@use "../../utils/breakpoints" as *;
+
 .contact {
   background-color: var(--color-background-1);
   display: grid;
@@ -180,14 +182,14 @@
   transform: scale(1.05);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: map-get($breakpoints, md)) {
   .contact {
       padding-top: 3rem;
       padding-bottom: 3rem;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: map-get($breakpoints, lg)) {
   .contact {
       gap: 1rem;
       grid-template-columns: 2fr 3fr;
