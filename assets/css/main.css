@@ -1042,13 +1042,14 @@ footer {
   mask-position: var(--mask-position);
   -webkit-mask-position: var(--mask-position);
   padding: 0;
-  transition: filter 300ms;
+  transition: filter 300ms, transform 300ms;
   width: var(--size);
 }
 
 .theme-toggler:focus-visible,
 .theme-toggler:hover {
   filter: brightness(1.75);
+  transform: scale(1.08);
 }
 
 @media screen and (min-width: 1024px) {
