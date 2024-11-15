@@ -105,24 +105,24 @@
 
 @media screen and (min-width: map-get($breakpoints, md)) {
   .personal-info {
-      flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
 
   .personal-info__content {
-      width: calc(100% - var(--photo-size) - 2rem);
+    width: calc(100% - var(--photo-size) - 2rem);
   }
 
   .personal-info__description {
-      font-size: 1.1rem;
+    font-size: 1.1rem;
   }
 
   .personal-info__list {
-      gap: 1.5rem;
+    gap: 1.5rem;
   }
 }
 
 @media screen and (min-width: map-get($breakpoints, lg)) {
   .personal-info__description {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 }

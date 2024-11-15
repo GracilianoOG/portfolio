@@ -28,7 +28,7 @@
   flex-direction: column;
 }
 
-.contact__feedback--show ~ .contact__item {
+.contact__feedback--show~.contact__item {
   filter: blur(5px);
 }
 
@@ -144,13 +144,13 @@
   border-color: var(--color-primary);
 }
 
-.has-content + .contact__label,
-.contact__field:focus + .contact__label {
+.has-content+.contact__label,
+.contact__field:focus+.contact__label {
   font-size: 85%;
   top: .5rem;
 }
 
-.contact__field:focus + .contact__label {
+.contact__field:focus+.contact__label {
   color: var(--color-primary);
 }
 
@@ -184,20 +184,20 @@
 
 @media screen and (min-width: map-get($breakpoints, md)) {
   .contact {
-      padding-top: 3rem;
-      padding-bottom: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
 @media screen and (min-width: map-get($breakpoints, lg)) {
   .contact {
-      gap: 1rem;
-      grid-template-columns: 2fr 3fr;
-      padding-top: 4rem;
-      padding-bottom: 4rem;
+    gap: 1rem;
+    grid-template-columns: 2fr 3fr;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .contact__image {
-      display: block;
+    display: block;
   }
 }

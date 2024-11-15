@@ -91,7 +91,8 @@ table {
   --container-sides: 1rem;
 }
 
-:root, :root.light {
+:root,
+:root.light {
   --color-background-1: var(--color-white-blue);
   --color-background-2: var(--color-white-gray);
   --color-background-3: var(--color-light-white);
@@ -126,13 +127,17 @@ table {
   --color-text: var(--color-dark-text);
 }
 
-html, body {
+html,
+body {
   background-color: var(--color-background-3);
   font-family: var(--font-main);
   scroll-behavior: smooth;
 }
 
-body, header, section, footer {
+body,
+header,
+section,
+footer {
   transition: background-color 300ms;
 }
 
@@ -227,7 +232,9 @@ body, header, section, footer {
   cursor: pointer;
 }
 
-.hamb-line, .header__hamburguer::after, .header__hamburguer::before {
+.hamb-line,
+.header__hamburguer::after,
+.header__hamburguer::before {
   content: "";
   background-color: var(--color-text);
   display: block;

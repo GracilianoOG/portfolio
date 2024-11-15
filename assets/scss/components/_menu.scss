@@ -31,17 +31,17 @@
 
 @media screen and (min-width: map-get($breakpoints, lg)) {
   .menu {
-      width: auto;
+    width: auto;
   }
 
   .menu__list {
-      flex-direction: row;
+    flex-direction: row;
   }
-  
+
   .menu__link {
-      border: none;
-      display: inline;
-      padding: .25rem;
-      width: auto;
+    border: none;
+    display: inline;
+    padding: .25rem;
+    width: auto;
   }
 }

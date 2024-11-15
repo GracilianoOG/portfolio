@@ -38,7 +38,8 @@
   --container-sides: 1rem;
 }
 
-:root, :root.light {
+:root,
+:root.light {
   --color-background-1: var(--color-white-blue);
   --color-background-2: var(--color-white-gray);
   --color-background-3: var(--color-light-white);
@@ -73,13 +74,17 @@
   --color-text: var(--color-dark-text);
 }
 
-html, body {
+html,
+body {
   background-color: var(--color-background-3);
   font-family: var(--font-main);
   scroll-behavior: smooth;
 }
 
-body, header, section, footer {
+body,
+header,
+section,
+footer {
   transition: background-color 300ms;
 }
 
@@ -92,13 +97,13 @@ body, header, section, footer {
 
 @keyframes fade-and-move {
   from {
-      transform: translate(var(--move-x-initial, 0), var(--move-y-initial, 0));
-      opacity: var(--opacity-initial, 0);
+    transform: translate(var(--move-x-initial, 0), var(--move-y-initial, 0));
+    opacity: var(--opacity-initial, 0);
   }
 
   to {
-      transform: translate(var(--move-x-final, 0), var(--move-y-final, 0));
-      opacity: var(--opacity-final, 1);
+    transform: translate(var(--move-x-final, 0), var(--move-y-final, 0));
+    opacity: var(--opacity-final, 1);
   }
 }
 
@@ -115,30 +120,30 @@ body, header, section, footer {
 
 @media (prefers-color-scheme: dark) {
   :root {
-      --color-background-1: var(--color-dark-background-1);
-      --color-background-2: var(--color-dark-background-2);
-      --color-background-3: var(--color-dark-background-3);
-      --color-description: var(--color-dark-description);
-      --color-disabled: var(--color-dark-disabled);
-      --color-neutral: var(--color-dark-neutral);
-      --color-source: var(--color-dark-source);
-      --color-source-button: var(--color-light-blue);
-      --color-text: var(--color-dark-text);
+    --color-background-1: var(--color-dark-background-1);
+    --color-background-2: var(--color-dark-background-2);
+    --color-background-3: var(--color-dark-background-3);
+    --color-description: var(--color-dark-description);
+    --color-disabled: var(--color-dark-disabled);
+    --color-neutral: var(--color-dark-neutral);
+    --color-source: var(--color-dark-source);
+    --color-source-button: var(--color-light-blue);
+    --color-text: var(--color-dark-text);
   }
 }
 
 @media screen and (min-width: map-get($breakpoints, md)) {
   :root {
-      --container-sides: 2rem;
+    --container-sides: 2rem;
   }
 }
 
 @media screen and (min-width: map-get($breakpoints, lg)) {
   :root {
-      --container-sides: 6rem;
+    --container-sides: 6rem;
   }
 
   .title {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 }

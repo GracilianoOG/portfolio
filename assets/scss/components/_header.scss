@@ -17,7 +17,7 @@
 
 /* Hamburguer */
 .header__hamburguer {
-  --line-gap: 0.4rem; 
+  --line-gap: 0.4rem;
   --line-width: 1.5rem;
   --line-height: 0.15rem;
   --translation: calc(var(--line-height) + var(--line-gap));
@@ -36,7 +36,9 @@
   cursor: pointer;
 }
 
-.hamb-line, .header__hamburguer::after, .header__hamburguer::before {
+.hamb-line,
+.header__hamburguer::after,
+.header__hamburguer::before {
   content: "";
   background-color: var(--color-text);
   display: block;
@@ -49,7 +51,7 @@
   transform: translateY(var(--translation)) rotate(45deg);
 }
 
-.header__hamburguer--close > .hamb-line {
+.header__hamburguer--close>.hamb-line {
   opacity: 0;
   width: 0%;
 }
