@@ -74,11 +74,13 @@
   --color-text: var(--color-dark-text);
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-background-3);
   font-family: var(--font-main);
-  scroll-behavior: smooth;
 }
 
 body,
