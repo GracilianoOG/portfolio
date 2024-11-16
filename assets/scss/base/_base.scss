@@ -1,5 +1,6 @@
 @use "../utils/breakpoints" as *;
 @use "../utils/themes";
+@use "../utils/animations";
 
 html {
   scroll-behavior: smooth;
@@ -22,18 +23,6 @@ footer {
   animation: fade-and-move .8s ease;
   margin: 0 auto;
   max-width: 1440px;
-}
-
-@keyframes fade-and-move {
-  from {
-    transform: translate(var(--move-x-initial, 0), var(--move-y-initial, 0));
-    opacity: var(--opacity-initial, 0);
-  }
-
-  to {
-    transform: translate(var(--move-x-final, 0), var(--move-y-final, 0));
-    opacity: var(--opacity-final, 1);
-  }
 }
 
 .container {

@@ -1,0 +1,11 @@
+@keyframes fade-and-move {
+  from {
+    transform: translate(var(--move-x-initial, 0), var(--move-y-initial, 0));
+    opacity: var(--opacity-initial, 0);
+  }
+
+  to {
+    transform: translate(var(--move-x-final, 0), var(--move-y-final, 0));
+    opacity: var(--opacity-final, 1);
+  }
+}

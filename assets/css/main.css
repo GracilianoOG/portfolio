@@ -140,6 +140,16 @@ table {
     --color-text: var(--color-dark-text);
   }
 }
+@keyframes fade-and-move {
+  from {
+    transform: translate(var(--move-x-initial, 0), var(--move-y-initial, 0));
+    opacity: var(--opacity-initial, 0);
+  }
+  to {
+    transform: translate(var(--move-x-final, 0), var(--move-y-final, 0));
+    opacity: var(--opacity-final, 1);
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -163,16 +173,6 @@ footer {
   max-width: 1440px;
 }
 
-@keyframes fade-and-move {
-  from {
-    transform: translate(var(--move-x-initial, 0), var(--move-y-initial, 0));
-    opacity: var(--opacity-initial, 0);
-  }
-  to {
-    transform: translate(var(--move-x-final, 0), var(--move-y-final, 0));
-    opacity: var(--opacity-final, 1);
-  }
-}
 .container {
   padding: 0 var(--container-sides);
 }
