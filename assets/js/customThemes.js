@@ -8,13 +8,9 @@ const toggleTheme = () => {
 }
 
 export const loadCachedTheme = () => {
-  const cachedTheme = sessionStorage.getItem(themes.key);
-  if(cachedTheme) {
-    classList.add(cachedTheme);
-  } else {
-    const isDarkPreferred = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    classList.add(isDarkPreferred ? themes.dark : themes.light);
-  }
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const cachedTheme = sessionStorage.getItem(themes.key) || (prefersDark ? themes.dark : themes.light);
+  classList.add(cachedTheme);
 }
 
 export default toggleTheme;
