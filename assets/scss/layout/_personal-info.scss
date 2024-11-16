@@ -1,4 +1,4 @@
-@use "../../utils/breakpoints" as *;
+@use "../utils/breakpoints" as *;
 
 .personal-info {
   --photo-size: clamp(10rem, 25vw, 25rem);

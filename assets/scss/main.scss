@@ -6,14 +6,14 @@
 @use "./components/header";
 @use "./components/main-title";
 @use "./components/menu";
-@use "./components/sections/personal-info";
-@use "./components/sections/about";
 @use "./components/cards";
-@use "./components/sections/attribute";
-@use "./components/sections/education";
-@use "./components/sections/projects";
-@use "./components/sections/contact";
 @use "./components/footer";
+@use "./layout/personal-info";
+@use "./layout/about";
+@use "./layout/attribute";
+@use "./layout/education";
+@use "./layout/projects";
+@use "./layout/contact";
 
 /* Extra Styling */
 @use "./utils/theme-toggler";
