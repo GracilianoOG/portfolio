@@ -79,6 +79,12 @@ themeToggler.addEventListener("click", toggleTheme);
 hamburguer.addEventListener("click", () => {
     headerMenu.classList.toggle("header__menu--off");
     hamburguer.classList.toggle("header__hamburguer--close");
+
+    if(headerMenu.classList.contains("header__menu--off")) {
+        hamburguer.setAttribute("aria-expanded", "false");
+    } else {
+        hamburguer.setAttribute("aria-expanded", "true");
+    }
 });
 
 // Back To Top Code
