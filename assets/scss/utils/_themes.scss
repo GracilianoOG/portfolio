@@ -1,0 +1,87 @@
+:root {
+  /* Base Colors */
+  --color-black: #000000;
+  --color-bright-blue: #D4E4FA;
+  --color-blue: #0C65DD;
+  --color-blue-linkedin: #1575CA;
+  --color-dark-gray: #464646;
+  --color-gray: #808080;
+  --color-green: #008000;
+  --color-green-resume: #19B64D;
+  --color-light-gray: #A2A2A2;
+  --color-light-white: #F5F5F5;
+  --color-light-blue: #5595E9;
+  --color-pink-github: #B514B5;
+  --color-red: #FF0000;
+  --color-tomato: #FF6347;
+  --color-white: #FFFFFF;
+  --color-white-blue: #EAF2FD;
+  --color-white-gray: #E5E5E5;
+
+  /* Dark Colors */
+  --color-dark-background-1: #1B1D1E;
+  --color-dark-background-2: #272A2C;
+  --color-dark-background-3: #1E2021;
+  --color-dark-description: #EEEEEE;
+  --color-dark-disabled: #60686C;
+  --color-dark-neutral: #181A1B;
+  --color-dark-source: #26292A;
+  --color-dark-source-button: var(--color-light-blue);
+  --color-dark-text: #BCB6AD;
+
+  /* Fonts */
+  --font-main: 'Raleway', sans-serif;
+
+  /* Spacing */
+  --container-sides: 1rem;
+}
+
+@mixin default-theme {
+  --color-background-1: var(--color-white-blue);
+  --color-background-2: var(--color-white-gray);
+  --color-background-3: var(--color-light-white);
+  --color-button-text: var(--color-white);
+  --color-contact-feedback: var(--color-dark-gray);
+  --color-link-1: var(--color-pink-github);
+  --color-link-2: var(--color-blue-linkedin);
+  --color-link-3: var(--color-green-resume);
+  --color-danger: var(--color-red);
+  --color-description: var(--color-black);
+  --color-disabled: var(--color-gray);
+  --color-highlight: var(--color-tomato);
+  --color-ok: var(--color-green);
+  --color-placeholder: var(--color-light-gray);
+  --color-primary: var(--color-blue);
+  --color-neutral: var(--color-white);
+  --color-secondary: var(--color-light-blue);
+  --color-source: var(--color-bright-blue);
+  --color-source-button: var(--color-blue);
+  --color-text: var(--color-dark-gray);
+}
+
+@mixin dark-theme {
+  --color-background-1: var(--color-dark-background-1);
+  --color-background-2: var(--color-dark-background-2);
+  --color-background-3: var(--color-dark-background-3);
+  --color-description: var(--color-dark-description);
+  --color-disabled: var(--color-dark-disabled);
+  --color-neutral: var(--color-dark-neutral);
+  --color-source: var(--color-dark-source);
+  --color-source-button: var(--color-light-blue);
+  --color-text: var(--color-dark-text);
+}
+
+:root,
+:root.light {
+  @include default-theme;
+}
+
+:root.dark {
+  @include dark-theme;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-theme;
+  }
+}
