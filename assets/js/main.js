@@ -82,8 +82,10 @@ hamburguer.addEventListener("click", () => {
 
     if(headerMenu.classList.contains("header__menu--off")) {
         hamburguer.setAttribute("aria-expanded", "false");
+        hamburguer.setAttribute("aria-label", "Open navigation menu");
     } else {
         hamburguer.setAttribute("aria-expanded", "true");
+        hamburguer.setAttribute("aria-label", "Close navigation menu");
     }
 });
 
