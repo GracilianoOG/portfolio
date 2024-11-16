@@ -1,4 +1,6 @@
-@media screen and (min-width: 1024px) {
+@use "../utils/breakpoints" as *;
+
+@media screen and (min-width: map-get($breakpoints, lg)) {
   .line-under {
     display: inline-block;
   }
