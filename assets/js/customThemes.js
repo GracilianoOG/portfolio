@@ -1,7 +1,7 @@
 const classList = document.documentElement.classList;
 const themes = { key: "theme", light: "light", dark: "dark" };
 
-export const loadThemeToggler = () => {
+export const setupThemeToggler = () => {
   const themeToggler = document.querySelector(".theme-toggler");
 
   themeToggler.addEventListener("click", () => {
@@ -11,7 +11,7 @@ export const loadThemeToggler = () => {
   });
 }
 
-export const loadCachedTheme = () => {
+export const loadStoredTheme = () => {
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   const cachedTheme = sessionStorage.getItem(themes.key) || (prefersDark ? themes.dark : themes.light);
   classList.add(cachedTheme);

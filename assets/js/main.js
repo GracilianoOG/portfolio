@@ -1,6 +1,6 @@
 import { validation as fv } from "./formValidation.js";
 import { handling as fh } from "./formHandling.js";
-import { loadThemeToggler, loadCachedTheme } from "./customThemes.js";
+import { setupThemeToggler, loadStoredTheme } from "./customThemes.js";
 import "./hamburger.js";
 import "./backToTop.js";
 
@@ -61,5 +61,5 @@ contactButton.addEventListener("click", event => {
     contactError.innerHTML = fv.errors.currentError;
 });
 
-loadCachedTheme();
-loadThemeToggler();
+loadStoredTheme();
+setupThemeToggler();
