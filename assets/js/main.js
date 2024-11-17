@@ -3,7 +3,7 @@ import { validation as fv } from "./formValidation.js";
 import { handling as fh } from "./formHandling.js";
 
 // Theme toggler import
-import toggleTheme, { loadCachedTheme } from "./customThemes.js";
+import { loadThemeToggler, loadCachedTheme } from "./customThemes.js";
 
 // Variables to work with forms
 const contactButton = document.querySelector(".contact__button");
@@ -11,9 +11,6 @@ const contactError = document.querySelector(".contact__error");
 const contactFeedback = document.querySelector(".contact__feedback");
 const contactFields = document.querySelectorAll(".contact__field");
 const form = document.querySelector(".contact__form");
-
-// Variables to work with theme toggling
-const themeToggler = document.querySelector(".theme-toggler");
 
 // Variables to work with the hamburguer menu
 const hamburguer = document.querySelector(".header__hamburguer");
@@ -72,9 +69,6 @@ contactButton.addEventListener("click", event => {
     contactError.innerHTML = fv.errors.currentError;
 });
 
-// Theme Switcher
-themeToggler.addEventListener("click", toggleTheme);
-
 // Hamburguer Menu
 hamburguer.addEventListener("click", () => {
     headerMenu.classList.toggle("header__menu--off");
@@ -99,5 +93,5 @@ window.onscroll = () => {
     }
 }
 
-// Load cached theme if possible
 loadCachedTheme();
+loadThemeToggler();
