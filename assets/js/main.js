@@ -2,6 +2,7 @@ import { validation as fv } from "./formValidation.js";
 import { handling as fh } from "./formHandling.js";
 import { loadThemeToggler, loadCachedTheme } from "./customThemes.js";
 import { loadHamburger } from "./hamburger.js";
+import "./backToTop.js";
 
 // Variables to work with forms
 const contactButton = document.querySelector(".contact__button");
@@ -9,9 +10,6 @@ const contactError = document.querySelector(".contact__error");
 const contactFeedback = document.querySelector(".contact__feedback");
 const contactFields = document.querySelectorAll(".contact__field");
 const form = document.querySelector(".contact__form");
-
-// Back To Top Button
-const backToTopButton = document.querySelector(".to-top");
 
 // Clear all input fields
 const clearFields = () => contactFields.forEach(field => field.value = "");
@@ -62,16 +60,6 @@ contactButton.addEventListener("click", event => {
     }
     contactError.innerHTML = fv.errors.currentError;
 });
-
-// Back To Top Code
-window.onscroll = () => {
-    const amount = 150;
-    if(document.body.scrollTop >= amount || document.documentElement.scrollTop >= amount) {
-        backToTopButton.classList.remove("to-top--hidden");
-    } else {
-        backToTopButton.classList.add("to-top--hidden");
-    }
-}
 
 loadCachedTheme();
 loadThemeToggler();
