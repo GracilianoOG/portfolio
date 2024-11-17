@@ -12,6 +12,7 @@ You can check the project's [repository here](https://github.com/GracilianoOG/po
 
 * Semantic HTML
 * CSS + Custom Properties
+* Sass pre-processor
 * Vanilla JS
 * Flexbox and Grid Layout
 * BEM Naming Convention
@@ -27,6 +28,11 @@ This is part of the **Oracle Next Education** (ONE) project, in partnership with
 
 ## 🔗 Links
 
-* [🔍 Alura](https://www.alura.com.br/ "Alura.")
-* [🔍 Oracle Next Education](https://www.oracle.com/br/education/oracle-next-education/ "Oracle Next Education.")
-* [🔍 Figma Copy](https://www.figma.com/file/UUADSjtWCQK4cJT5aIqIs0/Challenge-Front-end-Portf%C3%B3lio---Pessoal?node-id=0%3A1&t=PwUq6ijriVYHcwFP-1 "Figma Copy")
+* [Alura](https://www.alura.com.br/)
+* [Oracle Next Education](https://www.oracle.com/br/education/oracle-next-education/)
+* [Figma Copy](https://www.figma.com/file/UUADSjtWCQK4cJT5aIqIs0/Challenge-Front-end-Portf%C3%B3lio---Pessoal?node-id=0%3A1&t=PwUq6ijriVYHcwFP-1)
+* [Alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
+* [ARIA expanded](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+* [ARIA hidden](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+* [ARIA pressed](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
+* [ARIA required](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required)
