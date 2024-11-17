@@ -1,7 +1,7 @@
 import { validation as fv } from "./formValidation.js";
 import { handling as fh } from "./formHandling.js";
 import { loadThemeToggler, loadCachedTheme } from "./customThemes.js";
-import { loadHamburger } from "./hamburger.js";
+import "./hamburger.js";
 import "./backToTop.js";
 
 // Variables to work with forms
@@ -63,4 +63,3 @@ contactButton.addEventListener("click", event => {
 
 loadCachedTheme();
 loadThemeToggler();
-loadHamburger();
