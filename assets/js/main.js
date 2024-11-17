@@ -1,9 +1,7 @@
-// Form imports
 import { validation as fv } from "./formValidation.js";
 import { handling as fh } from "./formHandling.js";
-
-// Theme toggler import
 import { loadThemeToggler, loadCachedTheme } from "./customThemes.js";
+import { loadHamburguer } from "./hamburguer.js";
 
 // Variables to work with forms
 const contactButton = document.querySelector(".contact__button");
@@ -11,10 +9,6 @@ const contactError = document.querySelector(".contact__error");
 const contactFeedback = document.querySelector(".contact__feedback");
 const contactFields = document.querySelectorAll(".contact__field");
 const form = document.querySelector(".contact__form");
-
-// Variables to work with the hamburguer menu
-const hamburguer = document.querySelector(".header__hamburguer");
-const headerMenu = document.querySelector(".header__menu");
 
 // Back To Top Button
 const backToTopButton = document.querySelector(".to-top");
@@ -69,20 +63,6 @@ contactButton.addEventListener("click", event => {
     contactError.innerHTML = fv.errors.currentError;
 });
 
-// Hamburguer Menu
-hamburguer.addEventListener("click", () => {
-    headerMenu.classList.toggle("header__menu--off");
-    hamburguer.classList.toggle("header__hamburguer--close");
-
-    if(headerMenu.classList.contains("header__menu--off")) {
-        hamburguer.setAttribute("aria-expanded", "false");
-        hamburguer.setAttribute("aria-label", "Open navigation menu");
-    } else {
-        hamburguer.setAttribute("aria-expanded", "true");
-        hamburguer.setAttribute("aria-label", "Close navigation menu");
-    }
-});
-
 // Back To Top Code
 window.onscroll = () => {
     const amount = 150;
@@ -95,3 +75,4 @@ window.onscroll = () => {
 
 loadCachedTheme();
 loadThemeToggler();
+loadHamburguer();
