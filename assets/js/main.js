@@ -1,7 +1,7 @@
 import { validation as fv } from "./formValidation.js";
 import { handling as fh } from "./formHandling.js";
 import { loadThemeToggler, loadCachedTheme } from "./customThemes.js";
-import { loadHamburguer } from "./hamburguer.js";
+import { loadHamburger } from "./hamburger.js";
 
 // Variables to work with forms
 const contactButton = document.querySelector(".contact__button");
@@ -75,4 +75,4 @@ window.onscroll = () => {
 
 loadCachedTheme();
 loadThemeToggler();
-loadHamburguer();
+loadHamburger();
