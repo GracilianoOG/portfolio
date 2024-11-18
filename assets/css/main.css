@@ -127,19 +127,6 @@ table {
   --color-text: var(--color-dark-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background-1: var(--color-dark-background-1);
-    --color-background-2: var(--color-dark-background-2);
-    --color-background-3: var(--color-dark-background-3);
-    --color-description: var(--color-dark-description);
-    --color-disabled: var(--color-dark-disabled);
-    --color-neutral: var(--color-dark-neutral);
-    --color-source: var(--color-dark-source);
-    --color-source-button: var(--color-light-blue);
-    --color-text: var(--color-dark-text);
-  }
-}
 @keyframes fade-and-move {
   from {
     transform: translate(var(--move-x-initial, 0), var(--move-y-initial, 0));
