@@ -1,338 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This website showcases Gabriel's portfolio as a Front-end developer, featuring projects and skills developed during the Oracle Next Education program in 2022."
+    />
+    <title>Gabriel's Portfolio</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="This website showcases Gabriel's portfolio as a Front-end developer, featuring projects and skills developed during the Oracle Next Education program in 2022.">
-  <title>Gabriel's Portfolio</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
-</head>
+  <body class="wrapper">
+    <header id="home" class="header container">
+      <div class="header__main">
+        <h1 class="main-title">Gabriel's Portfolio</h1>
+        <button
+          class="header__hamburguer"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="header-menu"
+        >
+          <span class="hamb-line"></span>
+        </button>
+      </div>
+      <div id="header-menu" class="header__menu header__menu--off">
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#about" class="menu__link line-under">About</a>
+            </li>
+            <li class="menu__item">
+              <a href="#skills" class="menu__link line-under">Skills</a>
+            </li>
+            <li class="menu__item">
+              <a href="#hobbies" class="menu__link line-under">Hobbies</a>
+            </li>
+            <li class="menu__item">
+              <a href="#education" class="menu__link line-under">Education</a>
+            </li>
+            <li class="menu__item">
+              <a href="#projects" class="menu__link line-under">Projects</a>
+            </li>
+            <li class="menu__item">
+              <a href="#contact" class="menu__link line-under">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="theme-toggler"
+          type="button"
+          aria-label="Change dark mode"
+          aria-pressed="false"
+        ></button>
+      </div>
+    </header>
+    <main>
+      <section class="personal-info container">
+        <div class="personal-info__image"></div>
+        <div class="personal-info__content">
+          <h2 class="personal-info__title title">
+            Hello, my name is Gabriel and I'm a programmer!
+          </h2>
+          <p class="personal-info__description">
+            I'm a front-end developer and an English student living in Rio de
+            Janeiro, Brazil. I love programming and videogames, games and mods
+            were the things that introduced me to this wonderful world of
+            coding.
+          </p>
+          <ul class="personal-info__list">
+            <li class="personal-info__item">
+              <a
+                href="https://github.com/GracilianoOG"
+                class="personal-info__link personal-info__link--info-1 line-under-container"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="External link to my Github page."
+                ><span class="line-under line-under--pink">Github</span></a
+              >
+            </li>
+            <li class="personal-info__item">
+              <a
+                href="http://www.linkedin.com/in/gabrielgmbarros"
+                class="personal-info__link personal-info__link--info-2 line-under-container"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="External link to my Linkedin profile."
+                ><span class="line-under line-under--blue">Linkedin</span></a
+              >
+            </li>
+            <li class="personal-info__item">
+              <a
+                href="https://drive.google.com/file/d/16cWufzlriUBsaKd9DCPgCQyOL85MTiyD/view?usp=sharing"
+                class="personal-info__link personal-info__link--info-3 line-under-container"
+                rel="noopener noreferrer"
+                target="_blank"
+                title="External link to my resume."
+                ><span class="line-under line-under--green">Resume</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="about" class="about-me container">
+        <h2 class="about-me__title title">About me</h2>
+        <p class="about-me__description">
+          I lived my entire childhood around computers, since my father had an
+          internet café and would usually bring them home. It made it grow a
+          passion in me for computers and technology. My first contact with
+          programming was when I discovered Game Maker 8 (I still don't remember
+          how I found it to this day). The years passed, and I decided to take
+          some courses to understand this area more, and now I keep studying to
+          improve each day.
+        </p>
+        <p class="about-me__description">
+          Enthusiast of technology and video games. I love taking old computers
+          to fix and put them back to work. I'm a big fan of Valve and their
+          games, especially Half-Life since it introduced me to the fps genre
+          and the modding community, I would love to make a mod for it someday.
+          I also love chocolate, who doesn't? 🍫
+        </p>
+        <p class="about-me__description">
+          I'm a very curious and studious person, I'm always willing to learn
+          new things. I like to pass on knowledge, teaching someone requires
+          calmness and patience, just like a child in kindergarten. I appreciate
+          people that dedicate their lives to spread knowledge and wisdom for
+          free through the internet, it really makes a difference! 🌱
+        </p>
+      </section>
+      <section id="skills" class="attribute container">
+        <h2 class="attribute__title title">Skills</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--skill-1"></div>
+                <h3 class="card__title">HTML</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">The start of a great jorney. 🌱</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--skill-2"></div>
+                <h3 class="card__title">CSS</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">Making my future prettier. 😊</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--skill-3"></div>
+                <h3 class="card__title">Javascript</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">Coding my way to greatness. 🏆</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--skill-4"></div>
+                <h3 class="card__title">Java</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">Coffee keeps me awake to glory. 🎯</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--skill-5"></div>
+                <h3 class="card__title">Git</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">Never forgetting the past. 📷</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--skill-6"></div>
+                <h3 class="card__title">VSCode</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">Focus on the right things. 💡</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="hobbies" class="attribute container">
+        <h2 class="attribute__title title">Hobbies</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--hobby-1"></div>
+                <h3 class="card__title">Chat</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">People are nice. 🫂</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--hobby-2"></div>
+                <h3 class="card__title">Games</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">My favorite pastime. 🎮</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--hobby-3"></div>
+                <h3 class="card__title">Music</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">Calming for the soul. 🎼</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--hobby-4"></div>
+                <h3 class="card__title">Code</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">The thing I hate and love. ❤️</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--hobby-5"></div>
+                <h3 class="card__title">Read</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">Books? What about articles? 📚</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card__container">
+              <div class="card__face card__face--front">
+                <div class="card__image card__image--hobby-6"></div>
+                <h3 class="card__title">Youtube</h3>
+              </div>
+              <div class="card__face card__face--back">
+                <p class="card__text">Learning and laughing there. 💻</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="education" class="education container">
+        <h2 class="education__title title">Education</h2>
+        <div class="education__institutions">
+          <div class="institution">
+            <img
+              class="institution__image"
+              src="assets/img/education/senai-wh.jpg"
+              loading="lazy"
+              alt="SENAI's logo."
+              aria-hidden="true"
+            />
+            <h3 class="institution__course">Maintenance Mechanic</h3>
+            <p class="institution_description">
+              2016 -
+              <abbr title="Serviço Nacional de Aprendizagem Industrial"
+                >SENAI</abbr
+              >
+            </p>
+          </div>
+          <div class="institution">
+            <img
+              class="institution__image"
+              src="assets/img/education/ifrj.jpg"
+              loading="lazy"
+              alt="IFRJ's logo."
+              aria-hidden="true"
+            />
+            <h3 class="institution__course">Computer Technician</h3>
+            <p class="institution_description">
+              2018 -
+              <abbr title="Instituto Federal do Rio de Janeiro">IFRJ</abbr>
+            </p>
+          </div>
+          <div class="institution">
+            <img
+              class="institution__image"
+              src="assets/img/education/faetec.jpg"
+              loading="lazy"
+              alt="FAETEC's logo."
+              aria-hidden="true"
+            />
+            <h3 class="institution__course">Computer Technician</h3>
+            <p class="institution_description">
+              2021 -
+              <abbr title="Fundação de Apoio à Escola Técnica">FAETEC</abbr>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="projects" class="projects container">
+        <h2 class="projects__title title">Projects</h2>
+        <div class="project">
+          <img
+            class="project__image"
+            src="./assets/img/projects/project-1.png"
+            loading="lazy"
+            alt="This is a screenshot of the Product Card project, showcasing how it's displayed on bigger screens."
+          />
+          <div class="project__information">
+            <h3 class="project__title">Product Card</h3>
+            <p class="project__description">
+              This is a responsive Product Card made with HTML and plain CSS. I
+              had a lot of fun and learnt a lot while developing it.
+            </p>
+            <a
+              href="https://github.com/GracilianoOG/fementor-product-card"
+              class="project__link project__link--source"
+              title="Button to go to the project's source code in a new tab."
+              rel="noopener noreferrer"
+              target="_blank"
+              >Source</a
+            >
+            <a
+              href="https://gracilianoog.github.io/fementor-product-card/"
+              class="project__link project__link--demo"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Button to see the project running in a new tab."
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="project">
+          <img
+            class="project__image"
+            src="./assets/img/projects/project-2.png"
+            loading="lazy"
+            alt="This is a screenshot of the QR Code project, showcasing how it's displayed on bigger screens."
+          />
+          <div class="project__information">
+            <h3 class="project__title">QR Code</h3>
+            <p class="project__description">
+              This is a simple QR Code Preview made with HTML and CSS. It is
+              simple, but I really enjoyed making it.
+            </p>
+            <a
+              href="https://github.com/GracilianoOG/fementor-qrcode"
+              class="project__link project__link--source"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Button to go to the project's source code in a new tab."
+              >Source</a
+            >
+            <a
+              href="https://gracilianoog.github.io/fementor-qrcode/"
+              class="project__link project__link--demo"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Button to see the project running in a new tab."
+              >Demo</a
+            >
+          </div>
+        </div>
+        <div class="project">
+          <img
+            class="project__image"
+            src="./assets/img/projects/project-3.png"
+            loading="lazy"
+            alt="This is a screenshot of the Text Encoder project, showcasing how it's displayed on bigger screens."
+          />
+          <div class="project__information">
+            <h3 class="project__title">Text Encoder</h3>
+            <p class="project__description">
+              I made it during the Oracle Next Education course through the
+              Alura platform. I learnt so much coding it! It was made with HTML,
+              CSS and Javascript.
+            </p>
+            <a
+              href="https://github.com/GracilianoOG/descodificador-de-texto"
+              class="project__link project__link--source"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Button to go to the project's source code in a new tab."
+              >Source</a
+            >
+            <a
+              href="https://gracilianoog.github.io/descodificador-de-texto/"
+              class="project__link project__link--demo"
+              rel="noopener noreferrer"
+              target="_blank"
+              title="Button to see the project running in a new tab."
+              >Demo</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <section id="contact" class="contact container">
+      <div class="contact__feedback">
+        <span class="contact__feedback__title title">Thank you</span>
+        <button
+          class="contact__feedback__close"
+          type="button"
+          title="Close modal."
+        >
+          &times;
+        </button>
+      </div>
+      <div class="contact__item contact__image"></div>
+      <div class="contact__item contact__information">
+        <h2 class="contact__title title">Contact</h2>
+        <p class="contact__description">
+          Do you want to enter in contact with me?
+        </p>
+        <p class="contact__description">
+          Fill out the form below, I'll try to respond you as soon as possible.
+        </p>
+        <div class="contact__error" role="alert"></div>
+        <form
+          action="https://formsubmit.co/0608572af44fdc8ec0fba1f58f12adfc"
+          method="POST"
+          class="contact__form"
+        >
+          <div class="contact__form__group">
+            <input
+              class="contact__field"
+              type="text"
+              name="name"
+              id="name"
+              placeholder=""
+              maxlength="50"
+              required
+            />
+            <label class="contact__label" for="name"
+              >Name
+              <span class="contact__required" aria-hidden="true">*</span></label
+            >
+          </div>
 
-<body class="wrapper">
-  <header id="home" class="header container">
-    <div class="header__main">
-      <h1 class="main-title">Gabriel's Portfolio</h1>
-      <button class="header__hamburguer" type="button" aria-label="Open navigation menu" aria-expanded="false"
-        aria-controls="header-menu">
-        <span class="hamb-line"></span>
-      </button>
-    </div>
-    <div id="header-menu" class="header__menu header__menu--off">
-      <nav class="menu">
-        <ul class="menu__list">
-          <li class="menu__item"><a href="#about" class="menu__link line-under">About</a></li>
-          <li class="menu__item"><a href="#skills" class="menu__link line-under">Skills</a></li>
-          <li class="menu__item"><a href="#hobbies" class="menu__link line-under">Hobbies</a></li>
-          <li class="menu__item"><a href="#education" class="menu__link line-under">Education</a></li>
-          <li class="menu__item"><a href="#projects" class="menu__link line-under">Projects</a></li>
-          <li class="menu__item"><a href="#contact" class="menu__link line-under">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="theme-toggler" type="button" aria-label="Change dark mode" aria-pressed="false"></button>
-    </div>
-  </header>
-  <main>
-    <section class="personal-info container">
-      <div class="personal-info__image"></div>
-      <div class="personal-info__content">
-        <h2 class="personal-info__title title">Hello, my name is Gabriel and I'm a programmer!</h2>
-        <p class="personal-info__description">I'm a front-end developer and an English student living in Rio de Janeiro,
-          Brazil. I love programming and videogames, games and mods were the things that introduced me to this wonderful
-          world of coding.</p>
-        <ul class="personal-info__list">
-          <li class="personal-info__item"><a href="https://github.com/GracilianoOG"
-              class="personal-info__link personal-info__link--info-1 line-under-container" rel="noopener noreferrer"
-              target="_blank" title="External link to my Github page."><span
-                class="line-under line-under--pink">Github</span></a></li>
-          <li class="personal-info__item"><a href="http://www.linkedin.com/in/gabrielgmbarros"
-              class="personal-info__link personal-info__link--info-2 line-under-container" rel="noopener noreferrer"
-              target="_blank" title="External link to my Linkedin profile."><span
-                class="line-under line-under--blue">Linkedin</span></a></li>
-          <li class="personal-info__item"><a
-              href="https://drive.google.com/file/d/16cWufzlriUBsaKd9DCPgCQyOL85MTiyD/view?usp=sharing"
-              class="personal-info__link personal-info__link--info-3 line-under-container" rel="noopener noreferrer"
-              target="_blank" title="External link to my resume."><span
-                class="line-under line-under--green">Resume</span></a></li>
-        </ul>
+          <div class="contact__form__group">
+            <input
+              class="contact__field"
+              type="email"
+              name="email"
+              id="email"
+              placeholder=""
+              required
+            />
+            <label class="contact__label" for="email"
+              >E-mail
+              <span class="contact__required" aria-hidden="true">*</span></label
+            >
+          </div>
+
+          <div class="contact__form__group">
+            <input
+              class="contact__field"
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder=""
+              maxlength="50"
+              required
+            />
+            <label class="contact__label" for="subject"
+              >Subject
+              <span class="contact__required" aria-hidden="true">*</span></label
+            >
+          </div>
+
+          <div class="contact__form__group">
+            <textarea
+              class="contact__field"
+              name="message"
+              id="message"
+              rows="5"
+              placeholder=""
+              maxlength="255"
+              required
+            ></textarea>
+            <label class="contact__label" for="message"
+              >Message
+              <span class="contact__required" aria-hidden="true">*</span></label
+            >
+          </div>
+
+          <input
+            class="contact__button contact__button--disabled"
+            type="submit"
+            value="Send message"
+            disabled
+          />
+        </form>
       </div>
     </section>
-    <section id="about" class="about-me container">
-      <h2 class="about-me__title title">About me</h2>
-      <p class="about-me__description">I lived my entire childhood around computers, since my father had an internet
-        café and would usually bring them home. It made it grow a passion in me for computers and technology. My first
-        contact with programming was when I discovered Game Maker 8 (I still don't remember how I found it to this day).
-        The years passed, and I decided to take some courses to understand this area more, and now I keep studying to
-        improve each day.</p>
-      <p class="about-me__description">Enthusiast of technology and video games. I love taking old computers to fix and
-        put them back to work. I'm a big fan of Valve and their games, especially Half-Life since it introduced me to
-        the fps genre and the modding community, I would love to make a mod for it someday. I also love chocolate, who
-        doesn't? 🍫</p>
-      <p class="about-me__description">I'm a very curious and studious person, I'm always willing to learn new things. I
-        like to pass on knowledge, teaching someone requires calmness and patience, just like a child in kindergarten. I
-        appreciate people that dedicate their lives to spread knowledge and wisdom for free through the internet, it
-        really makes a difference! 🌱</p>
-    </section>
-    <section id="skills" class="attribute container">
-      <h2 class="attribute__title title">Skills</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--skill-1"></div>
-              <h3 class="card__title">HTML</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">The start of a great jorney. 🌱</p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--skill-2"></div>
-              <h3 class="card__title">CSS</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">Making my future prettier. 😊</p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--skill-3"></div>
-              <h3 class="card__title">Javascript</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">Coding my way to greatness. 🏆</p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--skill-4"></div>
-              <h3 class="card__title">Java</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">Coffee keeps me awake to glory. 🎯</p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--skill-5"></div>
-              <h3 class="card__title">Git</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">Never forgetting the past. 📷</p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--skill-6"></div>
-              <h3 class="card__title">VSCode</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">Focus on the right things. 💡</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="hobbies" class="attribute container">
-      <h2 class="attribute__title title">Hobbies</h2>
-      <div class="cards">
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--hobby-1"></div>
-              <h3 class="card__title">Chat</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">People are nice. 🫂</p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--hobby-2"></div>
-              <h3 class="card__title">Games</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">My favorite pastime. 🎮</p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--hobby-3"></div>
-              <h3 class="card__title">Music</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">Calming for the soul. 🎼</p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--hobby-4"></div>
-              <h3 class="card__title">Code</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">The thing I hate and love. ❤️</p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--hobby-5"></div>
-              <h3 class="card__title">Read</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">Books? What about articles? 📚</p>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__container">
-            <div class="card__face card__face--front">
-              <div class="card__image card__image--hobby-6"></div>
-              <h3 class="card__title">Youtube</h3>
-            </div>
-            <div class="card__face card__face--back">
-              <p class="card__text">Learning and laughing there. 💻</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="education" class="education container">
-      <h2 class="education__title title">Education</h2>
-      <div class="education__institutions">
-        <div class="institution">
-          <img class="institution__image" src="assets/img/education/senai-wh.jpg" loading="lazy"
-            alt="SENAI's logo." aria-hidden="true">
-          <h3 class="institution__course">Maintenance Mechanic</h3>
-          <p class="institution_description">2016 - <abbr title="Serviço Nacional de Aprendizagem Industrial">SENAI</abbr></p>
-        </div>
-        <div class="institution">
-          <img class="institution__image" src="assets/img/education/ifrj.jpg" loading="lazy"
-            alt="IFRJ's logo." aria-hidden="true">
-          <h3 class="institution__course">Computer Technician</h3>
-          <p class="institution_description">2018 - <abbr title="Instituto Federal do Rio de Janeiro">IFRJ</abbr></p>
-        </div>
-        <div class="institution">
-          <img class="institution__image" src="assets/img/education/faetec.jpg" loading="lazy"
-            alt="FAETEC's logo." aria-hidden="true">
-          <h3 class="institution__course">Computer Technician</h3>
-          <p class="institution_description">2021 - <abbr title="Fundação de Apoio à Escola Técnica">FAETEC</abbr></p>
-        </div>
-      </div>
-    </section>
-    <section id="projects" class="projects container">
-      <h2 class="projects__title title">Projects</h2>
-      <div class="project">
-        <img class="project__image" src="./assets/img/projects/project-1.png" loading="lazy"
-          alt="This is a screenshot of the Product Card project, showcasing how it's displayed on bigger screens.">
-        <div class="project__information">
-          <h3 class="project__title">Product Card</h3>
-          <p class="project__description">This is a responsive Product Card made with HTML and plain CSS. I had a lot of
-            fun and learnt a lot while developing it.</p>
-          <a href="https://github.com/GracilianoOG/fementor-product-card" class="project__link project__link--source"
-            title="Button to go to the project's source code in a new tab." rel="noopener noreferrer"
-            target="_blank">Source</a>
-          <a href="https://gracilianoog.github.io/fementor-product-card/" class="project__link project__link--demo"
-            rel="noopener noreferrer" target="_blank" title="Button to see the project running in a new tab.">Demo</a>
-        </div>
-      </div>
-      <div class="project">
-        <img class="project__image" src="./assets/img/projects/project-2.png" loading="lazy"
-          alt="This is a screenshot of the QR Code project, showcasing how it's displayed on bigger screens.">
-        <div class="project__information">
-          <h3 class="project__title">QR Code</h3>
-          <p class="project__description">This is a simple QR Code Preview made with HTML and CSS. It is simple, but I
-            really enjoyed making it.</p>
-          <a href="https://github.com/GracilianoOG/fementor-qrcode" class="project__link project__link--source"
-            rel="noopener noreferrer" target="_blank"
-            title="Button to go to the project's source code in a new tab.">Source</a>
-          <a href="https://gracilianoog.github.io/fementor-qrcode/" class="project__link project__link--demo"
-            rel="noopener noreferrer" target="_blank" title="Button to see the project running in a new tab.">Demo</a>
-        </div>
-      </div>
-      <div class="project">
-        <img class="project__image" src="./assets/img/projects/project-3.png" loading="lazy"
-          alt="This is a screenshot of the Text Encoder project, showcasing how it's displayed on bigger screens.">
-        <div class="project__information">
-          <h3 class="project__title">Text Encoder</h3>
-          <p class="project__description">I made it during the Oracle Next Education course through the Alura platform.
-            I learnt so much coding it! It was made with HTML, CSS and Javascript.</p>
-          <a href="https://github.com/GracilianoOG/descodificador-de-texto" class="project__link project__link--source"
-            rel="noopener noreferrer" target="_blank"
-            title="Button to go to the project's source code in a new tab.">Source</a>
-          <a href="https://gracilianoog.github.io/descodificador-de-texto/" class="project__link project__link--demo"
-            rel="noopener noreferrer" target="_blank" title="Button to see the project running in a new tab.">Demo</a>
-        </div>
-      </div>
-    </section>
-  </main>
-  <section id="contact" class="contact container">
-    <div class="contact__feedback">
-      <span class="contact__feedback__title title">Thank you</span>
-      <button class="contact__feedback__close" type="button" title="Close modal.">&times;</button>
-    </div>
-    <div class="contact__item contact__image"></div>
-    <div class="contact__item contact__information">
-      <h2 class="contact__title title">Contact</h2>
-      <p class="contact__description">Do you want to enter in contact with me?</p>
-      <p class="contact__description">Fill out the form below, I'll try to respond you as soon as possible.</p>
-      <div class="contact__error" role="alert"></div>
-      <form action="https://formsubmit.co/0608572af44fdc8ec0fba1f58f12adfc" method="POST" class="contact__form">
-        <div class="contact__form__group">
-          <input class="contact__field" type="text" name="name" id="name" placeholder="" maxlength="50" required>
-          <label class="contact__label" for="name">Name <span class="contact__required" aria-hidden="true">*</span></label>
-        </div>
+    <footer class="footer">
+      <p class="footer__text">
+        Developed with <span class="footer__highlight">love</span> by Gabriel
+      </p>
+      <p class="footer__date">2022</p>
+      <a
+        href="#home"
+        class="to-top to-top--hidden"
+        title="Back to the top of the page"
+      >
+        <div class="to-top__content">TOP</div>
+      </a>
+    </footer>
 
-        <div class="contact__form__group">
-          <input class="contact__field" type="email" name="email" id="email" placeholder="" required>
-          <label class="contact__label" for="email">E-mail <span class="contact__required" aria-hidden="true">*</span></label>
-        </div>
-
-        <div class="contact__form__group">
-          <input class="contact__field" type="text" name="subject" id="subject" placeholder="" maxlength="50" required>
-          <label class="contact__label" for="subject">Subject <span class="contact__required" aria-hidden="true">*</span></label>
-        </div>
-
-        <div class="contact__form__group">
-          <textarea class="contact__field" name="message" id="message" rows="5" placeholder="" maxlength="255"
-            required></textarea>
-          <label class="contact__label" for="message">Message <span class="contact__required" aria-hidden="true">*</span></label>
-        </div>
-
-        <input class="contact__button contact__button--disabled" type="submit" value="Send message" disabled>
-      </form>
-    </div>
-  </section>
-  <footer class="footer">
-    <p class="footer__text">Developed with <span class="footer__highlight">love</span> by Gabriel</p>
-    <p class="footer__date">2022</p>
-    <a href="#home" class="to-top to-top--hidden" title="Back to the top of the page">
-      <div class="to-top__content">TOP</div>
-    </a>
-  </footer>
-
-  <script type="module" src="assets/js/main.js"></script>
-</body>
-
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
 </html>
