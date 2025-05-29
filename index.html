@@ -8,13 +8,24 @@
       name="description"
       content="This website showcases Gabriel's portfolio as a Front-end developer, featuring projects and skills developed during the Oracle Next Education program in 2022."
     />
+
     <title>Gabriel's Portfolio</title>
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <link
       rel="shortcut icon"
       href="assets/img/favicon.ico"
       type="image/x-icon"
     />
+
+    <script>
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      const cachedTheme =
+        localStorage.getItem("theme") || (prefersDark ? "dark" : "light");
+      document.documentElement.classList.add(cachedTheme);
+    </script>
   </head>
 
   <body class="wrapper">
