@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../utils/breakpoints" as *;
 
 .contact {
@@ -12,8 +13,8 @@
 .contact__feedback {
   --feedback-size: 100%;
   --move-x-initial: 0;
-  animation: fade-and-move .5s ease;
-  background-color: rgba(0, 255, 0, .25);
+  animation: fade-and-move 0.5s ease;
+  background-color: rgba(0, 255, 0, 0.25);
   display: none;
   height: var(--feedback-size);
   position: absolute;
@@ -28,12 +29,12 @@
   flex-direction: column;
 }
 
-.contact__feedback--show~.contact__item {
+.contact__feedback--show ~ .contact__item {
   filter: blur(5px);
 }
 
 .contact__feedback__title {
-  animation: fade-and-move .4s ease;
+  animation: fade-and-move 0.4s ease;
   --move-x-initial: -2rem;
   color: var(--color-contact-feedback);
   text-align: center;
@@ -41,7 +42,8 @@
 
 .contact__feedback__title::before {
   --feedback-icon-size: 16rem;
-  background: url("../img/status/success.png") no-repeat center / var(--feedback-icon-size);
+  background: url("../img/status/success.png") no-repeat center /
+    var(--feedback-icon-size);
   content: "";
   display: block;
   height: var(--feedback-icon-size);
@@ -74,7 +76,7 @@
 }
 
 .contact__title {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact__description {
@@ -101,14 +103,14 @@
   font-size: 1rem;
   padding-left: 1rem;
   position: absolute;
-  transition: top .15s ease-in-out, font-size .15s ease-in-out;
+  transition: top 0.15s ease-in-out, font-size 0.15s ease-in-out;
   top: 1.4rem;
 }
 
 .contact__field {
   border: none;
-  border-bottom: .125rem solid var(--color-disabled);
-  border-radius: .3125rem;
+  border-bottom: 0.125rem solid var(--color-disabled);
+  border-radius: 0.3125rem;
   box-sizing: border-box;
   display: block;
   font-family: var(--font-main);
@@ -131,20 +133,20 @@
 
 .has-content,
 .contact__field:focus {
-  padding: 2rem 1rem .5rem;
+  padding: 2rem 1rem 0.5rem;
 }
 
 .contact__field:focus {
   border-color: var(--color-primary);
 }
 
-.has-content+.contact__label,
-.contact__field:focus+.contact__label {
+.has-content + .contact__label,
+.contact__field:focus + .contact__label {
   font-size: 85%;
-  top: .5rem;
+  top: 0.5rem;
 }
 
-.contact__field:focus+.contact__label {
+.contact__field:focus + .contact__label {
   color: var(--color-primary);
 }
 
@@ -159,8 +161,8 @@
   cursor: pointer;
   font-family: var(--font-main);
   font-size: 1rem;
-  margin-right: .75rem;
-  padding: .8rem 1rem;
+  margin-right: 0.75rem;
+  padding: 0.8rem 1rem;
   text-decoration: none;
   transition: all 500ms;
 }
@@ -180,14 +182,14 @@
   color: var(--color-danger);
 }
 
-@media screen and (min-width: map-get($breakpoints, md)) {
+@media screen and (min-width: map.get($breakpoints, md)) {
   .contact {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
 }
 
-@media screen and (min-width: map-get($breakpoints, lg)) {
+@media screen and (min-width: map.get($breakpoints, lg)) {
   .contact {
     gap: 1rem;
     grid-template-columns: 2fr 3fr;

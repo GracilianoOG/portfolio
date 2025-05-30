@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../utils/breakpoints" as *;
 
 .header {
@@ -51,7 +52,7 @@
   transform: translateY(var(--translation)) rotate(45deg);
 }
 
-.header__hamburguer--close>.hamb-line {
+.header__hamburguer--close > .hamb-line {
   opacity: 0;
   width: 0%;
 }
@@ -70,7 +71,7 @@
   display: none;
 }
 
-@media screen and (min-width: map-get($breakpoints, lg)) {
+@media screen and (min-width: map.get($breakpoints, lg)) {
   .header {
     align-items: center;
     flex-direction: row;

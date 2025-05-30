@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../utils/breakpoints" as *;
 
 .cards {
@@ -125,19 +126,19 @@
   font-weight: 700;
 }
 
-@media screen and (min-width: map-get($breakpoints, xs)) {
+@media screen and (min-width: map.get($breakpoints, xs)) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (min-width: map-get($breakpoints, sm)) {
+@media screen and (min-width: map.get($breakpoints, sm)) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (min-width: map-get($breakpoints, lg)) {
+@media screen and (min-width: map.get($breakpoints, lg)) {
   .cards {
     grid-template-columns: repeat(6, 1fr);
   }

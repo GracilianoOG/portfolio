@@ -1,6 +1,7 @@
+@use "sass:map";
 @use "../utils/breakpoints" as *;
 
-@media screen and (min-width: map-get($breakpoints, lg)) {
+@media screen and (min-width: map.get($breakpoints, lg)) {
   .line-under {
     display: inline-block;
   }
@@ -9,7 +10,7 @@
     background-color: var(--color-primary);
     content: "";
     display: block;
-    height: .175em;
+    height: 0.175em;
     transition: width 250ms ease-out;
     width: 0%;
   }

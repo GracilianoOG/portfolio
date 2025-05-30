@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../utils/breakpoints" as *;
 
 .personal-info {
@@ -41,7 +42,7 @@
 .personal-info__link {
   color: var(--color-text);
   font-weight: 600;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   text-decoration: none;
   transition: opacity 500ms, color 500ms;
 }
@@ -59,7 +60,7 @@
   -webkit-mask-repeat: var(--mask-repeat);
   mask-size: var(--mask-size);
   -webkit-mask-size: var(--mask-size);
-  margin-right: .5rem;
+  margin-right: 0.5rem;
   transition: background-color 300ms;
   vertical-align: -35%;
   width: var(--size);
@@ -103,7 +104,7 @@
   background-color: var(--color-link-3);
 }
 
-@media screen and (min-width: map-get($breakpoints, md)) {
+@media screen and (min-width: map.get($breakpoints, md)) {
   .personal-info {
     flex-direction: row-reverse;
   }
@@ -121,7 +122,7 @@
   }
 }
 
-@media screen and (min-width: map-get($breakpoints, lg)) {
+@media screen and (min-width: map.get($breakpoints, lg)) {
   .personal-info__description {
     font-size: 1.2rem;
   }

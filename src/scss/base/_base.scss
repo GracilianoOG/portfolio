@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "../utils/breakpoints" as *;
 @use "../utils/themes";
 @use "../utils/animations";
@@ -20,7 +21,7 @@ footer {
 
 .wrapper {
   --move-x-initial: -2rem;
-  animation: fade-and-move .8s ease;
+  animation: fade-and-move 0.8s ease;
   margin: 0 auto;
   max-width: 1440px;
 }
@@ -36,13 +37,13 @@ footer {
   text-transform: capitalize;
 }
 
-@media screen and (min-width: map-get($breakpoints, md)) {
+@media screen and (min-width: map.get($breakpoints, md)) {
   :root {
     --container-sides: 2rem;
   }
 }
 
-@media screen and (min-width: map-get($breakpoints, lg)) {
+@media screen and (min-width: map.get($breakpoints, lg)) {
   :root {
     --container-sides: 6rem;
   }
