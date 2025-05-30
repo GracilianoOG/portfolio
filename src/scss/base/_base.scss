@@ -41,8 +41,8 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
+  animation: focus 0.35s ease-out forwards;
   outline: 2px solid var(--color-text);
-  outline-offset: 4px;
 }
 
 @media screen and (min-width: map.get($breakpoints, md)) {
