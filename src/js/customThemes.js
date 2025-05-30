@@ -1,18 +1,18 @@
 export const setupThemeToggler = () => {
-  const themes = { key: "theme", light: "light", dark: "dark" };
+  const Themes = Object.freeze({ LIGHT: "light", DARK: "dark" });
   const themeToggler = document.querySelector(".theme-toggler");
   const classList = document.documentElement.classList;
 
   themeToggler.addEventListener("click", () => {
-    classList.toggle(themes.dark);
-    classList.toggle(themes.light);
-    const isLightTheme = classList.contains(themes.light);
-    localStorage.setItem(themes.key, isLightTheme ? themes.light : themes.dark);
+    classList.toggle(Themes.DARK);
+    classList.toggle(Themes.LIGHT);
+    const isLightTheme = classList.contains(Themes.LIGHT);
+    localStorage.setItem("theme", isLightTheme ? Themes.LIGHT : Themes.DARK);
     themeToggler.setAttribute("aria-pressed", isLightTheme ? "false" : "true");
   });
 
   themeToggler.setAttribute(
     "aria-pressed",
-    classList.contains("light") ? "false" : "true"
+    classList.contains(Themes.LIGHT) ? "false" : "true"
   );
 };
