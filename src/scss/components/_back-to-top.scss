@@ -4,11 +4,13 @@
   --move-y-initial: 50%;
   animation: fade-and-move 500ms;
   bottom: var(--container-sides);
+  border-radius: 50%;
   color: var(--color-button-text);
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 600;
   height: var(--size);
   line-height: var(--size);
+  overflow: hidden;
   position: fixed;
   right: var(--container-sides);
   text-decoration: none;
@@ -21,7 +23,6 @@
   --vertical-shadow: 2px;
   box-shadow: 0 var(--vertical-shadow) var(--color-black);
   background-color: var(--color-primary);
-  border-radius: 50%;
   transition: transform 50ms;
 }
 
