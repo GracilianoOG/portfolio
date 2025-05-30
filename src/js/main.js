@@ -3,6 +3,7 @@ import { handling as fh } from "./formHandling.js";
 import { setupThemeToggler } from "./customThemes.js";
 import "./hamburger.js";
 import "./backToTop.js";
+import "../scss/main.scss";
 
 // Variables to work with forms
 const contactButton = document.querySelector(".contact__button");
