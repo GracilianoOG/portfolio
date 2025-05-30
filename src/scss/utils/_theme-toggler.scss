@@ -1,12 +1,25 @@
 .theme-toggler {
   --size: 2.5rem;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+  padding: 0;
+  transition: filter 300ms, transform 300ms;
+}
+
+.theme-toggler::before {
   --mask-image: url("../img/theme-switch.svg");
   --mask-size: 1.5rem;
   --mask-repeat: no-repeat;
   --mask-position: center;
-  
+
   background-color: var(--color-text);
   cursor: pointer;
+  content: "";
+  display: block;
   height: var(--size);
   mask-image: var(--mask-image);
   -webkit-mask-image: var(--mask-image);
@@ -17,7 +30,6 @@
   mask-position: var(--mask-position);
   -webkit-mask-position: var(--mask-position);
   padding: 0;
-  transition: filter 300ms, transform 300ms;
   width: var(--size);
 }
 
