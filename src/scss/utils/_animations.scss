@@ -9,3 +9,13 @@
     opacity: var(--opacity-final, 1);
   }
 }
+
+@keyframes focus {
+  0% {
+    outline-offset: 0px;
+  }
+
+  100% {
+    outline-offset: 4px;
+  }
+}
