@@ -164,7 +164,7 @@
   margin-right: 0.75rem;
   padding: 0.8rem 1rem;
   text-decoration: none;
-  transition: all 500ms;
+  transition: background-color 500ms, transform 500ms;
 }
 
 .contact__button--disabled {
