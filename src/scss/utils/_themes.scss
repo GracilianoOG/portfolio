@@ -1,36 +1,37 @@
 :root {
   /* Base Colors */
   --color-black: #000000;
-  --color-bright-blue: #D4E4FA;
-  --color-blue: #0C65DD;
-  --color-blue-linkedin: #1575CA;
+  --color-bright-blue: #d4e4fa;
+  --color-blue: #0c65dd;
+  --color-blue-linkedin: #1575ca;
   --color-dark-gray: #464646;
   --color-gray: #808080;
   --color-green: #008000;
-  --color-green-resume: #19B64D;
-  --color-light-gray: #A2A2A2;
-  --color-light-white: #F5F5F5;
-  --color-light-blue: #5595E9;
-  --color-pink-github: #B514B5;
-  --color-red: #FF0000;
-  --color-tomato: #FF6347;
-  --color-white: #FFFFFF;
-  --color-white-blue: #EAF2FD;
-  --color-white-gray: #E5E5E5;
+  --color-green-resume: #19b64d;
+  --color-light-gray: #6f6f6f;
+  --color-light-white: #f5f5f5;
+  --color-light-blue: #5595e9;
+  --color-pink-github: #b514b5;
+  --color-red: #ff0000;
+  --color-tomato: #ff6347;
+  --color-dark-tomato: #e32d0c;
+  --color-white: #ffffff;
+  --color-white-blue: #eaf2fd;
+  --color-white-gray: #e5e5e5;
 
   /* Dark Colors */
-  --color-dark-background-1: #1B1D1E;
-  --color-dark-background-2: #272A2C;
-  --color-dark-background-3: #1E2021;
-  --color-dark-description: #EEEEEE;
-  --color-dark-disabled: #60686C;
-  --color-dark-neutral: #181A1B;
-  --color-dark-source: #26292A;
+  --color-dark-background-1: #1b1d1e;
+  --color-dark-background-2: #272a2c;
+  --color-dark-background-3: #1e2021;
+  --color-dark-description: #eeeeee;
+  --color-dark-disabled: #60686c;
+  --color-dark-neutral: #181a1b;
+  --color-dark-source: #26292a;
   --color-dark-source-button: var(--color-light-blue);
-  --color-dark-text: #BCB6AD;
+  --color-dark-text: #bcb6ad;
 
   /* Fonts */
-  --font-main: 'Raleway', sans-serif;
+  --font-main: "Raleway", sans-serif;
 
   /* Spacing */
   --container-sides: 1rem;
@@ -48,7 +49,7 @@
   --color-danger: var(--color-red);
   --color-description: var(--color-black);
   --color-disabled: var(--color-gray);
-  --color-highlight: var(--color-tomato);
+  --color-highlight: var(--color-dark-tomato);
   --color-ok: var(--color-green);
   --color-placeholder: var(--color-light-gray);
   --color-primary: var(--color-blue);
@@ -65,6 +66,7 @@
   --color-background-3: var(--color-dark-background-3);
   --color-description: var(--color-dark-description);
   --color-disabled: var(--color-dark-disabled);
+  --color-highlight: var(--color-tomato);
   --color-neutral: var(--color-dark-neutral);
   --color-source: var(--color-dark-source);
   --color-source-button: var(--color-light-blue);
