@@ -37,6 +37,14 @@ footer {
   text-transform: capitalize;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 4px;
+}
+
 @media screen and (min-width: map.get($breakpoints, md)) {
   :root {
     --container-sides: 2rem;
