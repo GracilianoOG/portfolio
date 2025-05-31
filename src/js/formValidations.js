@@ -9,7 +9,7 @@ const validateFields = () => {
   const validations = {
     name: [
       {
-        valid: !fields.name.validity.valueMissing,
+        valid: fields.name.value.trim().length > 0,
         message: "Name input is empty",
       },
       {
@@ -19,7 +19,7 @@ const validateFields = () => {
     ],
     email: [
       {
-        valid: !fields.email.validity.valueMissing,
+        valid: fields.email.value.trim().length > 0,
         message: "Email input is empty",
       },
       {
@@ -29,7 +29,7 @@ const validateFields = () => {
     ],
     subject: [
       {
-        valid: !fields.subject.validity.valueMissing,
+        valid: fields.subject.value.trim().length > 0,
         message: "Subject input is empty",
       },
       {
@@ -39,7 +39,7 @@ const validateFields = () => {
     ],
     message: [
       {
-        valid: !fields.message.validity.valueMissing,
+        valid: fields.message.value.trim().length > 0,
         message: "Message input is empty",
       },
       {
