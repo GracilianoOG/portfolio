@@ -1,16 +1,19 @@
-import { validation as fv } from "./formValidation.js";
 import { handling as fh } from "./formHandling.js";
 import { setupThemeToggler } from "./customThemes.js";
 import "./hamburger.js";
 import "./backToTop.js";
 import "../scss/main.scss";
+import {
+  applyValidityStyle,
+  keepLabelOnTop,
+  validateForm,
+} from "./formValidations.js";
 
 // Variables to work with forms
 const contactButton = document.querySelector(".contact__button");
 const contactError = document.querySelector(".contact__error");
 const contactFeedback = document.querySelector(".contact__feedback");
 const contactFields = document.querySelectorAll(".contact__field");
-const form = document.querySelector(".contact__form");
 
 // Clear all input fields
 const clearFields = () => contactFields.forEach(field => (field.value = ""));
@@ -40,21 +43,17 @@ contactFeedback.addEventListener("click", closeFeedback);
 
 // Add classes on the fields
 contactFields.forEach(field =>
-  field.addEventListener("blur", event => {
-    fv.applyLabelOnTopEffect(event);
-    fv.applyValidityClass(event);
+  field.addEventListener("blur", () => {
+    keepLabelOnTop(field);
+    applyValidityStyle(field);
   })
-);
-
-// Disable submit button if it's empty
-form.addEventListener("keyup", () =>
-  fv.isEveryFieldEmpty(contactFields, contactButton)
 );
 
 // Show a message after submiting the form
 contactButton.addEventListener("click", event => {
   event.preventDefault();
-  if (fv.isEveryFieldValid(contactFields)) {
+  const [isFormValid, errors] = validateForm();
+  if (isFormValid) {
     const values = [];
     contactFields.forEach(field => values.push(field.value));
     fh.submitForm(...values);
@@ -63,7 +62,7 @@ contactButton.addEventListener("click", event => {
     contactError.innerHTML = "";
     return;
   }
-  contactError.innerHTML = fv.errors.currentError;
+  contactError.innerHTML = errors;
 });
 
 setupThemeToggler();
