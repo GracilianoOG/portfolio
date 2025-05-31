@@ -65,14 +65,6 @@ export const applyValidityStyle = field => {
   field.classList.remove(isValid ? ERROR_CLASS : VALID_CLASS);
 };
 
-export const keepLabelOnTop = field => {
-  const HAS_CONTENT_CLASS = "has-content";
-  const length = field.value.length;
-  length > 0
-    ? field.classList.add(HAS_CONTENT_CLASS)
-    : field.classList.remove(HAS_CONTENT_CLASS);
-};
-
 export const validateForm = () => {
   const validations = validateFields();
   const validation = [true, ""];
