@@ -3,11 +3,7 @@ import { setupThemeToggler } from "./customThemes.js";
 import "./hamburger.js";
 import "./backToTop.js";
 import "../scss/main.scss";
-import {
-  applyValidityStyle,
-  keepLabelOnTop,
-  validateForm,
-} from "./formValidations.js";
+import { applyValidityStyle, validateForm } from "./formValidations.js";
 
 // Variables to work with forms
 const contactButton = document.querySelector(".contact__button");
@@ -27,10 +23,7 @@ const toggleModal = force => {
 // Reset all the styles of the fields
 const resetFields = () => {
   clearFields();
-  contactFields.forEach(field => {
-    field.classList.remove("contact__field--ok");
-    field.classList.remove("has-content");
-  });
+  contactFields.forEach(field => field.classList.remove("contact__field--ok"));
 };
 
 // Closable contact modal
@@ -38,10 +31,7 @@ contactFeedback.addEventListener("click", () => toggleModal(false));
 
 // Add classes on the fields
 contactFields.forEach(field =>
-  field.addEventListener("blur", () => {
-    keepLabelOnTop(field);
-    applyValidityStyle(field);
-  })
+  field.addEventListener("blur", () => applyValidityStyle(field))
 );
 
 // Show a message after submiting the form
