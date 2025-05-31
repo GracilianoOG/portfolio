@@ -142,7 +142,7 @@
   border-color: var(--color-ok);
 }
 
-.has-content,
+.contact__field:not(:placeholder-shown),
 .contact__field:focus {
   padding: 2rem 1rem 0.5rem;
 }
@@ -151,7 +151,7 @@
   border-color: var(--color-primary);
 }
 
-.has-content + .contact__label,
+.contact__field:not(:placeholder-shown) + .contact__label,
 .contact__field:focus + .contact__label {
   font-size: 85%;
   top: 0.5rem;
