@@ -40,7 +40,7 @@ contactButton.addEventListener("click", event => {
   const [isFormValid, errors] = validateForm();
   if (isFormValid) {
     const values = [];
-    contactFields.forEach(field => values.push(field.value));
+    contactFields.forEach(field => values.push(field.value.trim()));
     submitForm(...values);
     toggleModal(true);
     resetFields();
