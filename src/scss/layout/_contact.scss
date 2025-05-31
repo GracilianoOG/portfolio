@@ -86,8 +86,17 @@
 }
 
 .contact__error {
-  color: var(--color-danger);
+  border-radius: 1rem;
+  color: var(--color-invalid);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
   margin: 1rem 0;
+}
+
+.contact__error:not(:empty) {
+  background-color: var(--color-invalid-bg);
+  padding: 1rem;
 }
 
 .contact__form__group {
