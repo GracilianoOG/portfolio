@@ -130,6 +130,7 @@
     transform: rotateY(calc(var(--rotation-val) * -1));
   }
 
+  .project:focus-within > .project__image,
   .project:hover > .project__image {
     --box-shadow-left: var(--box-shadow-hover);
     --box-shadow-right: var(--box-shadow-hover);
