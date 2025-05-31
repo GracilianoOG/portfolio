@@ -20,12 +20,8 @@ const clearFields = () => contactFields.forEach(field => (field.value = ""));
 window.onload = clearFields;
 
 // Manipulate the feedback modal
-const showFeedback = () => {
-  contactFeedback.classList.add("contact__feedback--show");
-};
-
-const closeFeedback = () => {
-  contactFeedback.classList.remove("contact__feedback--show");
+const toggleModal = force => {
+  contactFeedback.classList.toggle("contact__feedback--show", force);
 };
 
 // Reset all the styles of the fields
@@ -38,7 +34,7 @@ const resetFields = () => {
 };
 
 // Closable contact modal
-contactFeedback.addEventListener("click", closeFeedback);
+contactFeedback.addEventListener("click", () => toggleModal(false));
 
 // Add classes on the fields
 contactFields.forEach(field =>
@@ -56,7 +52,7 @@ contactButton.addEventListener("click", event => {
     const values = [];
     contactFields.forEach(field => values.push(field.value));
     submitForm(...values);
-    showFeedback();
+    toggleModal(true);
     resetFields();
     contactError.innerHTML = "";
     return;
