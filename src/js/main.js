@@ -32,9 +32,8 @@ const closeFeedback = () => {
 const resetFields = () => {
   clearFields();
   contactFields.forEach(field => {
-    field.focus();
-    field.blur();
-    field.classList.remove("contact__field--error");
+    field.classList.remove("contact__field--ok");
+    field.classList.remove("has-content");
   });
 };
 
