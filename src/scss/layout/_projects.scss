@@ -55,6 +55,14 @@
   margin-bottom: 1.25rem;
 }
 
+.project__tags {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
 .project__link {
   border: 0.125rem solid transparent;
   display: inline-block;
