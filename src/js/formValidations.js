@@ -77,11 +77,12 @@ export const validateForm = () => {
   const validations = validateFields();
   const validation = [true, ""];
 
-  Object.values(validations).forEach(field => {
-    field.forEach(({ valid, message }) => {
+  Object.entries(validations).forEach(field => {
+    field[1].forEach(({ valid, message }) => {
       if (!valid) {
         validation[0] = false;
         validation[1] += `<p>${message}!</p>`;
+        applyValidityStyle(fields[field[0]]);
       }
     });
   });
