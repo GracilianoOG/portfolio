@@ -1,4 +1,4 @@
-import { handling as fh } from "./formHandling.js";
+import { submitForm } from "./formHandling.js";
 import { setupThemeToggler } from "./customThemes.js";
 import "./hamburger.js";
 import "./backToTop.js";
@@ -55,7 +55,7 @@ contactButton.addEventListener("click", event => {
   if (isFormValid) {
     const values = [];
     contactFields.forEach(field => values.push(field.value));
-    fh.submitForm(...values);
+    submitForm(...values);
     showFeedback();
     resetFields();
     contactError.innerHTML = "";
