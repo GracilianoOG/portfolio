@@ -1,5 +1,5 @@
 import { submitForm } from "./formHandling.js";
-import { setupThemeToggler } from "./customThemes.js";
+import "./customThemes.js";
 import "./hamburger.js";
 import "./backToTop.js";
 import "../scss/main.scss";
@@ -49,5 +49,3 @@ contactButton.addEventListener("click", event => {
   }
   contactError.innerHTML = errors;
 });
-
-setupThemeToggler();
