@@ -3,6 +3,10 @@
 @use "../utils/themes";
 @use "../utils/animations";
 
+* {
+  scrollbar-color: var(--color-blue) var(--color-background-2);
+}
+
 html {
   scroll-behavior: smooth;
 }
