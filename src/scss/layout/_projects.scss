@@ -68,30 +68,11 @@
   display: inline-block;
   font-weight: 600;
   text-decoration: none;
-  padding: 0.8rem 1rem;
-  transition: background-color 500ms, color 500ms;
+  transition: background-color 500ms, color 500ms, border-color 500ms;
 }
 
 .project__link--source {
-  background-color: transparent;
-  color: var(--color-source-button);
-  border: 0.125rem solid var(--color-primary);
   margin-right: 0.75rem;
-}
-
-.project__link--source:focus-visible,
-.project__link--source:hover {
-  background-color: var(--color-source);
-}
-
-.project__link--demo {
-  background-color: var(--color-primary);
-  color: var(--color-button-text);
-}
-
-.project__link--demo:focus-visible,
-.project__link--demo:hover {
-  background-color: var(--color-secondary);
 }
 
 @media screen and (min-width: map.get($breakpoints, lg)) {

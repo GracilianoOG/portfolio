@@ -166,26 +166,13 @@
 }
 
 .contact__button {
-  background-color: var(--color-primary);
   border: none;
-  color: var(--color-button-text);
-  cursor: pointer;
-  font-family: var(--font-main);
-  font-size: 1rem;
-  margin-right: 0.75rem;
-  padding: 0.8rem 1rem;
   text-decoration: none;
   transition: background-color 500ms, transform 500ms;
 }
 
-.contact__button--disabled {
-  background-color: var(--color-disabled);
-  pointer-events: none;
-}
-
 .contact__button:focus-visible,
 .contact__button:hover {
-  background-color: var(--color-secondary);
   transform: scale(1.05);
 }
 
