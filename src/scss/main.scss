@@ -1,14 +1,19 @@
-/* Essential */
+/* Base */
 @use "./base/reset";
 @use "./base/base";
 
-/* Structure */
+/* Components */
 @use "./components/header";
 @use "./components/main-title";
 @use "./components/menu";
 @use "./components/cards";
 @use "./components/footer";
 @use "./components/tag";
+@use "./components/theme-toggler";
+@use "./components/line-under";
+@use "./components/back-to-top";
+
+/* Layout */
 @use "./layout/personal-info";
 @use "./layout/about";
 @use "./layout/attribute";
@@ -16,10 +21,5 @@
 @use "./layout/projects";
 @use "./layout/contact";
 
-/* Extra Styling */
-@use "./utils/theme-toggler";
-@use "./utils/line-under";
-@use "./components/back-to-top";
-
-/* Fonts */
+/* Font */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
