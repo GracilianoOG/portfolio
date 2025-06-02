@@ -26,9 +26,9 @@
   transition: transform 50ms;
 }
 
-.to-top:active > .to-top__content {
+.to-top:active {
   --vertical-shadow: 0;
-  transform: translateY(0.15rem);
+  transform: scale(0.95);
 }
 
 .to-top--hidden {
