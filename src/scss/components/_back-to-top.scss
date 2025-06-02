@@ -2,7 +2,10 @@
   --size: 3.125rem;
   --move-x-initial: 0;
   --move-y-initial: 50%;
+  --shadow-y: 2px;
   animation: fade-and-move 500ms;
+  background-color: var(--color-primary);
+  box-shadow: 0 var(--shadow-y) 5px rgba(0, 0, 0, 0.35);
   bottom: var(--container-sides);
   border-radius: 50%;
   color: var(--color-button-text);
@@ -13,24 +16,18 @@
   overflow: hidden;
   position: fixed;
   right: var(--container-sides);
+  transition: transform 50ms;
   text-decoration: none;
   text-align: center;
   width: var(--size);
   z-index: 5;
-}
 
-.to-top__content {
-  --vertical-shadow: 2px;
-  box-shadow: 0 var(--vertical-shadow) var(--color-black);
-  background-color: var(--color-primary);
-  transition: transform 50ms;
-}
+  &:active {
+    --shadow-y: 0;
+    transform: scale(0.95);
+  }
 
-.to-top:active {
-  --vertical-shadow: 0;
-  transform: scale(0.95);
-}
-
-.to-top--hidden {
-  display: none;
+  &--hidden {
+    display: none;
+  }
 }
