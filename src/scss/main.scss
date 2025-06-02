@@ -2,6 +2,14 @@
 @use "./base/reset";
 @use "./base/base";
 
+/* Layout */
+@use "./layout/personal-info";
+@use "./layout/about";
+@use "./layout/attribute";
+@use "./layout/education";
+@use "./layout/projects";
+@use "./layout/contact";
+
 /* Components */
 @use "./components/header";
 @use "./components/main-title";
@@ -12,14 +20,6 @@
 @use "./components/theme-toggler";
 @use "./components/line-under";
 @use "./components/back-to-top";
-
-/* Layout */
-@use "./layout/personal-info";
-@use "./layout/about";
-@use "./layout/attribute";
-@use "./layout/education";
-@use "./layout/projects";
-@use "./layout/contact";
 
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap");
