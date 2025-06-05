@@ -10,9 +10,10 @@ const contactButton = document.querySelector(".contact__button");
 const contactError = document.querySelector(".contact__error");
 const contactFeedback = document.querySelector(".contact__feedback");
 const contactFields = document.querySelectorAll(".contact__field");
+const contactForm = document.querySelector(".contact__form");
 
 // Clear all input fields
-const clearFields = () => contactFields.forEach(field => (field.value = ""));
+const clearFields = () => contactForm.reset();
 window.onload = clearFields;
 
 // Manipulate the feedback modal
