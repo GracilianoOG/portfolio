@@ -10,6 +10,26 @@
   }
 }
 
+@keyframes fade-move-disappear {
+  0% {
+    transform: translate(var(--move-x-initial, 0), var(--move-y-initial, 0));
+    opacity: var(--opacity-initial, 0);
+  }
+
+  40% {
+    transform: translate(var(--move-x-final, 0), var(--move-y-final, 0));
+    opacity: var(--opacity-final, 1);
+  }
+
+  80% {
+    opacity: var(--opacity-final, 1);
+  }
+
+  100% {
+    opacity: var(--opacity-initial, 0);
+  }
+}
+
 @keyframes focus {
   0% {
     outline-offset: 0px;
