@@ -11,14 +11,17 @@
 }
 
 .contact__feedback {
-  --feedback-size: 100%;
-  --move-x-initial: 0;
-  animation: fade-and-move 0.5s ease;
+  --move-x-initial: -2rem;
+  animation: fade-and-move 0.4s ease;
   background-color: rgba(0, 255, 0, 0.25);
+  bottom: 1rem;
+  border-radius: 1rem;
+  border: 2px solid var(--color-text);
   display: none;
-  height: var(--feedback-size);
+  overflow: hidden;
   position: absolute;
-  width: var(--feedback-size);
+  padding: 1rem 2rem;
+  right: 1rem;
   z-index: 1;
 }
 
@@ -36,40 +39,8 @@
 // }
 
 .contact__feedback__title {
-  animation: fade-and-move 0.4s ease;
-  --move-x-initial: -2rem;
-  color: var(--color-contact-feedback);
+  color: var(--color-text);
   text-align: center;
-}
-
-.contact__feedback__title::before {
-  --feedback-icon-size: 16rem;
-  background: url("../img/status/success.png") no-repeat center /
-    var(--feedback-icon-size);
-  content: "";
-  display: block;
-  height: var(--feedback-icon-size);
-  margin: 0 auto 2rem;
-  width: var(--feedback-icon-size);
-}
-
-.contact__feedback__close {
-  --feedback-btn-size: 3rem;
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  font-size: 1rem;
-  height: var(--feedback-btn-size);
-  padding: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: color 100ms;
-  width: var(--feedback-btn-size);
-}
-
-.contact__feedback__close:hover {
-  color: var(--color-danger);
 }
 
 .contact__image {
