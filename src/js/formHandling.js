@@ -1,6 +1,6 @@
 export const submitForm = async (name, email, subject, message) => {
   try {
-    const url = "https://formsubmit.co/ajax/0608572af44fdc8ec0fba1f58f12adfc";
+    const url = `https://formsubmit.co/ajax/${process.env.FORMSUBMIT_KEY}`;
     const resp = await fetch(url, {
       method: "POST",
       headers: {
