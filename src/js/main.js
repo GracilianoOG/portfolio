@@ -32,7 +32,7 @@ const resetFields = () => {
 };
 
 // Closable contact modal
-contactFeedback.addEventListener("click", () => toggleModal(false));
+contactFeedback.addEventListener("animationend", () => toggleModal(false));
 
 // Add classes on the fields
 contactFields.forEach(field =>
