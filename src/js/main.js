@@ -1,5 +1,6 @@
 import { submitForm } from "./formHandling.js";
 import "./customThemes.js";
+import "./projectCards.js";
 import "./hamburger.js";
 import "./backToTop.js";
 import "../scss/main.scss";
