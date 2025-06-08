@@ -74,6 +74,13 @@ npm run dev
 - [Import module for side effect](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only)
 - [JavaScript Modules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
 
+### Environment variables
+
+- [Vercel environment variables](https://vercel.com/docs/environment-variables)
+- [Using environment variables in config](https://vite.dev/config/#using-environment-variables-in-config)
+- [How to use process.env in Vite](https://dev.to/whchi/how-to-use-processenv-in-vite-ho9)
+- [Environment variables and mode](https://vite.dev/guide/env-and-mode)
+
 ## 🧑🏻‍💻 Author
 
 - LinkedIn: [@gabrielgmbarros](https://www.linkedin.com/in/gabrielgmbarros)
