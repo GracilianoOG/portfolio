@@ -81,13 +81,9 @@
   }
 
   .project {
-    --length-perspective: 90rem;
     align-items: center;
     gap: 2rem;
     grid-template: "thumbnail information" / 3fr 2fr;
-    perspective: var(--length-perspective);
-    -moz-perspective: var(--length-perspective);
-    -webkit-perspective: var(--length-perspective);
   }
 
   .project:nth-of-type(even) {
@@ -109,6 +105,15 @@
     -moz-box-shadow: var(--box-shadow-right);
     -webkit-box-shadow: var(--box-shadow-right);
     transform: rotateY(calc(var(--rotation-val) * -1));
+  }
+}
+
+@media screen and (min-width: map.get($breakpoints, xl)) {
+  .project {
+    --length-perspective: 90rem;
+    perspective: var(--length-perspective);
+    -moz-perspective: var(--length-perspective);
+    -webkit-perspective: var(--length-perspective);
   }
 
   .project:focus-within > .project__image,
