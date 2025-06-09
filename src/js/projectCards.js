@@ -1,6 +1,6 @@
-import img1 from "../img/projects/project-1.png";
-import img2 from "../img/projects/project-2.png";
-import img3 from "../img/projects/project-3.png";
+import img1 from "../assets/img/projects/project-1.png";
+import img2 from "../assets/img/projects/project-2.png";
+import img3 from "../assets/img/projects/project-3.png";
 
 const projectsEl = document.querySelector("#projects");
 

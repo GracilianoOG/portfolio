@@ -73,7 +73,7 @@
 }
 
 .personal-info__link--info-1::before {
-  --mask-image: url("../img/social/github.svg");
+  --mask-image: url("../assets/img/social/github.svg");
   mask-image: var(--mask-image);
   -webkit-mask-image: var(--mask-image);
 }
@@ -84,7 +84,7 @@
 }
 
 .personal-info__link--info-2::before {
-  --mask-image: url("../img/social/linkedin.svg");
+  --mask-image: url("../assets/img/social/linkedin.svg");
   mask-image: var(--mask-image);
   -webkit-mask-image: var(--mask-image);
 }
@@ -95,7 +95,7 @@
 }
 
 .personal-info__link--info-3::before {
-  --mask-image: url("../img/social/resume.svg");
+  --mask-image: url("../assets/img/social/resume.svg");
   mask-image: var(--mask-image);
   -webkit-mask-image: var(--mask-image);
 }
