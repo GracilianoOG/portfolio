@@ -2,11 +2,18 @@
 @use "../utils/breakpoints" as *;
 
 .header {
+  backdrop-filter: blur(5px);
+  background-color: rgba(var(--color-background-3), 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 3.125rem;
+  padding-top: 1.563rem;
+  padding-bottom: 1.563rem;
+  position: sticky;
   row-gap: 2.5rem;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 .header__main {
