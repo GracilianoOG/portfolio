@@ -62,6 +62,9 @@
 }
 
 .header__menu {
+  --move-x-initial: 0;
+  --move-y-initial: -1rem;
+  animation: fade-and-move 0.3s;
   display: flex;
   flex-direction: column;
   gap: 2rem;
