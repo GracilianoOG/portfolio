@@ -57,7 +57,7 @@ projectsEl.innerHTML += cards
         <p class="project__description">
           ${description}
         </p>
-        <h3 id="project#${index}" class="sr-only">${title} Tools and technologies</h3>
+        <h4 id="project#${index}" class="sr-only">${title} Tools and technologies</h4>
         <ul class="project__tags" aria-describedby="project#${index}">
           ${tags
             .map(
