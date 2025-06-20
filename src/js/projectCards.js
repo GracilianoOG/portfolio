@@ -63,12 +63,12 @@ projectsEl.innerHTML += cards
         <a
           href="${links.source}"
           class="project__link project__link--source button button--transparent"
-          >Source</a
+          >Source<span class="sr-only"> to ${title}</span></a
         >
         <a
           href="${links.preview}"
           class="project__link button"
-          >Demo</a
+          >Demo<span class="sr-only"> to ${title}</span></a
         >
       </div>
     </div>
