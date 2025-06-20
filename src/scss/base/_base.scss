@@ -2,6 +2,7 @@
 @use "../utils/breakpoints" as *;
 @use "../utils/themes";
 @use "../utils/animations";
+@use "../utils/visually-hidden";
 
 * {
   scrollbar-color: var(--color-blue) var(--color-background-2);
