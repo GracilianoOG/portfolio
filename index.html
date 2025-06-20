@@ -355,93 +355,102 @@
       <section id="projects" class="projects container">
         <h2 class="projects__title title">Projects</h2>
       </section>
+      <section id="contact" class="contact container">
+        <div class="contact__item contact__image"></div>
+        <div class="contact__item contact__information">
+          <h2 class="contact__title title">Contact</h2>
+          <p class="contact__description">
+            Do you want to enter in contact with me?
+          </p>
+          <p class="contact__description">
+            Fill out the form below, I'll try to respond you as soon as
+            possible.
+          </p>
+          <div class="contact__error" role="alert"></div>
+          <form method="POST" class="contact__form">
+            <div class="contact__form__group">
+              <input
+                class="contact__field"
+                type="text"
+                name="name"
+                id="name"
+                placeholder=""
+                maxlength="50"
+                required
+              />
+              <label class="contact__label" for="name"
+                >Name
+                <span class="contact__required" aria-hidden="true"
+                  >*</span
+                ></label
+              >
+            </div>
+
+            <div class="contact__form__group">
+              <input
+                class="contact__field"
+                type="email"
+                name="email"
+                id="email"
+                placeholder=""
+                required
+              />
+              <label class="contact__label" for="email"
+                >E-mail
+                <span class="contact__required" aria-hidden="true"
+                  >*</span
+                ></label
+              >
+            </div>
+
+            <div class="contact__form__group">
+              <input
+                class="contact__field"
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder=""
+                maxlength="50"
+                required
+              />
+              <label class="contact__label" for="subject"
+                >Subject
+                <span class="contact__required" aria-hidden="true"
+                  >*</span
+                ></label
+              >
+            </div>
+
+            <div class="contact__form__group">
+              <textarea
+                class="contact__field"
+                name="message"
+                id="message"
+                rows="5"
+                placeholder=""
+                maxlength="255"
+                required
+              ></textarea>
+              <label class="contact__label" for="message"
+                >Message
+                <span class="contact__required" aria-hidden="true"
+                  >*</span
+                ></label
+              >
+            </div>
+
+            <input
+              class="contact__button button"
+              type="submit"
+              value="Send message"
+            />
+          </form>
+        </div>
+        <div class="contact__feedback">
+          <span class="contact__feedback__title title">Thank you</span>
+        </div>
+      </section>
     </main>
-    <section id="contact" class="contact container">
-      <div class="contact__item contact__image"></div>
-      <div class="contact__item contact__information">
-        <h2 class="contact__title title">Contact</h2>
-        <p class="contact__description">
-          Do you want to enter in contact with me?
-        </p>
-        <p class="contact__description">
-          Fill out the form below, I'll try to respond you as soon as possible.
-        </p>
-        <div class="contact__error" role="alert"></div>
-        <form method="POST" class="contact__form">
-          <div class="contact__form__group">
-            <input
-              class="contact__field"
-              type="text"
-              name="name"
-              id="name"
-              placeholder=""
-              maxlength="50"
-              required
-            />
-            <label class="contact__label" for="name"
-              >Name
-              <span class="contact__required" aria-hidden="true">*</span></label
-            >
-          </div>
-
-          <div class="contact__form__group">
-            <input
-              class="contact__field"
-              type="email"
-              name="email"
-              id="email"
-              placeholder=""
-              required
-            />
-            <label class="contact__label" for="email"
-              >E-mail
-              <span class="contact__required" aria-hidden="true">*</span></label
-            >
-          </div>
-
-          <div class="contact__form__group">
-            <input
-              class="contact__field"
-              type="text"
-              name="subject"
-              id="subject"
-              placeholder=""
-              maxlength="50"
-              required
-            />
-            <label class="contact__label" for="subject"
-              >Subject
-              <span class="contact__required" aria-hidden="true">*</span></label
-            >
-          </div>
-
-          <div class="contact__form__group">
-            <textarea
-              class="contact__field"
-              name="message"
-              id="message"
-              rows="5"
-              placeholder=""
-              maxlength="255"
-              required
-            ></textarea>
-            <label class="contact__label" for="message"
-              >Message
-              <span class="contact__required" aria-hidden="true">*</span></label
-            >
-          </div>
-
-          <input
-            class="contact__button button"
-            type="submit"
-            value="Send message"
-          />
-        </form>
-      </div>
-      <div class="contact__feedback">
-        <span class="contact__feedback__title title">Thank you</span>
-      </div>
-    </section>
     <footer class="footer">
       <p class="footer__text">
         Developed with <span class="footer__highlight">love</span> by Gabriel
