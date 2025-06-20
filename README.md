@@ -68,6 +68,7 @@ npm run dev
 - [Links Should Open in the Same Window](https://medium.com/the-metric/links-should-open-in-the-same-window-447da3ae59ba)
 - [Title attribute and accessibility](https://www.tpgi.com/using-the-html-title-attribute/)
 - [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/)
+- [Using NVDA with lists](https://blog.pope.tech/2025/03/02/using-nvda-with-lists/)
 
 ### JavaScript
 
