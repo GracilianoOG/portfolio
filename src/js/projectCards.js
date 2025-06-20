@@ -41,7 +41,7 @@ const cards = [
 ];
 
 projectsEl.innerHTML += cards
-  .map(card => {
+  .map((card, index) => {
     const { title, description, tags, links, imgURL } = card;
     return `
     <div class="project">
@@ -57,8 +57,8 @@ projectsEl.innerHTML += cards
         <p class="project__description">
           ${description}
         </p>
-        <h3 class="sr-only">Tools and technologies</h3>
-        <ul class="project__tags">
+        <h3 id="project#${index}" class="sr-only">${title} Tools and technologies</h3>
+        <ul class="project__tags" aria-describedby="project#${index}">
           ${tags
             .map(
               tag =>
