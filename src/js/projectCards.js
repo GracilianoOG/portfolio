@@ -57,9 +57,15 @@ projectsEl.innerHTML += cards
         <p class="project__description">
           ${description}
         </p>
-        <div class="project__tags">
-          ${tags.map(tag => `<span class="tag">#${tag}</span>`).join("")}
-        </div>
+        <h3 class="sr-only">Tools and technologies</h3>
+        <ul class="project__tags">
+          ${tags
+            .map(
+              tag =>
+                `<li class="tag"><span aria-hidden="true">#</span>${tag}</li>`
+            )
+            .join("")}
+        </ul>
         <a
           href="${links.source}"
           class="project__link project__link--source button button--transparent"
