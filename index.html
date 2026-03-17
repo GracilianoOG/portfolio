@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -18,11 +18,11 @@
     />
 
     <script>
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      const cachedTheme =
-        localStorage.getItem("theme") || (prefersDark ? "dark" : "light");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
+      const cachedTheme = localStorage.getItem("theme") || prefersDark;
       document.documentElement.classList.add(cachedTheme);
     </script>
   </head>
