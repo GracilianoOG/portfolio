@@ -8,15 +8,15 @@
 @use "./layout/attribute";
 @use "./layout/education";
 @use "./layout/projects";
+@use "./layout/footer";
+@use "./layout/header";
 @use "./layout/contact";
 
 /* Components */
 @use "./components/buttons";
-@use "./components/header";
 @use "./components/main-title";
 @use "./components/menu";
 @use "./components/cards";
-@use "./components/footer";
 @use "./components/tag";
 @use "./components/theme-toggler";
 @use "./components/line-under";
