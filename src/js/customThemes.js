@@ -25,11 +25,9 @@ const setTheme = (theme) => {
 };
 
 const changeTheme = () => {
-  classList.toggle(Themes.DARK);
-  classList.toggle(Themes.LIGHT);
-  const isLightTheme = classList.contains(Themes.LIGHT);
-  localStorage.setItem("theme", isLightTheme ? Themes.LIGHT : Themes.DARK);
-  themeToggler.setAttribute("aria-pressed", isLightTheme ? "false" : "true");
+  const theme = getTheme() === Themes.DARK ? Themes.LIGHT : Themes.DARK;
+  setTheme(theme);
+  themeToggler.setAttribute("aria-pressed", theme === Themes.DARK);
   handleSound();
 };
 
