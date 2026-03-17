@@ -19,6 +19,11 @@ const getTheme = () => {
   return theme;
 };
 
+const setTheme = (theme) => {
+  localStorage.setItem("theme", theme);
+  document.documentElement.setAttribute("class", theme);
+};
+
 const changeTheme = () => {
   classList.toggle(Themes.DARK);
   classList.toggle(Themes.LIGHT);
