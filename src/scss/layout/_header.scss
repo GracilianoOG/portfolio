@@ -3,7 +3,11 @@
 
 .header {
   backdrop-filter: blur(5px);
-  background-color: rgba(var(--color-background-3), 0.5);
+  background-color: color-mix(
+    in srgb,
+    var(--color-background-3) 80%,
+    transparent
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,7 +56,10 @@
   display: block;
   height: var(--line-height);
   width: 100%;
-  transition: opacity 400ms, transform 400ms, width 400ms;
+  transition:
+    opacity 400ms,
+    transform 400ms,
+    width 400ms;
 }
 
 .header__hamburguer--close::before {
