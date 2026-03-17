@@ -3,7 +3,7 @@ const themeToggler = document.querySelector(".theme-toggler");
 const classList = document.documentElement.classList;
 const lamp = document.querySelector("#lampAudio");
 
-const handleSound = () => {
+const playToggleSound = () => {
   lamp.pause();
   lamp.currentTime = 0;
   lamp.play();
@@ -28,7 +28,7 @@ const changeTheme = () => {
   const theme = getTheme() === Themes.DARK ? Themes.LIGHT : Themes.DARK;
   setTheme(theme);
   themeToggler.setAttribute("aria-pressed", theme === Themes.DARK);
-  handleSound();
+  playToggleSound();
 };
 
 themeToggler.addEventListener("click", changeTheme);
