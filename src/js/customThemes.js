@@ -1,6 +1,5 @@
 const Themes = Object.freeze({ LIGHT: "light", DARK: "dark" });
 const themeToggler = document.querySelector(".theme-toggler");
-const classList = document.documentElement.classList;
 const lamp = document.querySelector("#lampAudio");
 
 const playToggleSound = () => {
