@@ -28,6 +28,6 @@
   }
 
   &--hidden {
-    display: none;
+    animation: fade-and-move-reverse 500ms forwards;
   }
 }
