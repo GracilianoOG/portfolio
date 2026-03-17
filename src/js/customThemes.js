@@ -9,6 +9,16 @@ const handleSound = () => {
   lamp.play();
 };
 
+const getTheme = () => {
+  const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)")
+    .matches
+    ? "dark"
+    : "light";
+  const theme = localStorage.getItem("theme") ?? preferredTheme;
+
+  return theme;
+};
+
 const changeTheme = () => {
   classList.toggle(Themes.DARK);
   classList.toggle(Themes.LIGHT);
@@ -21,5 +31,5 @@ const changeTheme = () => {
 themeToggler.addEventListener("click", changeTheme);
 themeToggler.setAttribute(
   "aria-pressed",
-  classList.contains(Themes.LIGHT) ? "false" : "true"
+  classList.contains(Themes.LIGHT) ? "false" : "true",
 );
