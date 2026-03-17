@@ -31,8 +31,10 @@ const changeTheme = () => {
   playToggleSound();
 };
 
-themeToggler.addEventListener("click", changeTheme);
-themeToggler.setAttribute(
-  "aria-pressed",
-  classList.contains(Themes.LIGHT) ? "false" : "true",
-);
+const initThemeToggler = () => {
+  const theme = getTheme();
+  themeToggler.addEventListener("click", changeTheme);
+  themeToggler.setAttribute("aria-pressed", theme === Themes.DARK);
+};
+
+initThemeToggler();
