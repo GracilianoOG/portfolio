@@ -10,6 +10,19 @@
   }
 }
 
+@keyframes fade-and-move-reverse {
+  from {
+    transform: translate(var(--move-x-final, 0), var(--move-y-final, 0));
+    opacity: var(--opacity-final, 1);
+  }
+
+  to {
+    transform: translate(var(--move-x-initial, 0), var(--move-y-initial, 0));
+    opacity: var(--opacity-initial, 0);
+    visibility: hidden;
+  }
+}
+
 @keyframes fade-move-disappear {
   0% {
     transform: translate(var(--move-x-initial, 0), var(--move-y-initial, 0));
