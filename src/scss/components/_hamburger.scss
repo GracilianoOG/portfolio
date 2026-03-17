@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "../utils/breakpoints" as *;
 
-.header__hamburguer {
+.hamburger {
   --line-gap: 0.4rem;
   --line-width: 1.5rem;
   --line-height: 0.15rem;
