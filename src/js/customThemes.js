@@ -24,17 +24,21 @@ const setTheme = (theme) => {
   document.documentElement.setAttribute("class", theme);
 };
 
+const updateToggler = (theme) => {
+  themeToggler.setAttribute("aria-pressed", theme === Themes.DARK);
+};
+
 const changeTheme = () => {
   const theme = getTheme() === Themes.DARK ? Themes.LIGHT : Themes.DARK;
   setTheme(theme);
-  themeToggler.setAttribute("aria-pressed", theme === Themes.DARK);
+  updateToggler(theme);
   playToggleSound();
 };
 
 const initThemeToggler = () => {
   const theme = getTheme();
   themeToggler.addEventListener("click", changeTheme);
-  themeToggler.setAttribute("aria-pressed", theme === Themes.DARK);
+  updateToggler(theme);
 };
 
 initThemeToggler();
