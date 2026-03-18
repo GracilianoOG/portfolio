@@ -1,5 +1,9 @@
 const sections = document.querySelectorAll("section[id]");
 
+const centerView = {
+  rootMargin: "-50% 0px -50%",
+};
+
 const linkOptions = {
   rootMargin: "-25% 0px -75%",
 };
