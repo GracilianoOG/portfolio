@@ -5,6 +5,7 @@ import "./hamburger.js";
 import "./backToTop.js";
 import "../scss/main.scss";
 import { applyValidityStyle, validateForm } from "./formValidations.js";
+import "./scrollEffects.js";
 
 // Variables to work with forms
 const contactButton = document.querySelector(".contact__button");
