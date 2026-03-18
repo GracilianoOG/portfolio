@@ -86,13 +86,13 @@
         transform 250ms ease-in-out,
         box-shadow 300ms;
       transform: rotateY(var(--rotation-val));
-    }
 
-    &:nth-of-type(even) > &__image {
-      box-shadow: var(--box-shadow-right);
-      -moz-box-shadow: var(--box-shadow-right);
-      -webkit-box-shadow: var(--box-shadow-right);
-      transform: rotateY(calc(var(--rotation-val) * -1));
+      &--mirrored {
+        box-shadow: var(--box-shadow-right);
+        -moz-box-shadow: var(--box-shadow-right);
+        -webkit-box-shadow: var(--box-shadow-right);
+        transform: rotateY(calc(var(--rotation-val) * -1));
+      }
     }
   }
 
