@@ -23,8 +23,8 @@ const addClassToIntersectedElement = (entries, className) => {
   });
 };
 
-const observer = new IntersectionObserver(highlightActiveLink, linkOptions);
-sections.forEach((s) => observer.observe(s));
+const navObserver = new IntersectionObserver(highlightActiveLink, linkOptions);
+sections.forEach((s) => navObserver.observe(s));
 
 const projectsObserver = new IntersectionObserver(
   (entries) => addClassToIntersectedElement(entries, "project--active"),
