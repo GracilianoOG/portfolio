@@ -4,122 +4,13 @@
 .projects {
   padding-top: 2rem;
   padding-bottom: 3rem;
-}
 
-.projects__title {
-  text-align: center;
-  padding-bottom: 2rem;
-}
+  &__title {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
 
-.project {
-  --box-shadow-common: 8px 1.5rem 0px rgba(0, 0, 0, 0.21);
-  --box-shadow-hover: 0 0 0.8rem 0px rgba(0, 0, 0, 0.15);
-  --box-shadow-left: -30px var(--box-shadow-common);
-  --box-shadow-right: 30px var(--box-shadow-common);
-  --rotation-val: 20deg;
-
-  display: grid;
-  grid-template: "thumbnail" "information" / 1fr;
-}
-
-.project:not(:last-child) {
-  margin-bottom: 5rem;
-}
-
-.project__image {
-  box-shadow: var(--box-shadow-left);
-  -moz-box-shadow: var(--box-shadow-left);
-  -webkit-box-shadow: var(--box-shadow-left);
-  grid-area: thumbnail;
-  height: auto;
-  object-fit: cover;
-  width: 100%;
-}
-
-.project__information {
-  grid-area: information;
-  text-align: justify;
-}
-
-.project__title {
-  color: var(--color-text);
-  font-weight: 700;
-  margin: 1rem 0;
-}
-
-.project__description {
-  color: var(--color-text);
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.project__tags {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.project__link {
-  border: 0.125rem solid transparent;
-  display: inline-block;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 500ms, color 500ms, border-color 500ms;
-}
-
-.project__link--source {
-  margin-right: 0.75rem;
-}
-
-@media screen and (min-width: map.get($breakpoints, lg)) {
-  .projects {
+  @media screen and (min-width: map.get($breakpoints, lg)) {
     padding-bottom: 5rem;
-  }
-
-  .project {
-    align-items: center;
-    gap: 2rem;
-    grid-template: "thumbnail information" / 3fr 2fr;
-  }
-
-  .project:nth-of-type(even) {
-    grid-template: "information thumbnail" / 2fr 3fr;
-  }
-
-  .project__title {
-    margin-top: 0;
-  }
-
-  .project__image {
-    height: auto;
-    transition: transform 250ms ease-in-out, box-shadow 300ms;
-    transform: rotateY(var(--rotation-val));
-  }
-
-  .project:nth-of-type(even) > .project__image {
-    box-shadow: var(--box-shadow-right);
-    -moz-box-shadow: var(--box-shadow-right);
-    -webkit-box-shadow: var(--box-shadow-right);
-    transform: rotateY(calc(var(--rotation-val) * -1));
-  }
-}
-
-@media screen and (min-width: map.get($breakpoints, xl)) {
-  .project {
-    --length-perspective: 90rem;
-    perspective: var(--length-perspective);
-    -moz-perspective: var(--length-perspective);
-    -webkit-perspective: var(--length-perspective);
-  }
-
-  .project:focus-within > .project__image,
-  .project:hover > .project__image {
-    --box-shadow-left: var(--box-shadow-hover);
-    --box-shadow-right: var(--box-shadow-hover);
-    transform: rotateY(0deg);
   }
 }
