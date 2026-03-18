@@ -28,7 +28,7 @@ sections.forEach((s) => observer.observe(s));
 
 const projectsObserver = new IntersectionObserver(
   (entries) => addClassToIntersectedElement(entries, "project--active"),
-  options,
+  centerView,
 );
 
 projects.forEach((s) => projectsObserver.observe(s));
