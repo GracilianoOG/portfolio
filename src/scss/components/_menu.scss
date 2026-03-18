@@ -23,6 +23,11 @@
   text-decoration: none;
   transition: opacity 500ms;
   width: 100%;
+
+  &--active {
+    color: var(--color-secondary);
+    font-weight: bold;
+  }
 }
 
 .menu__link:focus,
