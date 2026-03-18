@@ -82,6 +82,11 @@ npm run dev
 - [How to use process.env in Vite](https://dev.to/whchi/how-to-use-processenv-in-vite-ho9)
 - [Environment variables and mode](https://vite.dev/guide/env-and-mode)
 
+### Intersection Observer
+
+- [IntersectionObserver's coming into view](https://web.dev/articles/intersectionobserver)
+- [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+
 ## 🧑🏻‍💻 Author
 
 - LinkedIn: [@gabrielgmbarros](https://www.linkedin.com/in/gabrielgmbarros)
