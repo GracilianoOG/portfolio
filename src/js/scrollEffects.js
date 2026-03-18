@@ -1,4 +1,5 @@
 const sections = document.querySelectorAll("section[id]");
+const projects = document.querySelectorAll(".project");
 
 const centerView = {
   rootMargin: "-50% 0px -50%",
@@ -24,3 +25,10 @@ const addClassToIntersectedElement = (entries, className) => {
 
 const observer = new IntersectionObserver(highlightActiveLink, linkOptions);
 sections.forEach((s) => observer.observe(s));
+
+const projectsObserver = new IntersectionObserver(
+  (entries) => addClassToIntersectedElement(entries, "project--active"),
+  options,
+);
+
+projects.forEach((s) => projectsObserver.observe(s));
