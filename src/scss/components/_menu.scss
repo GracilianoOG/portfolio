@@ -3,51 +3,49 @@
 
 .menu {
   width: 100%;
-}
 
-.menu__list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem 1.75rem;
-  text-align: center;
-}
-
-.menu__link {
-  border-bottom: 0.125rem solid var(--color-text);
-  color: var(--color-text);
-  display: inline-block;
-  font-family: var(--font-main);
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.35rem 0;
-  text-decoration: none;
-  transition: opacity 500ms;
-  width: 100%;
-
-  &--active {
-    color: var(--color-secondary);
-    font-weight: bold;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem 1.75rem;
+    text-align: center;
   }
-}
 
-.menu__link:focus,
-.menu__link:hover {
-  opacity: 0.75;
-}
+  &__link {
+    border-bottom: 0.125rem solid var(--color-text);
+    color: var(--color-text);
+    display: inline-block;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.35rem 0;
+    text-decoration: none;
+    transition: opacity 500ms;
+    width: 100%;
 
-@media screen and (min-width: map.get($breakpoints, lg)) {
-  .menu {
+    &--active {
+      color: var(--color-secondary);
+      font-weight: bold;
+    }
+  }
+
+  &__link:focus,
+  &__link:hover {
+    opacity: 0.75;
+  }
+
+  @media screen and (min-width: map.get($breakpoints, lg)) {
     width: auto;
-  }
 
-  .menu__list {
-    flex-direction: row;
-  }
+    &__list {
+      flex-direction: row;
+    }
 
-  .menu__link {
-    border: none;
-    display: inline;
-    padding: 0.25rem;
-    width: auto;
+    &__link {
+      border: none;
+      display: inline;
+      padding: 0.25rem;
+      width: auto;
+    }
   }
 }
