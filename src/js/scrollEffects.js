@@ -12,5 +12,11 @@ const highlightActiveLink = (entries) => {
   });
 };
 
+const addClassToIntersectedElement = (entries, className) => {
+  entries.forEach((entry) => {
+    entry.target.classList.toggle(className, entry.isIntersecting);
+  });
+};
+
 const observer = new IntersectionObserver(highlightActiveLink, linkOptions);
 sections.forEach((s) => observer.observe(s));
