@@ -102,8 +102,7 @@
     -moz-perspective: var(--length-perspective);
     -webkit-perspective: var(--length-perspective);
 
-    &:focus-within > &__image,
-    &:hover > &__image {
+    &--active &__image {
       --box-shadow-left: var(--box-shadow-hover);
       --box-shadow-right: var(--box-shadow-hover);
       transform: rotateY(0deg);
