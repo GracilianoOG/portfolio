@@ -22,31 +22,33 @@ const clearFields = () => contactForm.reset();
 window.onload = clearFields;
 
 // Manipulate the feedback modal
-const toggleModal = force => {
+const toggleModal = (force) => {
   contactFeedback.classList.toggle("contact__feedback--show", force);
 };
 
 // Reset all the styles of the fields
 const resetFields = () => {
   clearFields();
-  contactFields.forEach(field => field.classList.remove("contact__field--ok"));
+  contactFields.forEach((field) =>
+    field.classList.remove("contact__field--ok"),
+  );
 };
 
 // Closable contact modal
 contactFeedback.addEventListener("animationend", () => toggleModal(false));
 
 // Add classes on the fields
-contactFields.forEach(field =>
-  field.addEventListener("blur", () => applyValidityStyle(field))
+contactFields.forEach((field) =>
+  field.addEventListener("blur", () => applyValidityStyle(field)),
 );
 
 // Show a message after submiting the form
-contactButton.addEventListener("click", event => {
+contactButton.addEventListener("click", (event) => {
   event.preventDefault();
   const [isFormValid, errors] = validateForm();
   if (isFormValid) {
     const values = [];
-    contactFields.forEach(field => values.push(field.value.trim()));
+    contactFields.forEach((field) => values.push(field.value.trim()));
     submitForm(...values);
     toggleModal(true);
     resetFields();
