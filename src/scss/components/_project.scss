@@ -1,0 +1,112 @@
+@use "sass:map";
+@use "../utils/breakpoints" as *;
+
+.project {
+  --box-shadow-common: 8px 1.5rem 0px rgba(0, 0, 0, 0.21);
+  --box-shadow-hover: 0 0 0.8rem 0px rgba(0, 0, 0, 0.15);
+  --box-shadow-left: -30px var(--box-shadow-common);
+  --box-shadow-right: 30px var(--box-shadow-common);
+  --rotation-val: 20deg;
+
+  display: grid;
+  grid-template: "thumbnail" "information" / 1fr;
+
+  &:not(:last-child) {
+    margin-bottom: 5rem;
+  }
+
+  &__image {
+    box-shadow: var(--box-shadow-left);
+    -moz-box-shadow: var(--box-shadow-left);
+    -webkit-box-shadow: var(--box-shadow-left);
+    grid-area: thumbnail;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__information {
+    grid-area: information;
+    text-align: justify;
+  }
+
+  &__title {
+    color: var(--color-text);
+    font-weight: 700;
+    margin: 1rem 0;
+  }
+
+  &__description {
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__tags {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    border: 0.125rem solid transparent;
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+      background-color 500ms,
+      color 500ms,
+      border-color 500ms;
+
+    &--source {
+      margin-right: 0.75rem;
+    }
+  }
+
+  @media screen and (min-width: map.get($breakpoints, lg)) {
+    align-items: center;
+    gap: 2rem;
+    grid-template: "thumbnail information" / 3fr 2fr;
+
+    &:nth-of-type(even) {
+      grid-template: "information thumbnail" / 2fr 3fr;
+    }
+
+    &__title {
+      margin-top: 0;
+    }
+
+    &__image {
+      height: auto;
+      transition:
+        transform 250ms ease-in-out,
+        box-shadow 300ms;
+      transform: rotateY(var(--rotation-val));
+    }
+
+    &:nth-of-type(even) > &__image {
+      box-shadow: var(--box-shadow-right);
+      -moz-box-shadow: var(--box-shadow-right);
+      -webkit-box-shadow: var(--box-shadow-right);
+      transform: rotateY(calc(var(--rotation-val) * -1));
+    }
+  }
+
+  @media screen and (min-width: map.get($breakpoints, xl)) {
+    --length-perspective: 90rem;
+    perspective: var(--length-perspective);
+    -moz-perspective: var(--length-perspective);
+    -webkit-perspective: var(--length-perspective);
+
+    &:focus-within > &__image,
+    &:hover > &__image {
+      --box-shadow-left: var(--box-shadow-hover);
+      --box-shadow-right: var(--box-shadow-hover);
+      transform: rotateY(0deg);
+    }
+  }
+}
