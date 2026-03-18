@@ -46,7 +46,7 @@ projectsEl.innerHTML += cards
     return `
     <div class="project">
       <img
-        class="project__image"
+        class="project__image${index % 2 === 1 ? " project__image--mirrored" : ""}"
         src="${imgURL}"
         loading="lazy"
         alt="${title}"
