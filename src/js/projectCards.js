@@ -61,8 +61,8 @@ projectsEl.innerHTML += cards
         <ul class="project__tags" aria-describedby="project#${index}">
           ${tags
             .map(
-              tag =>
-                `<li class="tag"><span aria-hidden="true">#</span>${tag}</li>`
+              (tag) =>
+                `<li class="tag"><span aria-hidden="true">#</span>${tag}</li>`,
             )
             .join("")}
         </ul>
