@@ -33,6 +33,10 @@ footer {
   transition: background-color 300ms;
 }
 
+img {
+  filter: var(--low-brightness-filter);
+}
+
 .wrapper {
   --move-x-initial: -2rem;
   animation: fade-and-move 0.8s ease;
