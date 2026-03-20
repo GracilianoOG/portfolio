@@ -2,13 +2,16 @@ import { cards } from "./cards";
 
 const projectsEl = document.querySelector("#projects");
 
-projectsEl.innerHTML += cards
-  .map((card, index) => {
-    const { title, description, tags, links, imgURL } = card;
-    return `
+const generateProjectCards = () => {
+  return cards
+    .map((card, index) => {
+      const { title, description, tags, links, imgURL } = card;
+      const mirrorImage = index % 2 === 1 ? " project__image--mirrored" : "";
+
+      return `
     <div class="project">
       <img
-        class="project__image${index % 2 === 1 ? " project__image--mirrored" : ""}"
+        class="project__image${mirrorImage}"
         src="${imgURL}"
         loading="lazy"
         alt="${title}"
@@ -41,5 +44,8 @@ projectsEl.innerHTML += cards
       </div>
     </div>
   `;
-  })
-  .join("");
+    })
+    .join("");
+};
+
+projectsEl.innerHTML += generateProjectCards();
