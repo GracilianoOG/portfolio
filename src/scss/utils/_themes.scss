@@ -64,6 +64,7 @@
   --color-text: var(--color-dark-gray);
   --color-invalid: var(--color-dark-red);
   --color-invalid-bg: var(--color-light-transparent-red);
+  --low-brightness-filter: none;
 }
 
 @mixin dark-theme {
@@ -79,6 +80,7 @@
   --color-text: var(--color-dark-text);
   --color-invalid: var(--color-light-red);
   --color-invalid-bg: var(--color-dark-transparent-red);
+  --low-brightness-filter: brightness(0.9) contrast(1.1);
 }
 
 :root,
