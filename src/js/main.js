@@ -68,4 +68,4 @@ contactFields.forEach((field) =>
 contactButton.addEventListener("click", handleFormSubmit);
 
 setFooterDate();
-window.onload = resetFormState;
+resetFormState();
