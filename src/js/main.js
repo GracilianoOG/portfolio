@@ -48,17 +48,22 @@ contactFields.forEach((field) =>
 // Show a message after submiting the form
 contactButton.addEventListener("click", (event) => {
   event.preventDefault();
+
   const [isFormValid, errors] = validateForm();
-  if (isFormValid) {
-    const values = [];
-    contactFields.forEach((field) => values.push(field.value.trim()));
-    submitForm(...values);
-    toggleFeedbackModal(true);
-    clearFieldStyles();
-    contactError.innerHTML = "";
+
+  if (!isFormValid) {
+    contactError.innerHTML = errors;
     return;
   }
-  contactError.innerHTML = errors;
+
+  const values = [];
+  contactFields.forEach((field) => values.push(field.value.trim()));
+  submitForm(...values);
+
+  toggleFeedbackModal(true);
+  clearFieldStyles();
+
+  contactError.innerHTML = "";
 });
 
 setFooterDate();
