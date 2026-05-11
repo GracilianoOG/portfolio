@@ -1,11 +1,13 @@
 import { submitForm } from "./formHandling.js";
+import { applyValidityStyle, validateForm } from "./formValidations.js";
+
 import "./customThemes.js";
 import "./projectCards.js";
 import "./hamburger.js";
 import "./backToTop.js";
-import "../scss/main.scss";
-import { applyValidityStyle, validateForm } from "./formValidations.js";
 import "./scrollEffects.js";
+
+import "../scss/main.scss";
 
 // Variables to work with forms
 const contactButton = document.querySelector(".contact__button");
