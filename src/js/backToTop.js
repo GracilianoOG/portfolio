@@ -4,9 +4,12 @@ const updateVisibility = (element, isVisible) => {
   element.classList.toggle("to-top--hidden", !isVisible);
 };
 
+const isPastScrollThreshold = (threshold) => {
+  return window.scrollY >= threshold;
+};
+
 const handleScroll = (element, amount = 150) => {
-  const isNotStuck = window.scrollY >= amount;
-  updateVisibility(btn, isNotStuck);
+  updateVisibility(btn, isPastScrollThreshold(150));
 };
 
 window.onscroll = () => handleScroll(btn);
