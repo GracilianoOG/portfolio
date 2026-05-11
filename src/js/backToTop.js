@@ -8,8 +8,8 @@ const isPastScrollThreshold = (threshold) => {
   return window.scrollY >= threshold;
 };
 
-const handleScroll = (element, amount = 150) => {
+const handleScroll = () => {
   updateVisibility(btn, isPastScrollThreshold(150));
 };
 
-window.onscroll = () => handleScroll(btn);
+window.onscroll = handleScroll;
