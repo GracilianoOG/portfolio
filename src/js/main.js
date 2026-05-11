@@ -58,12 +58,10 @@ const handleFieldBlur = ({ target }) => {
   applyValidityStyle(target);
 };
 
-// Closable contact modal
 contactFeedback.addEventListener("animationend", () =>
   toggleFeedbackModal(false),
 );
 
-// Add classes on the fields
 contactFields.forEach((field) =>
   field.addEventListener("blur", handleFieldBlur),
 );
