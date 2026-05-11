@@ -54,6 +54,10 @@ const handleFormSubmit = (event) => {
   contactError.innerHTML = "";
 };
 
+const handleFieldBlur = ({ target }) => {
+  applyValidityStyle(target);
+};
+
 // Closable contact modal
 contactFeedback.addEventListener("animationend", () =>
   toggleFeedbackModal(false),
@@ -61,7 +65,7 @@ contactFeedback.addEventListener("animationend", () =>
 
 // Add classes on the fields
 contactFields.forEach((field) =>
-  field.addEventListener("blur", () => applyValidityStyle(field)),
+  field.addEventListener("blur", handleFieldBlur),
 );
 
 // Show a message after submiting the form
