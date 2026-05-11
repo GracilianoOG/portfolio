@@ -30,7 +30,7 @@ const toggleFeedbackModal = (force) => {
 };
 
 // Reset all the styles of the fields
-const resetFields = () => {
+const clearFieldStyles = () => {
   clearFields();
   contactFields.forEach((field) =>
     field.classList.remove("contact__field--ok"),
@@ -56,7 +56,7 @@ contactButton.addEventListener("click", (event) => {
     contactFields.forEach((field) => values.push(field.value.trim()));
     submitForm(...values);
     toggleFeedbackModal(true);
-    resetFields();
+    clearFieldStyles();
     contactError.innerHTML = "";
     return;
   }
