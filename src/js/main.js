@@ -9,7 +9,6 @@ import "./scrollEffects.js";
 
 import "../scss/main.scss";
 
-// Variables to work with forms
 const contactButton = document.querySelector(".contact__button");
 const contactError = document.querySelector(".contact__error");
 const contactFeedback = document.querySelector(".contact__feedback");
@@ -21,20 +20,19 @@ const setFooterDate = () => {
   footerDate.textContent = new Date().getFullYear();
 };
 
-// Clear all input fields
-const clearFields = () => contactForm.reset();
-window.onload = clearFields;
-
 const toggleFeedbackModal = (force) => {
   contactFeedback.classList.toggle("contact__feedback--show", force);
 };
 
-// Reset all the styles of the fields
 const clearFieldStyles = () => {
-  clearFields();
   contactFields.forEach((field) =>
     field.classList.remove("contact__field--ok"),
   );
+};
+
+const resetFormState = () => {
+  clearFieldStyles();
+  contactForm.reset();
 };
 
 // Closable contact modal
@@ -64,3 +62,4 @@ contactButton.addEventListener("click", (event) => {
 });
 
 setFooterDate();
+window.onload = resetFormState;
