@@ -15,8 +15,9 @@ const contactFields = document.querySelectorAll(".contact__field");
 const contactForm = document.querySelector(".contact__form");
 const footerDate = document.querySelector(".footer__date");
 
-// Set current year on footer
-footerDate.textContent = new Date().getFullYear();
+const setFooterDate = () => {
+  footerDate.textContent = new Date().getFullYear();
+};
 
 // Clear all input fields
 const clearFields = () => contactForm.reset();
@@ -58,3 +59,5 @@ contactButton.addEventListener("click", (event) => {
   }
   contactError.innerHTML = errors;
 });
+
+setFooterDate();
