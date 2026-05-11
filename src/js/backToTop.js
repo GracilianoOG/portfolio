@@ -14,4 +14,4 @@ const handleScroll = () => {
   updateVisibility(topButton, isPastScrollThreshold(THRESHOLD));
 };
 
-window.onscroll = handleScroll;
+document.addEventListener("scroll", handleScroll);
