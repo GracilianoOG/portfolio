@@ -23,19 +23,12 @@ const addClassToIntersectedElement = (entries, className) => {
   });
 };
 
-const initIntersectionObservers = () => {
-  const navObserver = new IntersectionObserver(
-    highlightActiveLink,
-    linkOptions,
-  );
-  sections.forEach((s) => navObserver.observe(s));
+const navObserver = new IntersectionObserver(highlightActiveLink, linkOptions);
+sections.forEach((s) => navObserver.observe(s));
 
-  const projectsObserver = new IntersectionObserver(
-    (entries) => addClassToIntersectedElement(entries, "project--active"),
-    centerView,
-  );
+const projectsObserver = new IntersectionObserver(
+  (entries) => addClassToIntersectedElement(entries, "project--active"),
+  centerView,
+);
 
-  projects.forEach((s) => projectsObserver.observe(s));
-};
-
-initIntersectionObservers();
+projects.forEach((s) => projectsObserver.observe(s));
