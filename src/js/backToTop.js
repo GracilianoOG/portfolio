@@ -1,4 +1,4 @@
-const btn = document.querySelector(".to-top");
+const topButton = document.querySelector(".to-top");
 
 const updateVisibility = (element, isVisible) => {
   element.classList.toggle("to-top--hidden", !isVisible);
@@ -9,7 +9,7 @@ const isPastScrollThreshold = (threshold) => {
 };
 
 const handleScroll = () => {
-  updateVisibility(btn, isPastScrollThreshold(150));
+  updateVisibility(topButton, isPastScrollThreshold(150));
 };
 
 window.onscroll = handleScroll;
