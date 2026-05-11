@@ -45,8 +45,7 @@ const handleFormSubmit = (event) => {
     return;
   }
 
-  const values = [];
-  contactFields.forEach((field) => values.push(field.value.trim()));
+  const values = [...contactFields].map((field) => field.value.trim());
   submitForm(...values);
 
   toggleFeedbackModal(true);
