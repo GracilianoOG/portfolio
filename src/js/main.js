@@ -23,8 +23,7 @@ const setFooterDate = () => {
 const clearFields = () => contactForm.reset();
 window.onload = clearFields;
 
-// Manipulate the feedback modal
-const toggleModal = (force) => {
+const toggleFeedbackModal = (force) => {
   contactFeedback.classList.toggle("contact__feedback--show", force);
 };
 
@@ -37,7 +36,9 @@ const resetFields = () => {
 };
 
 // Closable contact modal
-contactFeedback.addEventListener("animationend", () => toggleModal(false));
+contactFeedback.addEventListener("animationend", () =>
+  toggleFeedbackModal(false),
+);
 
 // Add classes on the fields
 contactFields.forEach((field) =>
@@ -52,7 +53,7 @@ contactButton.addEventListener("click", (event) => {
     const values = [];
     contactFields.forEach((field) => values.push(field.value.trim()));
     submitForm(...values);
-    toggleModal(true);
+    toggleFeedbackModal(true);
     resetFields();
     contactError.innerHTML = "";
     return;
