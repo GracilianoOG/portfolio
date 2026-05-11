@@ -49,7 +49,7 @@ const handleFormSubmit = (event) => {
   submitForm(...values);
 
   toggleFeedbackModal(true);
-  clearFieldStyles();
+  resetFormState();
 
   contactError.innerHTML = "";
 };
