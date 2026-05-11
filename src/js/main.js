@@ -68,7 +68,6 @@ contactFields.forEach((field) =>
   field.addEventListener("blur", handleFieldBlur),
 );
 
-// Show a message after submiting the form
 contactButton.addEventListener("click", handleFormSubmit);
 
 setFooterDate();
