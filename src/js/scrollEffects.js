@@ -13,11 +13,15 @@ const getMenuLink = (id) => {
   return document.querySelector(`.menu__link[href="#${id}"]`);
 };
 
+const highlightLink = (menuLink, highlight) => {
+  menuLink.classList.toggle("menu__link--active", highlight);
+};
+
 const highlightActiveLink = (entries) => {
   entries.forEach((entry) => {
     const id = entry.target.getAttribute("id");
     const menuLink = getMenuLink(id);
-    menuLink.classList.toggle("menu__link--active", entry.isIntersecting);
+    highlightLink(menuLink, entry.isIntersecting);
   });
 };
 
