@@ -39,4 +39,4 @@ const projectsObserver = new IntersectionObserver(
   centerView,
 );
 
-projects.forEach((s) => projectsObserver.observe(s));
+projects.forEach((p) => projectsObserver.observe(p));
