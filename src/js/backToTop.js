@@ -1,10 +1,10 @@
 const btn = document.querySelector(".to-top");
 
-const changeVisibilityOnScroll = (amount = 150) => {
+const changeVisibilityOnScroll = (element, amount = 150) => {
   const isNotStuck =
     document.body.scrollTop >= amount ||
     document.documentElement.scrollTop >= amount;
-  btn.classList.toggle("to-top--hidden", !isNotStuck);
+  element.classList.toggle("to-top--hidden", !isNotStuck);
 };
 
-window.onscroll = () => changeVisibilityOnScroll();
+window.onscroll = () => changeVisibilityOnScroll(btn);
