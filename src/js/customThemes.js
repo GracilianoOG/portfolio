@@ -34,10 +34,6 @@ const changeTheme = () => {
   playToggleSound();
 };
 
-const initThemeToggler = () => {
-  const theme = getTheme();
-  themeToggler.addEventListener("click", changeTheme);
-  updateToggler(theme);
-};
-
-initThemeToggler();
+const theme = getTheme();
+themeToggler.addEventListener("click", changeTheme);
+updateToggler(theme);
