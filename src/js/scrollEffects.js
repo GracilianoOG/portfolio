@@ -9,10 +9,14 @@ const linkOptions = {
   rootMargin: "-25% 0px -75%",
 };
 
+const getMenuLink = (id) => {
+  return document.querySelector(`.menu__link[href="#${id}"]`);
+};
+
 const highlightActiveLink = (entries) => {
   entries.forEach((entry) => {
     const id = entry.target.getAttribute("id");
-    const menuLink = document.querySelector(`.menu__link[href="#${id}"]`);
+    const menuLink = getMenuLink(id);
     menuLink.classList.toggle("menu__link--active", entry.isIntersecting);
   });
 };
