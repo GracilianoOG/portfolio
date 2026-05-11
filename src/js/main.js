@@ -35,18 +35,7 @@ const resetFormState = () => {
   contactForm.reset();
 };
 
-// Closable contact modal
-contactFeedback.addEventListener("animationend", () =>
-  toggleFeedbackModal(false),
-);
-
-// Add classes on the fields
-contactFields.forEach((field) =>
-  field.addEventListener("blur", () => applyValidityStyle(field)),
-);
-
-// Show a message after submiting the form
-contactButton.addEventListener("click", (event) => {
+const handleFormSubmit = (event) => {
   event.preventDefault();
 
   const [isFormValid, errors] = validateForm();
@@ -64,7 +53,20 @@ contactButton.addEventListener("click", (event) => {
   clearFieldStyles();
 
   contactError.innerHTML = "";
-});
+};
+
+// Closable contact modal
+contactFeedback.addEventListener("animationend", () =>
+  toggleFeedbackModal(false),
+);
+
+// Add classes on the fields
+contactFields.forEach((field) =>
+  field.addEventListener("blur", () => applyValidityStyle(field)),
+);
+
+// Show a message after submiting the form
+contactButton.addEventListener("click", handleFormSubmit);
 
 setFooterDate();
 window.onload = resetFormState;
