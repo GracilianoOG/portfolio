@@ -1,5 +1,5 @@
-const hamburger = document.querySelector<HTMLButtonElement>(".hamburger");
-const headerMenu = document.querySelector<HTMLDivElement>(".header__menu");
+const hamburger = document.querySelector<HTMLButtonElement>(".hamburger")!;
+const headerMenu = document.querySelector<HTMLDivElement>(".header__menu")!;
 
 const isMenuOpen = () => hamburger.classList.contains("hamburger--close");
 
