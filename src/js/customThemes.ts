@@ -26,7 +26,7 @@ const setTheme = (theme) => {
 };
 
 const updateToggler = (theme) => {
-  themeToggler.setAttribute("aria-pressed", theme === Themes.DARK);
+  themeToggler.setAttribute("aria-pressed", String(theme === Themes.DARK));
 };
 
 const changeTheme = () => {
