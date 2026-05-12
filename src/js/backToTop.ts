@@ -1,4 +1,4 @@
-const topButton = document.querySelector(".to-top");
+const topButton = document.querySelector<HTMLButtonElement>(".to-top")!;
 const THRESHOLD = 150;
 const HIDDEN_CLASS = "to-top--hidden";
 
