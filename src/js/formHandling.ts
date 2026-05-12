@@ -20,6 +20,11 @@ export const submitForm = async (
     }
   } catch (err) {
     console.info("An error has happened during the form submission.");
-    console.error(err.message);
+
+    if (err instanceof Error) {
+      console.error(err.message);
+    } else {
+      console.error("Unknown error: " + err);
+    }
   }
 };
