@@ -2,7 +2,7 @@ const topButton = document.querySelector<HTMLButtonElement>(".to-top")!;
 const THRESHOLD = 150;
 const HIDDEN_CLASS = "to-top--hidden";
 
-const updateVisibility = (element: Element, isVisible: boolean) => {
+const updateVisibility = (element: HTMLElement, isVisible: boolean) => {
   element.classList.toggle(HIDDEN_CLASS, !isVisible);
 };
 
