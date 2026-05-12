@@ -59,7 +59,7 @@ const handleFormSubmit = (event: PointerEvent) => {
   contactError.innerHTML = "";
 };
 
-const handleFieldBlur = ({ target }) => {
+const handleFieldBlur = ({ target }: Event) => {
   applyValidityStyle(target);
 };
 
