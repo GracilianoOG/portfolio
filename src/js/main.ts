@@ -40,7 +40,7 @@ const resetFormState = () => {
   contactForm.reset();
 };
 
-const handleFormSubmit = (event) => {
+const handleFormSubmit = (event: PointerEvent) => {
   event.preventDefault();
 
   const [isFormValid, errors] = validateForm();
