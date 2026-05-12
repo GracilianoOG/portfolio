@@ -17,7 +17,7 @@ const contactForm = document.querySelector(".contact__form");
 const footerDate = document.querySelector(".footer__date");
 
 const setFooterDate = () => {
-  footerDate.textContent = new Date().getFullYear();
+  footerDate.textContent = String(new Date().getFullYear());
 };
 
 const toggleFeedbackModal = (force) => {
