@@ -9,12 +9,12 @@ import "./scrollEffects.js";
 
 import "../scss/main.scss";
 
-const contactButton = document.querySelector(".contact__button");
-const contactError = document.querySelector(".contact__error");
-const contactFeedback = document.querySelector(".contact__feedback");
-const contactFields = document.querySelectorAll(".contact__field");
-const contactForm = document.querySelector(".contact__form");
-const footerDate = document.querySelector(".footer__date");
+const contactButton = document.querySelector(".contact__button")!;
+const contactError = document.querySelector(".contact__error")!;
+const contactFeedback = document.querySelector(".contact__feedback")!;
+const contactFields = document.querySelectorAll(".contact__field")!;
+const contactForm = document.querySelector(".contact__form")!;
+const footerDate = document.querySelector(".footer__date")!;
 
 const setFooterDate = () => {
   footerDate.textContent = String(new Date().getFullYear());
