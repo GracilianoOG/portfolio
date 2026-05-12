@@ -2,7 +2,18 @@ import img1 from "../assets/img/projects/project-1.png";
 import img2 from "../assets/img/projects/project-2.png";
 import img3 from "../assets/img/projects/project-3.png";
 
-export const cards = [
+interface Card {
+  title: string;
+  description: string;
+  tags: string[];
+  links: {
+    source: string;
+    preview: string;
+  };
+  imgURL: string;
+}
+
+export const cards: Card[] = [
   {
     title: "Product Card",
     description:
