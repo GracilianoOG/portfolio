@@ -7,10 +7,12 @@ interface CardLinks {
   preview: string;
 }
 
+type CardTags = string[];
+
 interface Card {
   title: string;
   description: string;
-  tags: string[];
+  tags: CardTags;
   links: CardLinks;
   imgURL: string;
 }
