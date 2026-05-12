@@ -1,4 +1,5 @@
-const Themes = Object.freeze({ LIGHT: "light", DARK: "dark" });
+const Themes = { LIGHT: "light", DARK: "dark" } as const;
+
 const themeToggler = document.querySelector(".theme-toggler");
 const lamp = document.querySelector("#lampAudio");
 
