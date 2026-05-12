@@ -20,7 +20,7 @@ const setFooterDate = () => {
   footerDate.textContent = String(new Date().getFullYear());
 };
 
-const toggleFeedbackModal = (force) => {
+const toggleFeedbackModal = (force: boolean) => {
   contactFeedback.classList.toggle("contact__feedback--show", force);
 };
 
