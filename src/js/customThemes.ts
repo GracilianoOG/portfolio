@@ -1,7 +1,8 @@
 const Themes = { LIGHT: "light", DARK: "dark" } as const;
 
-const themeToggler = document.querySelector(".theme-toggler");
-const lamp = document.querySelector("#lampAudio");
+const themeToggler =
+  document.querySelector<HTMLButtonElement>(".theme-toggler")!;
+const lamp = document.querySelector<HTMLAudioElement>("#lampAudio")!;
 
 const playToggleSound = () => {
   lamp.pause();
