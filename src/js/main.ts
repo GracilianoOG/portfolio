@@ -46,7 +46,7 @@ const handleFormSubmit = (event: PointerEvent) => {
   const [isFormValid, errors] = validateForm();
 
   if (!isFormValid) {
-    contactError.innerHTML = errors;
+    contactError.innerHTML = errors as string;
     return;
   }
 
