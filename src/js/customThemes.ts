@@ -1,4 +1,5 @@
 const Themes = { LIGHT: "light", DARK: "dark" } as const;
+type Theme = (typeof Themes)[keyof typeof Themes];
 
 const themeToggler =
   document.querySelector<HTMLButtonElement>(".theme-toggler")!;
@@ -17,15 +18,15 @@ const getTheme = () => {
     : "light";
   const theme = localStorage.getItem("theme") ?? preferredTheme;
 
-  return theme;
+  return theme as Theme;
 };
 
-const setTheme = (theme) => {
+const setTheme = (theme: Theme) => {
   localStorage.setItem("theme", theme);
   document.documentElement.setAttribute("class", theme);
 };
 
-const updateToggler = (theme) => {
+const updateToggler = (theme: Theme) => {
   themeToggler.setAttribute("aria-pressed", String(theme === Themes.DARK));
 };
 
