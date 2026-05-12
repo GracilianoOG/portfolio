@@ -1,11 +1,11 @@
-import { submitForm } from "./formHandling.js";
-import { applyValidityStyle, validateForm } from "./formValidations.js";
+import { submitForm } from "./formHandling";
+import { applyValidityStyle, validateForm } from "./formValidations";
 
-import "./customThemes.js";
-import "./projectCards.js";
-import "./hamburger.js";
-import "./backToTop.js";
-import "./scrollEffects.js";
+import "./customThemes";
+import "./projectCards";
+import "./hamburger";
+import "./backToTop";
+import "./scrollEffects";
 
 import "../scss/main.scss";
 
