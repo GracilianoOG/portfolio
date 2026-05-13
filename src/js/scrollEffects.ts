@@ -17,7 +17,7 @@ const highlightLink = (menuLink, highlight) => {
   menuLink.classList.toggle("menu__link--active", highlight);
 };
 
-const highlightActiveLink = (entries) => {
+const highlightActiveLink = (entries: IntersectionObserverEntry[]) => {
   entries.forEach((entry) => {
     const id = entry.target.getAttribute("id");
     const menuLink = getMenuLink(id);
