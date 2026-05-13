@@ -61,8 +61,9 @@ const handleFormSubmit = (event: PointerEvent) => {
   contactError.innerHTML = "";
 };
 
-const handleFieldBlur = ({ target }: Event) => {
-  applyValidityStyle(target);
+const handleFieldBlur = ({ currentTarget }: Event) => {
+  const field = currentTarget;
+  applyValidityStyle(field as FormField);
 };
 
 contactFeedback.addEventListener("animationend", () =>
