@@ -30,7 +30,7 @@ const highlightActiveLink = (entries: IntersectionObserverEntry[]) => {
     try {
       const id = entry.target.getAttribute("id");
       if (!id) {
-        throw new Error("Id doesn't exist!");
+        throw new Error(`Id ${id} not found!`);
       }
       const menuLink = getMenuLink(id);
       highlightLink(menuLink, entry.isIntersecting);
