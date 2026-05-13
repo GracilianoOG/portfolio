@@ -64,8 +64,8 @@ const validateFields = () => {
 };
 
 const isFieldValid = (name: string) => {
-  const validations = validateFields();
-  return validations[name].every(({ valid }) => valid);
+  const validatedFields = validateFields();
+  return validatedFields[name].every(({ valid }) => valid);
 };
 
 export const applyValidityStyle = ({ name, classList }: FormField) => {
