@@ -10,7 +10,9 @@ const linkOptions = {
 };
 
 const getMenuLink = (id: string) => {
-  const menuLink = document.querySelector(`.menu__link[href="#${id}"]`);
+  const menuLink = document.querySelector<HTMLAnchorElement>(
+    `.menu__link[href="#${id}"]`,
+  );
 
   if (!menuLink) {
     throw new Error("Menu link doesn't exist!");
