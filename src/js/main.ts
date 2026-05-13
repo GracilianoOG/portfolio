@@ -52,7 +52,11 @@ const handleFormSubmit = (event: PointerEvent) => {
     return;
   }
 
-  const values = [...contactFields].map((field) => field.value.trim());
+  type SubmitValues = [string, string, string, string];
+
+  const values = [...contactFields].map((field) =>
+    field.value.trim(),
+  ) as SubmitValues;
   submitForm(...values);
 
   toggleFeedbackModal(true);
