@@ -5,6 +5,10 @@ interface Validation {
   message: string;
 }
 
+interface Validations {
+  [key: string]: Validation[];
+}
+
 const fields = {
   name: document.querySelector<FormField>("#name")!,
   email: document.querySelector<FormField>("#email")!,
