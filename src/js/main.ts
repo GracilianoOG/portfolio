@@ -1,5 +1,9 @@
 import { submitForm } from "./formHandling";
-import { applyValidityStyle, validateForm } from "./formValidations";
+import {
+  applyValidityStyle,
+  validateForm,
+  type FormField,
+} from "./formValidations";
 
 import "./customThemes";
 import "./projectCards";
@@ -14,9 +18,7 @@ const contactButton =
 const contactError = document.querySelector<HTMLDivElement>(".contact__error")!;
 const contactFeedback =
   document.querySelector<HTMLDivElement>(".contact__feedback")!;
-const contactFields = document.querySelectorAll<
-  HTMLInputElement | HTMLTextAreaElement
->(".contact__field")!;
+const contactFields = document.querySelectorAll<FormField>(".contact__field")!;
 const contactForm = document.querySelector<HTMLFormElement>(".contact__form")!;
 const footerDate =
   document.querySelector<HTMLParagraphElement>(".footer__date")!;
