@@ -78,17 +78,17 @@ export const applyValidityStyle = ({ name, classList }: FormField) => {
 
 export const validateForm = () => {
   const validatedFields = validateFields();
-  const validation = [true, ""];
+  const validationResult = [true, ""];
 
   Object.entries(validatedFields).forEach((field) => {
     field[1].forEach(({ valid, message }) => {
       if (!valid) {
-        validation[0] = false;
-        validation[1] += `<p>${message}!</p>`;
+        validationResult[0] = false;
+        validationResult[1] += `<p>${message}!</p>`;
         applyValidityStyle(fields[field[0]]);
       }
     });
   });
 
-  return validation;
+  return validationResult;
 };
