@@ -9,7 +9,7 @@ const linkOptions = {
   rootMargin: "-25% 0px -75%",
 };
 
-const getMenuLink = (id) => {
+const getMenuLink = (id: string) => {
   return document.querySelector(`.menu__link[href="#${id}"]`);
 };
 
