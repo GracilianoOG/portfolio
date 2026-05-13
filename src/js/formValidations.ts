@@ -1,5 +1,7 @@
 export type FormField = HTMLInputElement | HTMLTextAreaElement;
 
+type FieldName = keyof typeof fields;
+
 interface Validation {
   valid: boolean;
   message: string;
