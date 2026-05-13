@@ -52,12 +52,12 @@ const validateFields = () => {
   return validations;
 };
 
-const isFieldValid = name => {
+const isFieldValid = (name) => {
   const validations = validateFields();
   return validations[name].every(({ valid }) => valid);
 };
 
-export const applyValidityStyle = field => {
+export const applyValidityStyle = (field) => {
   const isValid = isFieldValid(field.name);
   const ERROR_CLASS = "contact__field--error";
   const VALID_CLASS = "contact__field--ok";
@@ -69,7 +69,7 @@ export const validateForm = () => {
   const validations = validateFields();
   const validation = [true, ""];
 
-  Object.entries(validations).forEach(field => {
+  Object.entries(validations).forEach((field) => {
     field[1].forEach(({ valid, message }) => {
       if (!valid) {
         validation[0] = false;
