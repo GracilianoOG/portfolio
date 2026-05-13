@@ -63,7 +63,7 @@ const validateFields = () => {
   return validations;
 };
 
-const isFieldValid = (name) => {
+const isFieldValid = (name: string) => {
   const validations = validateFields();
   return validations[name].every(({ valid }) => valid);
 };
