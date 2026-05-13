@@ -27,9 +27,17 @@ const highlightLink = (menuLink: HTMLAnchorElement, highlight: boolean) => {
 
 const highlightActiveLink = (entries: IntersectionObserverEntry[]) => {
   entries.forEach((entry) => {
-    const id = entry.target.getAttribute("id");
-    const menuLink = getMenuLink(id);
-    highlightLink(menuLink, entry.isIntersecting);
+    try {
+      const id = entry.target.getAttribute("id");
+      const menuLink = getMenuLink(id);
+      highlightLink(menuLink, entry.isIntersecting);
+    } catch (error) {
+      if (error instanceof Error) {
+        console.error(error.message);
+      } else {
+        console.error(error);
+      }
+    }
   });
 };
 
