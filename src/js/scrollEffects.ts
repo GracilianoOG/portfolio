@@ -21,7 +21,7 @@ const getMenuLink = (id: string) => {
   return menuLink;
 };
 
-const highlightLink = (menuLink, highlight) => {
+const highlightLink = (menuLink: HTMLAnchorElement, highlight: boolean) => {
   menuLink.classList.toggle("menu__link--active", highlight);
 };
 
