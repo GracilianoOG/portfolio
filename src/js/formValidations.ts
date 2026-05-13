@@ -68,7 +68,7 @@ const isFieldValid = (name: string) => {
   return validations[name].every(({ valid }) => valid);
 };
 
-export const applyValidityStyle = (field) => {
+export const applyValidityStyle = (field: FormField) => {
   const isValid = isFieldValid(field.name);
   const ERROR_CLASS = "contact__field--error";
   const VALID_CLASS = "contact__field--ok";
