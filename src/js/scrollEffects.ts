@@ -33,7 +33,10 @@ const highlightActiveLink = (entries: IntersectionObserverEntry[]) => {
   });
 };
 
-const addClassToIntersectedElement = (entries, className) => {
+const addClassToIntersectedElement = (
+  entries: IntersectionObserverEntry[],
+  className: string,
+) => {
   entries.forEach((entry) => {
     entry.target.classList.toggle(className, entry.isIntersecting);
   });
