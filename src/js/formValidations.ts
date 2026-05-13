@@ -68,12 +68,12 @@ const isFieldValid = (name: string) => {
   return validations[name].every(({ valid }) => valid);
 };
 
-export const applyValidityStyle = (field: FormField) => {
-  const isValid = isFieldValid(field.name);
+export const applyValidityStyle = ({ name, classList }: FormField) => {
+  const isValid = isFieldValid(name);
   const ERROR_CLASS = "contact__field--error";
   const VALID_CLASS = "contact__field--ok";
-  field.classList.add(isValid ? VALID_CLASS : ERROR_CLASS);
-  field.classList.remove(isValid ? ERROR_CLASS : VALID_CLASS);
+  classList.add(isValid ? VALID_CLASS : ERROR_CLASS);
+  classList.remove(isValid ? ERROR_CLASS : VALID_CLASS);
 };
 
 export const validateForm = () => {
