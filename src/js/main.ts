@@ -11,7 +11,7 @@ import "./hamburger";
 import "./backToTop";
 import "./scrollEffects";
 
-import "../scss/main.scss";
+import "../styles/main.scss";
 
 const contactButton =
   document.querySelector<HTMLButtonElement>(".contact__button")!;
