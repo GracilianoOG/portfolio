@@ -15,7 +15,7 @@ const getMenuLink = (id: string) => {
   );
 
   if (!menuLink) {
-    throw new Error("Menu link doesn't exist!");
+    throw new Error(`Menu link with id ${id} not found!`);
   }
 
   return menuLink;
