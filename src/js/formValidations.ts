@@ -17,7 +17,7 @@ const fields = {
 };
 
 const validateFields = () => {
-  const validations = {
+  const validations: Validations = {
     name: [
       {
         valid: fields.name.value.trim().length > 0,
