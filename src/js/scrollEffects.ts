@@ -10,7 +10,13 @@ const linkOptions = {
 };
 
 const getMenuLink = (id: string) => {
-  return document.querySelector(`.menu__link[href="#${id}"]`);
+  const menuLink = document.querySelector(`.menu__link[href="#${id}"]`);
+
+  if (!menuLink) {
+    throw new Error("Menu link doesn't exist!");
+  }
+
+  return menuLink;
 };
 
 const highlightLink = (menuLink, highlight) => {
