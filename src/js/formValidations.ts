@@ -1,5 +1,10 @@
 export type FormField = HTMLInputElement | HTMLTextAreaElement;
 
+interface Validation {
+  valid: boolean;
+  message: string;
+}
+
 const fields = {
   name: document.querySelector<FormField>("#name")!,
   email: document.querySelector<FormField>("#email")!,
