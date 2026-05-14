@@ -74,13 +74,11 @@
 
 /* Skills */
 $path: "../assets/img/skills/";
-$images:
-  "#{$path}html.svg", "#{$path}css.svg", "#{$path}js.svg", "#{$path}java.svg",
-  "#{$path}git.svg", "#{$path}vscode.svg";
+$images: "html.svg", "css.svg", "js.svg", "java.svg", "git.svg", "vscode.svg";
 
 @for $i from 1 through list.length($images) {
   .card__image--skill-#{$i} {
-    background-image: url(#{list.nth($images, $i)});
+    background-image: url(#{$path + list.nth($images, $i)});
   }
 }
 
