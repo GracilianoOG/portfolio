@@ -2,6 +2,14 @@
 @use "sass:list";
 @use "../utils/breakpoints" as *;
 
+@mixin generate-images($class, $path, $images) {
+  @for $i from 1 through list.length($images) {
+    #{$class}-#{$i} {
+      background-image: url(#{$path + list.nth($images, $i)});
+    }
+  }
+}
+
 .cards {
   display: grid;
   grid-template-columns: 1fr;
@@ -73,26 +81,20 @@
 }
 
 /* Skills */
+$class: ".card__image--skill";
 $path: "../assets/img/skills/";
 $images: "html.svg", "css.svg", "js.svg", "java.svg", "git.svg", "vscode.svg";
 
-@for $i from 1 through list.length($images) {
-  .card__image--skill-#{$i} {
-    background-image: url(#{$path + list.nth($images, $i)});
-  }
-}
+@include generate-images($class, $path, $images);
 
 /* Hobbies */
+$class: ".card__image--hobby";
 $path: "../assets/img/hobbies/";
 $images:
   "chat.svg", "games.svg", "music.svg", "programming.svg", "reading.svg",
   "videos.svg";
 
-@for $i from 1 through list.length($images) {
-  .card__image--hobby-#{$i} {
-    background-image: url(#{$path + list.nth($images, $i)});
-  }
-}
+@include generate-images($class, $path, $images);
 
 .card__title {
   color: var(--color-text);
