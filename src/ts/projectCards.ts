@@ -1,6 +1,8 @@
 import { cards } from "./cards";
 
-const projectsEl = document.querySelector<HTMLElement>("#projects")!;
+const projectsEl = document.querySelector<HTMLDivElement>(
+  ".projects__container",
+)!;
 
 const generateProjectCards = () => {
   return cards
