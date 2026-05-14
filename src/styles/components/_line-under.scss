@@ -4,34 +4,34 @@
 @media screen and (min-width: map.get($breakpoints, lg)) {
   .line-under {
     display: inline-block;
-  }
 
-  .line-under::after {
-    background-color: var(--color-primary);
-    content: "";
-    display: block;
-    height: 0.175em;
-    margin-top: 2px;
-    transition: width 250ms ease-out;
-    width: 0%;
-  }
+    &::after {
+      background-color: var(--color-primary);
+      content: "";
+      display: block;
+      height: 0.175em;
+      margin-top: 2px;
+      transition: width 250ms ease-out;
+      width: 0%;
+    }
 
-  .line-under--pink::after {
-    background-color: var(--color-link-1);
-  }
+    &--pink::after {
+      background-color: var(--color-link-1);
+    }
 
-  .line-under--blue::after {
-    background-color: var(--color-link-2);
-  }
+    &--blue::after {
+      background-color: var(--color-link-2);
+    }
 
-  .line-under--green::after {
-    background-color: var(--color-link-3);
-  }
+    &--green::after {
+      background-color: var(--color-link-3);
+    }
 
-  .line-under-container:focus-visible > .line-under::after,
-  .line-under-container:hover > .line-under::after,
-  .line-under:focus-visible::after,
-  .line-under:hover::after {
-    width: 100%;
+    &-container:focus-visible > &::after,
+    &-container:hover > &::after,
+    &:focus-visible::after,
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
