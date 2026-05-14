@@ -85,7 +85,9 @@
   font-size: 1rem;
   padding-left: 1rem;
   position: absolute;
-  transition: top 0.15s ease-in-out, font-size 0.15s ease-in-out;
+  transition:
+    top 0.15s ease-in-out,
+    font-size 0.15s ease-in-out;
   top: 1.4rem;
 }
 
@@ -101,7 +103,9 @@
   outline: none;
   padding: 1.25rem 1rem;
   resize: none;
-  transition: border 150ms ease-in-out, padding 100ms ease;
+  transition:
+    border 150ms ease-in-out,
+    padding 100ms ease;
   width: 100%;
 }
 
@@ -139,7 +143,9 @@
 .contact__button {
   border: none;
   text-decoration: none;
-  transition: background-color 500ms, transform 500ms;
+  transition:
+    background-color 500ms,
+    transform 500ms;
 }
 
 .contact__button:focus-visible,
