@@ -73,10 +73,10 @@
 }
 
 /* Skills */
+$path: "../assets/img/skills/";
 $images:
-  "../assets/img/skills/html.svg", "../assets/img/skills/css.svg",
-  "../assets/img/skills/js.svg", "../assets/img/skills/java.svg",
-  "../assets/img/skills/git.svg", "../assets/img/skills/vscode.svg";
+  "#{$path}html.svg", "#{$path}css.svg", "#{$path}js.svg", "#{$path}java.svg",
+  "#{$path}git.svg", "#{$path}vscode.svg";
 
 @for $i from 1 through list.length($images) {
   .card__image--skill-#{$i} {
