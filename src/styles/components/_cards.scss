@@ -83,28 +83,15 @@ $images: "html.svg", "css.svg", "js.svg", "java.svg", "git.svg", "vscode.svg";
 }
 
 /* Hobbies */
-.card__image--hobby-1 {
-  background-image: url("../assets/img/hobbies/chat.svg");
-}
+$path: "../assets/img/hobbies/";
+$images:
+  "chat.svg", "games.svg", "music.svg", "programming.svg", "reading.svg",
+  "videos.svg";
 
-.card__image--hobby-2 {
-  background-image: url("../assets/img/hobbies/games.svg");
-}
-
-.card__image--hobby-3 {
-  background-image: url("../assets/img/hobbies/music.svg");
-}
-
-.card__image--hobby-4 {
-  background-image: url("../assets/img/hobbies/programming.svg");
-}
-
-.card__image--hobby-5 {
-  background-image: url("../assets/img/hobbies/reading.svg");
-}
-
-.card__image--hobby-6 {
-  background-image: url("../assets/img/hobbies/videos.svg");
+@for $i from 1 through list.length($images) {
+  .card__image--hobby-#{$i} {
+    background-image: url(#{$path + list.nth($images, $i)});
+  }
 }
 
 .card__title {
