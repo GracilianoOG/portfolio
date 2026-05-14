@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:list";
 @use "../utils/breakpoints" as *;
 
 .cards {
@@ -72,28 +73,15 @@
 }
 
 /* Skills */
-.card__image--skill-1 {
-  background-image: url("../assets/img/skills/html.svg");
-}
+$images:
+  "../assets/img/skills/html.svg", "../assets/img/skills/css.svg",
+  "../assets/img/skills/js.svg", "../assets/img/skills/java.svg",
+  "../assets/img/skills/git.svg", "../assets/img/skills/vscode.svg";
 
-.card__image--skill-2 {
-  background-image: url("../assets/img/skills/css.svg");
-}
-
-.card__image--skill-3 {
-  background-image: url("../assets/img/skills/js.svg");
-}
-
-.card__image--skill-4 {
-  background-image: url("../assets/img/skills/java.svg");
-}
-
-.card__image--skill-5 {
-  background-image: url("../assets/img/skills/git.svg");
-}
-
-.card__image--skill-6 {
-  background-image: url("../assets/img/skills/vscode.svg");
+@for $i from 1 through list.length($images) {
+  .card__image--skill-#{$i} {
+    background-image: url(#{list.nth($images, $i)});
+  }
 }
 
 /* Hobbies */
