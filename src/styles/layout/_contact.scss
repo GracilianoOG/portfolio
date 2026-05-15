@@ -140,17 +140,6 @@
   font-size: 1rem;
 }
 
-.contact__button {
-  transition:
-    background-color 500ms,
-    transform 500ms;
-}
-
-.contact__button:focus-visible,
-.contact__button:hover {
-  transform: scale(1.05);
-}
-
 .contact__required {
   color: var(--color-danger);
 }
