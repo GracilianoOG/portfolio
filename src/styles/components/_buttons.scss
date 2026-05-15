@@ -7,6 +7,10 @@
   font-size: 1rem;
   padding: 0.8rem 1rem;
   text-decoration: none;
+  transition:
+    background-color 500ms,
+    border-color 500ms,
+    color 500ms;
 
   &:focus-visible,
   &:hover {
