@@ -1,0 +1,101 @@
+@use "sass:map";
+@use "sass:list";
+@use "../utils/breakpoints" as *;
+
+@mixin generate-images($class, $path, $images) {
+  @for $i from 1 through list.length($images) {
+    #{$class}-#{$i} {
+      background-image: url(#{$path + list.nth($images, $i)});
+    }
+  }
+}
+
+.card {
+  --perspective: 25rem;
+  height: 8rem;
+  perspective: var(--perspective);
+  -moz-perspective: var(--perspective);
+  -webkit-perspective: var(--perspective);
+  position: relative;
+
+  &__title {
+    color: var(--color-text);
+    font-weight: 700;
+  }
+
+  &__container {
+    --preserve-3d: preserve-3d;
+    height: 100%;
+    transform-style: var(--preserve-3d);
+    -moz-transform-style: var(--preserve-3d);
+    -webkit-transform-style: var(--preserve-3d);
+    transition: transform 500ms ease-out;
+  }
+
+  &:hover > &__container {
+    transform: rotateY(180deg) translateY(-0.5rem) scale(1.05);
+  }
+
+  &__face {
+    --face-size: 100%;
+    --backface: hidden;
+    background-color: var(--color-neutral);
+    border-radius: 0.3125rem;
+    box-sizing: border-box;
+    backface-visibility: var(--backface);
+    -moz-backface-visibility: var(--backface);
+    -webkit-backface-visibility: var(--backface);
+    display: flex;
+    height: var(--face-size);
+    padding: 1rem;
+    position: absolute;
+    width: var(--face-size);
+  }
+
+  &__face--front {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__face--back {
+    align-items: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+    text-align: center;
+  }
+
+  &__text {
+    color: var(--color-description);
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+
+  &__image {
+    --card-size: 1.875rem;
+    background: no-repeat center / cover;
+    height: var(--card-size);
+    margin-bottom: 1rem;
+    width: var(--card-size);
+  }
+
+  /* Skills */
+  $class: ".card__image--skill";
+  $path: "../assets/img/skills/";
+  $images: "html.svg", "css.svg", "js.svg", "java.svg", "git.svg", "vscode.svg";
+
+  @include generate-images($class, $path, $images);
+
+  /* Hobbies */
+  $class: ".card__image--hobby";
+  $path: "../assets/img/hobbies/";
+  $images:
+    "chat.svg", "games.svg", "music.svg", "programming.svg", "reading.svg",
+    "videos.svg";
+
+  @include generate-images($class, $path, $images);
+
+  /* Medias */
+  @media screen and (min-width: map.get($breakpoints, lg)) {
+    height: 10rem;
+  }
+}
