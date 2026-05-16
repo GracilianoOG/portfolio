@@ -8,10 +8,10 @@
     height: auto;
     transition: transform 500ms;
     width: 100%;
-  }
 
-  &__image:hover {
-    transform: scale(1.025);
+    &:hover {
+      transform: scale(1.025);
+    }
   }
 
   &__course {
